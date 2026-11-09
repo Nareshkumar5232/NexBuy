@@ -4,7 +4,7 @@ import { productsData } from '../data/productsData';
 function getFallbackCatalog(params = {}) {
   let list = [...productsData];
   try {
-    const custom = JSON.parse(localStorage.getItem('bytecart_custom_products') || '[]');
+    const custom = JSON.parse(localStorage.getItem('nexbuy_custom_products') || '[]');
     if (Array.isArray(custom) && custom.length > 0) {
       // Merge unique by id
       const customIds = new Set(custom.map(p => p.id));
@@ -88,7 +88,7 @@ export const productService = {
       
       // Seamlessly merge any local custom demo products saved in localStorage
       try {
-        const custom = JSON.parse(localStorage.getItem('bytecart_custom_products') || '[]');
+        const custom = JSON.parse(localStorage.getItem('nexbuy_custom_products') || '[]');
         if (Array.isArray(custom) && custom.length > 0) {
           const serverIds = new Set(items.map(p => p.id));
           const serverSlugs = new Set(items.map(p => p.slug));

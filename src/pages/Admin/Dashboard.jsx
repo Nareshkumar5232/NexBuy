@@ -11,7 +11,8 @@ import {
   MessageSquare,
   TrendingUp,
   ArrowUpRight,
-  RefreshCw
+  RefreshCw,
+  Boxes
 } from 'lucide-react';
 
 export default function AdminDashboard() {
@@ -38,14 +39,12 @@ export default function AdminDashboard() {
 
   if (loading) {
     return (
-      <div className="py-20 flex flex-col items-center justify-center gap-3">
-        <div className="w-8 h-8 border-2 border-[#24221F] border-t-transparent rounded-full animate-spin" />
-        <p className="text-xs font-serif text-[#77716A] uppercase tracking-wider">Loading Real-Time Database Metrics...</p>
+      <div className="py-24 flex flex-col items-center justify-center gap-3">
+        <div className="w-8 h-8 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+        <p className="text-xs text-slate-500 uppercase font-bold tracking-wider">Syncing NEXBUY Database Metrics...</p>
       </div>
     );
   }
-
-
 
   const kpis = data?.kpis || {
     totalOrders: 0,
@@ -66,92 +65,93 @@ export default function AdminDashboard() {
     {
       title: 'Total Revenue',
       value: formatCurrency(kpis.totalRevenue),
-      subtitle: 'Realized from active orders',
+      subtitle: 'Recorded across completed orders',
       icon: TrendingUp,
-      color: 'text-emerald-700',
-      bgColor: 'bg-emerald-50 border-emerald-200'
+      color: 'text-emerald-600',
+      bgColor: 'bg-white border-slate-200'
     },
     {
       title: 'Total Orders',
       value: kpis.totalOrders,
       subtitle: `${kpis.pendingOrders} pending · ${kpis.completedOrders} completed`,
       icon: ShoppingBag,
-      color: 'text-[#24221F]',
-      bgColor: 'bg-[#EAE4DA]/50 border-[#E2DBD0]'
+      color: 'text-slate-900',
+      bgColor: 'bg-white border-slate-200'
     },
     {
-      title: 'Total Products',
+      title: 'Tech Products',
       value: kpis.totalProducts,
       subtitle: `${kpis.lowStockProducts} items low on stock`,
       icon: Layers,
-      color: 'text-[#A66A4C]',
-      bgColor: 'bg-[#EAE4DA]/50 border-[#E2DBD0]'
+      color: 'text-emerald-600',
+      bgColor: 'bg-white border-slate-200'
     },
     {
       title: 'Registered Customers',
       value: kpis.totalCustomers,
       subtitle: 'Active user accounts',
       icon: Users,
-      color: 'text-indigo-800',
-      bgColor: 'bg-indigo-50 border-indigo-200'
+      color: 'text-indigo-600',
+      bgColor: 'bg-white border-slate-200'
     },
     {
-      title: 'Unread Feedback',
+      title: 'Customer Feedback',
       value: kpis.unreadFeedback,
-      subtitle: 'Contact & support messages',
+      subtitle: 'Inquiries & support tickets',
       icon: MessageSquare,
-      color: kpis.unreadFeedback > 0 ? 'text-amber-700' : 'text-[#77716A]',
-      bgColor: kpis.unreadFeedback > 0 ? 'bg-amber-50 border-amber-200' : 'bg-[#EAE4DA]/50 border-[#E2DBD0]'
+      color: kpis.unreadFeedback > 0 ? 'text-amber-600' : 'text-slate-600',
+      bgColor: 'bg-white border-slate-200'
     },
     {
-      title: 'Payment Status',
+      title: 'Payment Verifications',
       value: `${kpis.successfulPayments} Paid`,
-      subtitle: `${kpis.pendingPayments} pending verification`,
+      subtitle: `${kpis.pendingPayments} pending confirmation`,
       icon: CreditCard,
-      color: 'text-teal-800',
-      bgColor: 'bg-teal-50 border-teal-200'
+      color: 'text-emerald-600',
+      bgColor: 'bg-white border-slate-200'
     }
   ];
 
   return (
-    <div className="space-y-8">
-      {/* Non-blocking Connection Notice if operating in offline/fallback mode */}
+    <div className="space-y-6">
+      {/* Alert if offline */}
       {(error && !data) && (
-        <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs shadow-xs">
+        <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs shadow-xs">
           <div className="flex items-center gap-2.5">
             <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
             <div>
-              <span className="font-bold">Database Operating in Offline/Local Mode:</span>{' '}
+              <span className="font-bold">Database Connection Notice:</span>{' '}
               <span className="text-amber-800">
-                {error || 'Live database currently unreachable; displaying local metrics.'}
+                {error || 'Displaying cached metrics.'}
               </span>
             </div>
           </div>
           <button
             onClick={fetchStats}
-            className="px-3 py-1.5 rounded-full bg-[#24221F] text-white text-[11px] font-semibold tracking-wider uppercase hover:bg-[#A66A4C] cursor-pointer shrink-0 transition-colors"
+            className="px-3 py-1.5 rounded-lg bg-slate-900 text-white text-[11px] font-bold tracking-wider uppercase hover:bg-emerald-600 cursor-pointer shrink-0 transition-colors"
           >
-            Retry Connection
+            Retry Sync
           </button>
         </div>
       )}
+
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A66A4C]">
-            Operational Overview
+          <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600">
+            NEXBUY Enterprise Overview
           </span>
-          <h1 className="text-2xl sm:text-3xl font-serif text-[#24221F] font-bold">
-            Administrative Dashboard
+          <h1 className="text-2xl sm:text-3xl font-black text-slate-900">
+            Executive Dashboard
           </h1>
         </div>
 
         <button
           onClick={fetchStats}
-          className="self-start sm:self-auto px-4 py-2 rounded-full border border-[#E2DBD0] bg-white hover:bg-[#EAE4DA] text-xs font-semibold text-[#24221F] flex items-center gap-2 transition-colors cursor-pointer"
+          className="self-start sm:self-auto px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-xs font-bold text-slate-700 flex items-center gap-2 transition-colors cursor-pointer shadow-xs"
         >
-          <RefreshCw className="w-3.5 h-3.5 text-[#77716A]" />
-          <span>Refresh Database Stats</span>
+          <RefreshCw className="w-3.5 h-3.5 text-slate-500" />
+          <span>Refresh Metrics</span>
         </button>
       </div>
 
@@ -162,21 +162,21 @@ export default function AdminDashboard() {
           return (
             <div
               key={idx}
-              className={`p-6 rounded-3xl border ${card.bgColor} space-y-3 transition-transform hover:-translate-y-0.5`}
+              className={`p-5 rounded-2xl border ${card.bgColor} space-y-3 shadow-xs hover:border-slate-300 transition-all`}
             >
               <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#77716A]">
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
                   {card.title}
                 </span>
-                <div className="p-2 rounded-xl bg-white/80">
+                <div className="p-2 rounded-xl bg-slate-100">
                   <Icon className={`w-4 h-4 ${card.color}`} />
                 </div>
               </div>
               <div>
-                <p className={`text-2xl sm:text-3xl font-serif font-bold ${card.color}`}>
+                <p className={`text-2xl sm:text-3xl font-black ${card.color}`}>
                   {card.value}
                 </p>
-                <p className="text-[11px] text-[#77716A] mt-1">{card.subtitle}</p>
+                <p className="text-[11px] text-slate-400 mt-1">{card.subtitle}</p>
               </div>
             </div>
           );
@@ -184,55 +184,55 @@ export default function AdminDashboard() {
       </div>
 
       {/* Recent Orders Section */}
-      <div className="bg-[#EAE4DA]/30 rounded-3xl p-6 sm:p-8 border border-[#E2DBD0] space-y-6">
+      <div className="bg-white rounded-2xl p-6 border border-slate-200 space-y-5 shadow-xs">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-lg font-serif font-bold text-[#24221F]">Recent Orders</h2>
-            <p className="text-xs text-[#77716A]">Directly synchronized with customer checkout pipeline</p>
+            <h2 className="text-base font-bold text-slate-900">Recent Customer Orders</h2>
+            <p className="text-xs text-slate-500">Live backend synchronized order pipeline</p>
           </div>
           <Link
             to="/admin/orders"
-            className="text-xs font-semibold text-[#A66A4C] hover:text-[#24221F] flex items-center gap-1"
+            className="text-xs font-bold uppercase tracking-wider text-emerald-600 hover:text-emerald-700 flex items-center gap-1"
           >
-            <span>View All Orders</span>
+            <span>View All</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
         </div>
 
         {(!data?.recentOrders || data.recentOrders.length === 0) ? (
-          <div className="py-12 text-center space-y-2 border border-dashed border-[#E2DBD0] rounded-2xl bg-white/40">
-            <ShoppingBag className="w-8 h-8 text-[#9E9890] mx-auto" />
-            <p className="text-sm font-serif text-[#24221F]">No orders have been placed yet.</p>
-            <p className="text-xs text-[#77716A]">Orders placed on the customer store will appear here in real-time.</p>
+          <div className="py-12 text-center space-y-2 border border-dashed border-slate-200 rounded-xl bg-slate-50">
+            <ShoppingBag className="w-8 h-8 text-slate-400 mx-auto" />
+            <p className="text-sm font-bold text-slate-800">No orders currently on record</p>
+            <p className="text-xs text-slate-500">Orders placed by customers will update here instantly.</p>
           </div>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
               <thead>
-                <tr className="border-b border-[#E2DBD0] text-[#77716A] uppercase tracking-wider text-[10px]">
-                  <th className="pb-3 font-semibold">Order ID</th>
-                  <th className="pb-3 font-semibold">Customer</th>
-                  <th className="pb-3 font-semibold">Date</th>
-                  <th className="pb-3 font-semibold">Items</th>
-                  <th className="pb-3 font-semibold">Total</th>
-                  <th className="pb-3 font-semibold">Payment</th>
-                  <th className="pb-3 font-semibold">Status</th>
-                  <th className="pb-3 font-semibold text-right">Action</th>
+                <tr className="border-b border-slate-100 text-slate-400 uppercase tracking-wider text-[10px]">
+                  <th className="pb-3 font-bold">Order ID</th>
+                  <th className="pb-3 font-bold">Customer</th>
+                  <th className="pb-3 font-bold">Date</th>
+                  <th className="pb-3 font-bold">Items</th>
+                  <th className="pb-3 font-bold">Total</th>
+                  <th className="pb-3 font-bold">Payment</th>
+                  <th className="pb-3 font-bold">Status</th>
+                  <th className="pb-3 font-bold text-right">Action</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#E2DBD0]">
+              <tbody className="divide-y divide-slate-100">
                 {data.recentOrders.map((order) => (
-                  <tr key={order.id} className="hover:bg-white/60 transition-colors">
-                    <td className="py-3.5 font-serif font-bold text-[#24221F]">{order.id}</td>
-                    <td className="py-3.5 font-medium text-[#24221F]">
+                  <tr key={order.id} className="hover:bg-slate-50 transition-colors">
+                    <td className="py-3 font-black text-slate-900">#{order.id}</td>
+                    <td className="py-3 font-bold text-slate-800">
                       {order.customerName}
-                      <span className="block text-[10px] text-[#77716A]">{order.customerEmail}</span>
+                      <span className="block text-[10px] text-slate-400 font-normal">{order.customerEmail}</span>
                     </td>
-                    <td className="py-3.5 text-[#77716A]">{formatDate(order.createdAt)}</td>
-                    <td className="py-3.5 text-[#77716A]">{order.items?.length || 0} items</td>
-                    <td className="py-3.5 font-serif font-bold text-[#24221F]">{formatCurrency(order.total)}</td>
-                    <td className="py-3.5">
-                      <span className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-semibold ${
+                    <td className="py-3 text-slate-500">{formatDate(order.createdAt)}</td>
+                    <td className="py-3 text-slate-600 font-medium">{order.items?.length || 0} items</td>
+                    <td className="py-3 font-black text-slate-900">{formatCurrency(order.total)}</td>
+                    <td className="py-3">
+                      <span className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold ${
                         order.paymentStatus === 'Paid' || order.paymentStatus === 'SUCCESS'
                           ? 'bg-emerald-100 text-emerald-800'
                           : 'bg-amber-100 text-amber-800'
@@ -240,21 +240,21 @@ export default function AdminDashboard() {
                         {order.paymentStatus}
                       </span>
                     </td>
-                    <td className="py-3.5">
-                      <span className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-semibold ${
+                    <td className="py-3">
+                      <span className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold ${
                         order.orderStatus === 'Delivered'
                           ? 'bg-emerald-100 text-emerald-800'
                           : order.orderStatus === 'Cancelled'
-                          ? 'bg-red-100 text-red-800'
+                          ? 'bg-rose-100 text-rose-800'
                           : 'bg-blue-100 text-blue-800'
                       }`}>
                         {order.orderStatus}
                       </span>
                     </td>
-                    <td className="py-3.5 text-right">
+                    <td className="py-3 text-right">
                       <Link
                         to={`/admin/orders/${order.id}`}
-                        className="px-3 py-1 rounded-full bg-[#24221F] text-white text-[10px] font-semibold uppercase hover:bg-[#A66A4C] transition-colors"
+                        className="px-3 py-1 rounded-lg bg-slate-900 text-white text-[10px] font-bold uppercase hover:bg-emerald-600 transition-colors"
                       >
                         Inspect
                       </Link>

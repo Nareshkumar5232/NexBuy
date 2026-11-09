@@ -6,5 +6,12 @@ export const feedbackService = {
       method: 'POST',
       body: { name, email, phone, subject, category, message }
     });
+  },
+
+  async subscribeNewsletter(email) {
+    return await apiRequest('/feedback/newsletter', {
+      method: 'POST',
+      body: { email }
+    });
   }
 };

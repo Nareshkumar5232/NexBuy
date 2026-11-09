@@ -27,8 +27,8 @@ export default function AdminCustomerDetails() {
   if (loading) {
     return (
       <div className="py-20 flex flex-col items-center justify-center gap-3">
-        <div className="w-8 h-8 border-2 border-[#24221F] border-t-transparent rounded-full animate-spin" />
-        <p className="text-xs font-serif text-[#77716A] uppercase tracking-wider">Loading Customer Profile...</p>
+        <div className="w-8 h-8 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+        <p className="text-xs text-slate-500 uppercase font-bold tracking-wider">Loading Customer Profile...</p>
       </div>
     );
   }
@@ -40,41 +40,41 @@ export default function AdminCustomerDetails() {
     <div className="space-y-6">
       <Link
         to="/admin/customers"
-        className="text-xs font-semibold text-[#A66A4C] hover:text-[#24221F] inline-flex items-center gap-1.5"
+        className="text-xs font-bold text-emerald-600 hover:text-emerald-700 inline-flex items-center gap-1.5"
       >
         <ArrowLeft className="w-3.5 h-3.5" />
         <span>Back to Customer Directory</span>
       </Link>
 
-      <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DBD0] space-y-4 shadow-xs">
+      <div className="bg-white rounded-2xl p-6 border border-slate-200 space-y-4 shadow-xs">
         <div className="flex items-center gap-4">
-          <div className="w-14 h-14 rounded-2xl bg-[#EAE4DA] flex items-center justify-center text-[#24221F] font-serif font-bold text-xl">
+          <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center font-black text-xl">
             {customer?.name?.charAt(0) || 'U'}
           </div>
           <div>
-            <h1 className="text-2xl font-serif font-bold text-[#24221F]">{customer?.name}</h1>
-            <p className="text-xs text-[#77716A]">{customer?.email} · Joined {formatDate(customer?.createdAt)}</p>
+            <h1 className="text-2xl font-black text-slate-900">{customer?.name}</h1>
+            <p className="text-xs text-slate-500">{customer?.email} · Joined {formatDate(customer?.createdAt)}</p>
           </div>
         </div>
       </div>
 
       {/* Orders History */}
-      <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E2DBD0] space-y-6 shadow-xs">
-        <h2 className="text-lg font-serif font-bold text-[#24221F]">Customer Orders ({orders.length})</h2>
+      <div className="bg-white rounded-2xl p-6 border border-slate-200 space-y-5 shadow-xs">
+        <h2 className="text-base font-bold text-slate-900">Customer Orders ({orders.length})</h2>
 
         {orders.length === 0 ? (
-          <p className="text-xs text-[#77716A]">No orders have been placed by this customer.</p>
+          <p className="text-xs text-slate-500">No orders have been placed by this customer.</p>
         ) : (
-          <div className="divide-y divide-[#E2DBD0] text-xs">
+          <div className="divide-y divide-slate-100 text-xs">
             {orders.map((o) => (
               <div key={o.id} className="py-3.5 flex items-center justify-between">
                 <div>
-                  <p className="font-serif font-bold text-[#24221F]">Order #{o.id}</p>
-                  <p className="text-[11px] text-[#77716A]">{formatDate(o.createdAt)} · {o.items?.length} items</p>
+                  <p className="font-bold text-slate-900">Order #{o.id}</p>
+                  <p className="text-[11px] text-slate-400">{formatDate(o.createdAt)} · {o.items?.length} items</p>
                 </div>
                 <div className="text-right">
-                  <p className="font-serif font-bold text-[#24221F]">{formatCurrency(o.total)}</p>
-                  <span className="text-[10px] text-[#A66A4C] font-semibold">{o.orderStatus}</span>
+                  <p className="font-black text-slate-900">{formatCurrency(o.total)}</p>
+                  <span className="text-[10px] text-emerald-600 font-bold uppercase">{o.orderStatus}</span>
                 </div>
               </div>
             ))}

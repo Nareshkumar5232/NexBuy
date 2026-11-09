@@ -1,7 +1,7 @@
 import { apiRequest } from './api';
 
-const TOKEN_KEY = 'bytecart_auth_token_v1';
-const USER_KEY = 'bytecart_auth_user_v1';
+const TOKEN_KEY = 'nexbuy_auth_token_v1';
+const USER_KEY = 'nexbuy_auth_user_v1';
 
 export const authService = {
   async login({ email, password }) {
@@ -39,7 +39,7 @@ export const authService = {
           name: 'System Administrator',
           email: emailLower || 'admin@gmail.com',
           role: 'ADMIN',
-          token: 'bytecart_auth_token_offline_2026'
+          token: 'nexbuy_auth_token_offline_2026'
         };
         localStorage.setItem(TOKEN_KEY, fallbackAdmin.token);
         localStorage.setItem(USER_KEY, JSON.stringify(fallbackAdmin));

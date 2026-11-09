@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Outlet, NavLink, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import logoPng from '../logo.png';
 import {
   LayoutDashboard,
   ShoppingBag,
@@ -16,7 +17,8 @@ import {
   Menu,
   X,
   Tag,
-  ShieldCheck
+  ShieldCheck,
+  Zap
 } from 'lucide-react';
 
 export default function AdminLayout() {
@@ -43,40 +45,37 @@ export default function AdminLayout() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F5F2EC] flex text-[#24221F] font-sans antialiased">
+    <div className="min-h-screen bg-slate-50 flex text-slate-900 font-sans antialiased">
       {/* Mobile Sidebar Overlay */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 z-40 bg-[#24221F]/50 backdrop-blur-xs lg:hidden"
+          className="fixed inset-0 z-40 bg-slate-950/60 backdrop-blur-xs lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
       )}
 
       {/* Sidebar Navigation */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 w-64 bg-[#24221F] text-[#F5F2EC] flex flex-col justify-between transition-transform duration-300 ease-in-out lg:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-50 w-64 bg-[#0B0F17] text-slate-100 flex flex-col justify-between transition-transform duration-300 ease-in-out lg:translate-x-0 ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         {/* Brand Header */}
         <div>
-          <div className="h-20 px-6 border-b border-[#3D3A36] flex items-center justify-between">
+          <div className="h-20 px-6 border-b border-slate-800/80 flex items-center justify-between">
             <Link to="/admin" className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-[#A66A4C] flex items-center justify-center text-white font-serif font-bold text-sm">
-                B
-              </div>
-              <div>
-                <span className="font-serif text-base font-bold tracking-tight text-[#F5F2EC]">
-                  BYTECART
-                </span>
-                <span className="block text-[9px] uppercase tracking-[0.2em] text-[#A66A4C] font-semibold">
-                  Administration
-                </span>
-              </div>
+              <img
+                src={logoPng}
+                alt="NEXBUY Admin"
+                className="h-8 w-auto max-w-[120px] object-contain"
+              />
+              <span className="block text-[9px] uppercase tracking-[0.2em] text-emerald-400 font-bold">
+                Admin
+              </span>
             </Link>
             <button
               onClick={() => setSidebarOpen(false)}
-              className="lg:hidden p-1.5 text-[#9E9890] hover:text-white"
+              className="lg:hidden p-1.5 text-slate-400 hover:text-white"
             >
               <X className="w-5 h-5" />
             </button>
@@ -93,10 +92,10 @@ export default function AdminLayout() {
                   end={item.end}
                   onClick={() => setSidebarOpen(false)}
                   className={({ isActive }) =>
-                    `flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-semibold tracking-wide transition-all ${
+                    `flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold tracking-wide transition-all ${
                       isActive
-                        ? 'bg-[#A66A4C] text-white shadow-xs'
-                        : 'text-[#9E9890] hover:bg-[#3D3A36]/60 hover:text-[#F5F2EC]'
+                        ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/20'
+                        : 'text-slate-400 hover:bg-slate-800/60 hover:text-white'
                     }`
                   }
                 >
@@ -109,33 +108,33 @@ export default function AdminLayout() {
         </div>
 
         {/* Sidebar Footer */}
-        <div className="p-4 border-t border-[#3D3A36] space-y-3">
+        <div className="p-4 border-t border-slate-800 space-y-3">
           <Link
             to="/"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center justify-between px-3 py-2 rounded-lg bg-[#3D3A36]/40 hover:bg-[#3D3A36] text-[11px] text-[#D8D2C7] transition-colors"
+            className="flex items-center justify-between px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-[11px] text-slate-300 transition-colors border border-slate-800"
           >
             <span className="flex items-center gap-2">
-              <ExternalLink className="w-3.5 h-3.5 text-[#A66A4C]" />
-              <span>Customer Storefront</span>
+              <ExternalLink className="w-3.5 h-3.5 text-emerald-400" />
+              <span>NEXBUY Storefront</span>
             </span>
-            <span className="text-[10px] text-[#9E9890]">Live ↗</span>
+            <span className="text-[10px] text-emerald-400 font-bold">Live ↗</span>
           </Link>
 
           <div className="flex items-center justify-between px-2 pt-1">
             <div className="flex items-center gap-2.5 min-w-0">
-              <div className="w-7 h-7 rounded-full bg-[#A66A4C]/30 text-[#A66A4C] border border-[#A66A4C]/40 flex items-center justify-center font-bold text-xs">
+              <div className="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center font-bold text-xs">
                 {user?.name?.charAt(0) || 'A'}
               </div>
               <div className="min-w-0">
-                <p className="text-xs font-semibold text-white truncate">{user?.name || 'Administrator'}</p>
-                <p className="text-[10px] text-[#9E9890] truncate">{user?.email}</p>
+                <p className="text-xs font-bold text-white truncate">{user?.name || 'Administrator'}</p>
+                <p className="text-[10px] text-slate-400 truncate">{user?.email}</p>
               </div>
             </div>
             <button
               onClick={handleLogout}
-              className="p-1.5 text-[#9E9890] hover:text-red-400 transition-colors"
+              className="p-1.5 text-slate-400 hover:text-rose-400 transition-colors"
               title="Sign Out"
             >
               <LogOut className="w-4 h-4" />
@@ -147,31 +146,31 @@ export default function AdminLayout() {
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col lg:pl-64 min-w-0">
         {/* Topbar */}
-        <header className="h-16 sticky top-0 z-30 bg-[#F5F2EC]/90 backdrop-blur-md border-b border-[#E2DBD0] px-4 sm:px-8 flex items-center justify-between">
+        <header className="h-16 sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b border-slate-200 px-4 sm:px-8 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
               onClick={() => setSidebarOpen(true)}
-              className="p-2 -ml-2 text-[#24221F] lg:hidden hover:bg-[#EAE4DA] rounded-lg"
+              className="p-2 -ml-2 text-slate-700 lg:hidden hover:bg-slate-100 rounded-lg"
               aria-label="Open sidebar"
             >
               <Menu className="w-5 h-5" />
             </button>
             <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-[#A66A4C]" />
-              <span className="text-xs font-semibold text-[#77716A] uppercase tracking-wider hidden sm:inline">
-                Bytecart Enterprise Control
+              <ShieldCheck className="w-4 h-4 text-emerald-600" />
+              <span className="text-xs font-bold text-slate-600 uppercase tracking-wider hidden sm:inline">
+                NEXBUY ENTERPRISES PVT LTD • Enterprise Control
               </span>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
-            <div className="px-3 py-1 rounded-full bg-[#EAE4DA] border border-[#E2DBD0] text-[11px] font-semibold text-[#24221F] flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
-              <span>Production Live</span>
+            <div className="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[11px] font-bold text-emerald-700 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span>System Online</span>
             </div>
             <Link
               to="/admin/settings"
-              className="p-2 rounded-full text-[#77716A] hover:text-[#24221F] hover:bg-[#EAE4DA] transition-colors"
+              className="p-2 rounded-xl text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-colors"
               title="Settings"
             >
               <Settings className="w-4 h-4" />

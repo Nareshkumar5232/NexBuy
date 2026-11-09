@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ChevronLeft, Save } from 'lucide-react';
+import { ChevronLeft, Save, Lock, User, Mail, Phone, ShieldCheck } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
 export default function Profile() {
@@ -56,37 +56,42 @@ export default function Profile() {
 
   if (authLoading || (!user && isAuthenticated)) {
     return (
-      <div className="pt-36 pb-28 max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 animate-pulse">
-        <div className="h-16 bg-[#E8E0D5] rounded-3xl" />
-        <div className="h-64 bg-[#E8E0D5] rounded-3xl" />
+      <div className="pt-8 pb-28 max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 animate-pulse">
+        <div className="h-16 bg-slate-100 rounded-2xl" />
+        <div className="h-64 bg-slate-100 rounded-2xl" />
       </div>
     );
   }
 
   return (
-    <div className="pt-28 md:pt-36 pb-28 max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <div className="pt-6 pb-28 max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       {/* Header */}
-      <div className="space-y-2 border-b border-[#E2DBD0] pb-6">
+      <div className="space-y-1 border-b border-slate-200 pb-5">
         <Link
           to="/account"
-          className="text-xs font-semibold uppercase tracking-wider text-[#77716A] hover:text-[#24221F] inline-flex items-center gap-1 mb-2"
+          className="text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-slate-900 inline-flex items-center gap-1 mb-2"
         >
           <ChevronLeft className="w-3.5 h-3.5" />
           <span>Back to Account</span>
         </Link>
-        <h1 className="text-3xl font-serif text-[#24221F] tracking-tight">
-          Personal Profile & Security
+        <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          Profile & Security
         </h1>
-        <p className="text-xs sm:text-sm text-[#77716A]">
-          Manage your personal identification details and account credentials.
+        <p className="text-xs sm:text-sm text-slate-500">
+          Manage your personal identity, contact details, and account credentials.
         </p>
       </div>
 
       {/* Form */}
-      <form onSubmit={handleSubmit} className="bg-[#E8E0D5]/30 rounded-3xl p-8 sm:p-10 border border-[#E2DBD0] space-y-6">
+      <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-6 shadow-xs">
         <div className="space-y-4">
+          <h2 className="text-base font-bold text-slate-900 flex items-center gap-2">
+            <User className="w-4 h-4 text-emerald-600" />
+            <span>Personal Information</span>
+          </h2>
+
           <div className="space-y-1.5">
-            <label className="text-xs font-semibold uppercase tracking-wider text-[#77716A] block">
+            <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block">
               Full Name
             </label>
             <input
@@ -95,48 +100,50 @@ export default function Profile() {
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-2xl bg-[#F4F0E8] border border-[#E2DBD0] text-xs text-[#24221F] focus:bg-white focus:outline-none focus:border-[#A66A4C]"
+              className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-emerald-500"
             />
           </div>
 
-          <div className="space-y-1.5">
-            <label className="text-xs font-semibold uppercase tracking-wider text-[#77716A] block">
-              Email Address
-            </label>
-            <input
-              type="email"
-              name="email"
-              required
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-2xl bg-[#F4F0E8] border border-[#E2DBD0] text-xs text-[#24221F] focus:bg-white focus:outline-none focus:border-[#A66A4C]"
-            />
-          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="space-y-1.5">
+              <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block">
+                Email Address
+              </label>
+              <input
+                type="email"
+                name="email"
+                required
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-emerald-500"
+              />
+            </div>
 
-          <div className="space-y-1.5">
-            <label className="text-xs font-semibold uppercase tracking-wider text-[#77716A] block">
-              Contact Phone
-            </label>
-            <input
-              type="tel"
-              name="phone"
-              required
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-2xl bg-[#F4F0E8] border border-[#E2DBD0] text-xs text-[#24221F] focus:bg-white focus:outline-none focus:border-[#A66A4C]"
-            />
+            <div className="space-y-1.5">
+              <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="+91 98765 43210"
+                className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-emerald-500"
+              />
+            </div>
           </div>
         </div>
 
-        {/* Change Password Section */}
-        <div className="pt-6 border-t border-[#E2DBD0] space-y-4">
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#A66A4C]">
-            Update Security Password
-          </span>
+        <div className="pt-4 border-t border-slate-100 space-y-4">
+          <h2 className="text-base font-bold text-slate-900 flex items-center gap-2">
+            <Lock className="w-4 h-4 text-emerald-600" />
+            <span>Security & Password</span>
+          </h2>
 
           <div className="space-y-1.5">
-            <label className="text-xs font-semibold uppercase tracking-wider text-[#77716A] block">
-              New Password (Leave blank to keep unchanged)
+            <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block">
+              New Password (leave blank to keep current)
             </label>
             <input
               type="password"
@@ -144,25 +151,21 @@ export default function Profile() {
               value={formData.newPassword}
               onChange={handleChange}
               placeholder="••••••••"
-              className="w-full px-4 py-3 rounded-2xl bg-[#F4F0E8] border border-[#E2DBD0] text-xs text-[#24221F] focus:bg-white focus:outline-none focus:border-[#A66A4C]"
+              className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-emerald-500"
             />
           </div>
         </div>
 
-        <button
-          type="submit"
-          disabled={submitting}
-          className="w-full py-4 px-6 rounded-full bg-[#24221F] hover:bg-[#A66A4C] active:scale-[0.99] disabled:opacity-50 text-[#F4F0E8] text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer shadow-sm"
-        >
-          {submitting ? (
-            <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-          ) : (
-            <>
-              <Save className="w-3.5 h-3.5" />
-              <span>Save Changes</span>
-            </>
-          )}
-        </button>
+        <div className="pt-2">
+          <button
+            type="submit"
+            disabled={submitting}
+            className="w-full py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 active:scale-[0.99] text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md shadow-emerald-500/20 disabled:opacity-50"
+          >
+            <Save className="w-4 h-4" />
+            <span>{submitting ? 'Updating...' : 'Save Profile Changes'}</span>
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -3,7 +3,7 @@ import { useToast } from './ToastContext';
 
 const CartContext = createContext(null);
 
-const CART_STORAGE_KEY = 'bytecart_customer_cart_v1';
+const CART_STORAGE_KEY = 'nexbuy_customer_cart_v1';
 
 export function CartProvider({ children }) {
   const [items, setItems] = useState(() => {
@@ -77,7 +77,7 @@ export function CartProvider({ children }) {
 
   const applyPromoCode = (code) => {
     const clean = code.trim().toUpperCase();
-    if (clean === 'WELCOME10' || clean === 'BYTECART10') {
+    if (clean === 'WELCOME10' || clean === 'NEXBUY10') {
       setAppliedPromo({ code: clean, percentage: 10 });
       addToast('Promo code applied: 10% discount on order.', 'success');
       return true;

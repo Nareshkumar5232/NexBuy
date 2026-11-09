@@ -51,7 +51,7 @@ router.post('/calculate', (req, res) => {
     let appliedPromo = null;
     if (promoCode) {
       const clean = promoCode.trim().toUpperCase();
-      if (clean === 'WELCOME10' || clean === 'BYTECART10') {
+      if (clean === 'WELCOME10' || clean === 'NEXBUY10') {
         discount = Math.round((subtotal * 10) / 100);
         appliedPromo = { code: clean, percentage: 10, discount };
       } else if (clean === 'FIRST5') {
@@ -151,7 +151,7 @@ router.post('/', optionalAuth, (req, res) => {
     let discount = 0;
     if (promoCode) {
       const clean = promoCode.trim().toUpperCase();
-      if (clean === 'WELCOME10' || clean === 'BYTECART10') {
+      if (clean === 'WELCOME10' || clean === 'NEXBUY10') {
         discount = Math.round((subtotal * 10) / 100);
       } else if (clean === 'FIRST5') {
         discount = Math.round((subtotal * 5) / 100);
@@ -172,7 +172,7 @@ router.post('/', optionalAuth, (req, res) => {
 
     const total = Math.max(0, subtotal - discount + shipping + tax);
     const now = new Date().toISOString();
-    const orderId = 'BC' + Math.floor(10000 + Math.random() * 90000);
+    const orderId = 'NB' + Math.floor(10000 + Math.random() * 90000);
 
     // Deduct stock for confirmed items
     for (const item of orderItems) {
@@ -193,7 +193,7 @@ router.post('/', optionalAuth, (req, res) => {
       id: orderId,
       userId: req.user ? req.user.id : (req.body.userId || 'usr-guest'),
       customerName: shippingAddress.name || (req.user ? req.user.name : 'Guest Customer'),
-      customerEmail: shippingAddress.email || (req.user ? req.user.email : 'guest@bytecart.in'),
+      customerEmail: shippingAddress.email || (req.user ? req.user.email : 'reach2nexbuy@gmail.com'),
       customerPhone: shippingAddress.phone || '',
       items: orderItems,
       shippingAddress: {

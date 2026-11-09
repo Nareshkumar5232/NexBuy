@@ -4,7 +4,7 @@ import { productsData } from '../../../data/productsData';
 import { formatCurrency } from '../../../utils/formatters';
 import { useToast } from '../../../context/ToastContext';
 import ProductModal from './ProductModal';
-import { Layers, Plus, Search, Edit2, Trash2, RefreshCw, Sparkles } from 'lucide-react';
+import { Layers, Plus, Search, Edit2, Trash2, RefreshCw, Sparkles, Filter } from 'lucide-react';
 
 export default function AdminProducts() {
   const [products, setProducts] = useState([]);
@@ -43,7 +43,7 @@ export default function AdminProducts() {
       try {
         const seedResult = await adminService.seedDemoProducts();
         if (seedResult?.addedCount > 0) {
-          addToast(`Successfully added ${seedResult.addedCount} flagship demo products! They are live on the storefront and main page.`, 'success');
+          addToast(`Successfully synced ${seedResult.addedCount} NEXBUY tech products! They are live on the storefront.`, 'success');
           await fetchCatalog();
           return;
         }
@@ -62,7 +62,7 @@ export default function AdminProducts() {
       }
 
       if (count > 0) {
-        addToast(`Successfully added ${count} demo products! They are live on the storefront.`, 'success');
+        addToast(`Successfully added ${count} tech products to the database!`, 'success');
       } else {
         const targetCategory = categoryFilter !== 'all' ? categoryFilter : null;
         const candidates = targetCategory
@@ -73,12 +73,12 @@ export default function AdminProducts() {
         const newDemo = {
           ...base,
           id: undefined,
-          name: `${base.name} (Demo Unit #${randId})`,
+          name: `${base.name} (Unit #${randId})`,
           slug: `${base.slug}-unit-${randId}`,
-          sku: `SKU-DEMO-${randId}`,
+          sku: `NB-DEMO-${randId}`,
         };
         await adminService.createProduct(newDemo);
-        addToast(`Added new demo product "${newDemo.name}" in ${newDemo.categoryName}!`, 'success');
+        addToast(`Added new product "${newDemo.name}" in ${newDemo.categoryName}!`, 'success');
       }
 
       await fetchCatalog();
@@ -107,14 +107,14 @@ export default function AdminProducts() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A66A4C]">
-              Hardware Inventory & Catalog
+            <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600">
+              NEXBUY Inventory Management
             </span>
-            <span className="px-2 py-0.5 rounded-full bg-[#EAE4DA] text-[#77716A] text-[10px] font-semibold">
-              {products.length} Items Live
+            <span className="px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 text-[10px] font-bold">
+              {products.length} Products Live
             </span>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-serif text-[#24221F] font-bold">
+          <h1 className="text-2xl sm:text-3xl font-black text-slate-900">
             Products Catalog
           </h1>
         </div>
@@ -122,7 +122,7 @@ export default function AdminProducts() {
         <div className="flex flex-wrap items-center gap-2.5">
           <button
             onClick={fetchCatalog}
-            className="p-2.5 rounded-full border border-[#E2DBD0] bg-white hover:bg-[#EAE4DA] text-[#77716A] hover:text-[#24221F] transition-colors cursor-pointer"
+            className="p-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-600 hover:text-slate-900 transition-colors cursor-pointer shadow-xs"
             title="Refresh Catalog"
           >
             <RefreshCw className="w-4 h-4" />
@@ -131,16 +131,16 @@ export default function AdminProducts() {
           <button
             onClick={handleAddDemoProducts}
             disabled={seeding}
-            className="px-4 py-2.5 rounded-full border border-[#A66A4C]/30 bg-[#F4EBE1] hover:bg-[#A66A4C] text-[#A66A4C] hover:text-white text-xs font-semibold uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-colors shadow-xs disabled:opacity-50"
-            title="Seed high-spec demo products for main page"
+            className="px-4 py-2.5 rounded-xl border border-emerald-300 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-colors shadow-xs disabled:opacity-50"
+            title="Seed tech products"
           >
-            <Sparkles className={`w-3.5 h-3.5 ${seeding ? 'animate-spin' : ''}`} />
-            <span>{seeding ? 'Seeding...' : 'Add Demo Products'}</span>
+            <Sparkles className={`w-3.5 h-3.5 text-emerald-600 ${seeding ? 'animate-spin' : ''}`} />
+            <span>{seeding ? 'Seeding...' : 'Seed Tech Gear'}</span>
           </button>
 
           <button
             onClick={() => { setEditingProduct(null); setModalOpen(true); }}
-            className="px-5 py-2.5 rounded-full bg-[#24221F] hover:bg-[#A66A4C] text-white text-xs font-semibold uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-colors shadow-xs"
+            className="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-colors shadow-md shadow-emerald-500/20"
           >
             <Plus className="w-4 h-4" />
             <span>Add Product</span>
@@ -149,7 +149,7 @@ export default function AdminProducts() {
       </div>
 
       {/* Filter Toolbar */}
-      <div className="p-4 rounded-2xl bg-[#EAE4DA]/40 border border-[#E2DBD0] flex flex-col sm:flex-row gap-3 items-center justify-between">
+      <div className="p-4 rounded-2xl bg-white border border-slate-200 flex flex-col sm:flex-row gap-3 items-center justify-between shadow-xs">
         <div className="relative w-full sm:w-80">
           <input
             type="text"
@@ -157,17 +157,17 @@ export default function AdminProducts() {
             onChange={(e) => setSearch(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && fetchCatalog()}
             placeholder="Search products by title, SKU, brand..."
-            className="w-full pl-9 pr-4 py-2 rounded-xl bg-white border border-[#E2DBD0] text-xs text-[#24221F] focus:outline-none focus:border-[#A66A4C]"
+            className="w-full pl-9 pr-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 focus:outline-none focus:border-emerald-500"
           />
-          <Search className="w-3.5 h-3.5 text-[#77716A] absolute left-3 top-2.5" />
+          <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5" />
         </div>
 
         <select
           value={categoryFilter}
           onChange={(e) => setCategoryFilter(e.target.value)}
-          className="px-3 py-2 rounded-xl bg-white border border-[#E2DBD0] text-xs text-[#24221F] w-full sm:w-auto"
+          className="px-3 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 font-medium w-full sm:w-auto focus:outline-none focus:border-emerald-500"
         >
-          <option value="all">All Hardware Categories</option>
+          <option value="all">All Tech Categories ({categories.length})</option>
           {categories.map(c => (
             <option key={c.slug} value={c.slug}>{c.name}</option>
           ))}
@@ -175,86 +175,86 @@ export default function AdminProducts() {
       </div>
 
       {/* Table */}
-      <div className="bg-white rounded-3xl border border-[#E2DBD0] overflow-hidden shadow-xs">
+      <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
         {loading ? (
           <div className="py-20 flex flex-col items-center justify-center gap-3">
-            <div className="w-8 h-8 border-2 border-[#24221F] border-t-transparent rounded-full animate-spin" />
-            <p className="text-xs font-serif text-[#77716A] uppercase tracking-wider">Loading Product Catalog...</p>
+            <div className="w-8 h-8 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+            <p className="text-xs text-slate-500 uppercase font-bold tracking-wider">Syncing Product Catalog...</p>
           </div>
         ) : products.length === 0 ? (
           <div className="py-16 text-center space-y-4">
-            <Layers className="w-8 h-8 text-[#9E9890] mx-auto" />
+            <Layers className="w-8 h-8 text-slate-400 mx-auto" />
             <div>
-              <p className="text-base font-serif text-[#24221F] font-bold">No products in catalog yet.</p>
-              <p className="text-xs text-[#77716A] max-w-sm mx-auto mt-1">
-                Add realistic demo flagship products with one click so they immediately show on the storefront, or create custom items.
+              <p className="text-base font-bold text-slate-900">No products found in catalog.</p>
+              <p className="text-xs text-slate-500 max-w-sm mx-auto mt-1">
+                Add products from the preset tech catalog or create custom gadgets.
               </p>
             </div>
             <div className="flex items-center justify-center gap-3 pt-2">
               <button
                 onClick={handleAddDemoProducts}
                 disabled={seeding}
-                className="px-5 py-2.5 rounded-full bg-[#A66A4C] hover:bg-[#8e583d] text-white text-xs font-semibold uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-xs transition-colors"
+                className="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-xs transition-colors"
               >
                 <Sparkles className="w-4 h-4" />
-                <span>Add Demo Products</span>
+                <span>Add Tech Gear</span>
               </button>
               <button
                 onClick={() => { setEditingProduct(null); setModalOpen(true); }}
-                className="px-5 py-2.5 rounded-full bg-[#24221F] hover:bg-[#A66A4C] text-white text-xs font-semibold uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-xs transition-colors"
+                className="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-xs transition-colors"
               >
                 <Plus className="w-4 h-4" />
-                <span>Custom Product</span>
+                <span>Create Custom</span>
               </button>
             </div>
           </div>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-[#EAE4DA]/30 border-b border-[#E2DBD0] text-[#77716A] uppercase tracking-wider text-[10px]">
+              <thead className="bg-slate-50 border-b border-slate-200 text-slate-400 uppercase tracking-wider text-[10px]">
                 <tr>
-                  <th className="py-3 px-4 font-semibold">Product</th>
-                  <th className="py-3 px-4 font-semibold">Category</th>
-                  <th className="py-3 px-4 font-semibold">Brand</th>
-                  <th className="py-3 px-4 font-semibold">Price</th>
-                  <th className="py-3 px-4 font-semibold">Stock</th>
-                  <th className="py-3 px-4 font-semibold">SKU</th>
-                  <th className="py-3 px-4 font-semibold text-right">Actions</th>
+                  <th className="py-3 px-4 font-bold">Product</th>
+                  <th className="py-3 px-4 font-bold">Category</th>
+                  <th className="py-3 px-4 font-bold">Brand</th>
+                  <th className="py-3 px-4 font-bold">Price</th>
+                  <th className="py-3 px-4 font-bold">Stock</th>
+                  <th className="py-3 px-4 font-bold">SKU</th>
+                  <th className="py-3 px-4 font-bold text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#E2DBD0]">
+              <tbody className="divide-y divide-slate-100">
                 {products.map((p) => (
-                  <tr key={p.id} className="hover:bg-[#F5F2EC]/60 transition-colors">
+                  <tr key={p.id} className="hover:bg-slate-50 transition-colors">
                     <td className="py-3 px-4">
                       <div className="flex items-center gap-3">
                         <img
                           src={p.images?.[0]}
                           alt={p.name}
-                          className="w-10 h-10 rounded-lg object-cover bg-[#EAE4DA] shrink-0"
+                          className="w-10 h-10 rounded-lg object-cover bg-slate-100 border border-slate-200/80 shrink-0"
                           onError={(e) => {
-                            e.target.src = 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80';
+                            e.target.src = 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=400&q=80';
                           }}
                         />
                         <div className="min-w-0">
                           <div className="flex items-center gap-1.5">
-                            <p className="font-serif font-bold text-[#24221F] truncate">{p.name}</p>
+                            <p className="font-bold text-slate-900 truncate max-w-xs">{p.name}</p>
                             {p.featured && (
-                              <span className="px-1.5 py-0.2 bg-[#A66A4C] text-white text-[9px] rounded font-sans uppercase font-bold tracking-wider">
+                              <span className="px-1.5 py-0.2 bg-emerald-600 text-white text-[9px] rounded font-bold uppercase tracking-wider">
                                 Featured
                               </span>
                             )}
                           </div>
-                          <p className="text-[10px] text-[#77716A] truncate">{p.tagline}</p>
+                          <p className="text-[10px] text-slate-400 truncate">{p.tagline}</p>
                         </div>
                       </div>
                     </td>
-                    <td className="py-3 px-4 text-[#77716A]">{p.categoryName}</td>
-                    <td className="py-3 px-4 font-medium text-[#24221F]">{p.brand}</td>
-                    <td className="py-3 px-4 font-serif font-bold text-[#24221F]">{formatCurrency(p.price)}</td>
+                    <td className="py-3 px-4 text-slate-600 font-medium">{p.categoryName}</td>
+                    <td className="py-3 px-4 font-bold text-slate-800">{p.brand}</td>
+                    <td className="py-3 px-4 font-black text-slate-900">{formatCurrency(p.price)}</td>
                     <td className="py-3 px-4">
-                      <span className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-semibold ${
+                      <span className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold ${
                         p.stock === 0
-                          ? 'bg-red-100 text-red-800'
+                          ? 'bg-rose-100 text-rose-800'
                           : p.stock <= 5
                           ? 'bg-amber-100 text-amber-800'
                           : 'bg-emerald-100 text-emerald-800'
@@ -262,19 +262,19 @@ export default function AdminProducts() {
                         {p.stock} in stock
                       </span>
                     </td>
-                    <td className="py-3 px-4 font-mono text-[#77716A]">{p.sku}</td>
+                    <td className="py-3 px-4 font-mono text-slate-500 text-[11px]">{p.sku}</td>
                     <td className="py-3 px-4 text-right">
                       <div className="flex items-center justify-end gap-1.5">
                         <button
                           onClick={() => { setEditingProduct(p); setModalOpen(true); }}
-                          className="p-1.5 text-[#77716A] hover:text-[#24221F] hover:bg-[#EAE4DA] rounded-lg transition-colors cursor-pointer"
+                          className="p-1.5 text-slate-400 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors cursor-pointer"
                           title="Edit"
                         >
                           <Edit2 className="w-3.5 h-3.5" />
                         </button>
                         <button
                           onClick={() => handleDelete(p.id, p.name)}
-                          className="p-1.5 text-[#77716A] hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors cursor-pointer"
+                          className="p-1.5 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-colors cursor-pointer"
                           title="Delete"
                         >
                           <Trash2 className="w-3.5 h-3.5" />

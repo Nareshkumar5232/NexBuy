@@ -1,6 +1,6 @@
 import { apiRequest } from './api';
 
-const LOCAL_ORDERS_KEY = 'bytecart_orders_history_v1';
+const LOCAL_ORDERS_KEY = 'nexbuy_orders_history_v1';
 
 function getStoredOrders() {
   try {

@@ -37,7 +37,7 @@ export default function AdminInventory() {
         stock: Number(stockVal),
         inStock: Number(stockVal) > 0
       });
-      addToast('Inventory count updated successfully.', 'success');
+      addToast('Inventory count updated successfully in database.', 'success');
       fetchInventory();
     } catch (err) {
       addToast(err.message || 'Failed to update stock', 'error');
@@ -48,63 +48,63 @@ export default function AdminInventory() {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A66A4C]">
-            Stock Control
+          <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600">
+            Warehouse & Stock Management
           </span>
-          <h1 className="text-2xl sm:text-3xl font-serif text-[#24221F] font-bold">
+          <h1 className="text-2xl sm:text-3xl font-black text-slate-900">
             Real Inventory Levels
           </h1>
         </div>
 
         <button
           onClick={fetchInventory}
-          className="self-start sm:self-auto px-4 py-2 rounded-full border border-[#E2DBD0] bg-white hover:bg-[#EAE4DA] text-xs font-semibold text-[#24221F] flex items-center gap-2 transition-colors cursor-pointer"
+          className="self-start sm:self-auto px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-xs font-bold text-slate-700 flex items-center gap-2 transition-colors cursor-pointer shadow-xs"
         >
-          <RefreshCw className="w-3.5 h-3.5 text-[#77716A]" />
+          <RefreshCw className="w-3.5 h-3.5 text-slate-500" />
           <span>Refresh Stock</span>
         </button>
       </div>
 
-      <div className="bg-white rounded-3xl border border-[#E2DBD0] overflow-hidden shadow-xs">
+      <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
         {loading ? (
           <div className="py-20 flex flex-col items-center justify-center gap-3">
-            <div className="w-8 h-8 border-2 border-[#24221F] border-t-transparent rounded-full animate-spin" />
-            <p className="text-xs font-serif text-[#77716A] uppercase tracking-wider">Loading Inventory...</p>
+            <div className="w-8 h-8 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+            <p className="text-xs text-slate-500 uppercase font-bold tracking-wider">Syncing Inventory...</p>
           </div>
         ) : items.length === 0 ? (
           <div className="py-16 text-center space-y-2">
-            <Boxes className="w-8 h-8 text-[#9E9890] mx-auto" />
-            <p className="text-base font-serif text-[#24221F]">No inventory items available.</p>
+            <Boxes className="w-8 h-8 text-slate-400 mx-auto" />
+            <p className="text-base font-bold text-slate-900">No inventory items available.</p>
           </div>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-[#EAE4DA]/30 border-b border-[#E2DBD0] text-[#77716A] uppercase tracking-wider text-[10px]">
+              <thead className="bg-slate-50 border-b border-slate-200 text-slate-400 uppercase tracking-wider text-[10px]">
                 <tr>
-                  <th className="py-3 px-4 font-semibold">Product Name</th>
-                  <th className="py-3 px-4 font-semibold">SKU</th>
-                  <th className="py-3 px-4 font-semibold">Category</th>
-                  <th className="py-3 px-4 font-semibold">Current Stock</th>
-                  <th className="py-3 px-4 font-semibold">Status</th>
-                  <th className="py-3 px-4 font-semibold text-right">Quick Stock Adjustment</th>
+                  <th className="py-3 px-4 font-bold">Product Name</th>
+                  <th className="py-3 px-4 font-bold">SKU</th>
+                  <th className="py-3 px-4 font-bold">Category</th>
+                  <th className="py-3 px-4 font-bold">Current Stock</th>
+                  <th className="py-3 px-4 font-bold">Status</th>
+                  <th className="py-3 px-4 font-bold text-right">Quick Stock Adjustment</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#E2DBD0]">
+              <tbody className="divide-y divide-slate-100">
                 {items.map((item) => (
-                  <tr key={item.id} className="hover:bg-[#F5F2EC]/60 transition-colors">
-                    <td className="py-3.5 px-4 font-serif font-bold text-[#24221F]">{item.name}</td>
-                    <td className="py-3.5 px-4 font-mono text-[#77716A]">{item.sku}</td>
-                    <td className="py-3.5 px-4 text-[#77716A]">{item.categoryName}</td>
-                    <td className="py-3.5 px-4 font-bold text-[#24221F]">{item.currentStock} units</td>
+                  <tr key={item.id} className="hover:bg-slate-50 transition-colors">
+                    <td className="py-3.5 px-4 font-bold text-slate-900">{item.name}</td>
+                    <td className="py-3.5 px-4 font-mono text-slate-500 text-[11px]">{item.sku}</td>
+                    <td className="py-3.5 px-4 text-slate-600 font-medium">{item.categoryName}</td>
+                    <td className="py-3.5 px-4 font-black text-slate-900">{item.currentStock} units</td>
                     <td className="py-3.5 px-4">
-                      <span className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-semibold ${
+                      <span className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold ${
                         item.isOutOfStock
-                          ? 'bg-red-100 text-red-800'
+                          ? 'bg-rose-100 text-rose-800'
                           : item.isLowStock
                           ? 'bg-amber-100 text-amber-800'
                           : 'bg-emerald-100 text-emerald-800'
                       }`}>
-                        {item.isOutOfStock ? 'Out of Stock' : item.isLowStock ? 'Low Stock' : 'Optimal'}
+                        {item.isOutOfStock ? 'Out of Stock' : item.isLowStock ? 'Low Stock' : 'In Stock'}
                       </span>
                     </td>
                     <td className="py-3.5 px-4 text-right">
@@ -114,12 +114,12 @@ export default function AdminInventory() {
                           min="0"
                           value={editingStock[item.id] !== undefined ? editingStock[item.id] : item.currentStock}
                           onChange={(e) => setEditingStock({ ...editingStock, [item.id]: e.target.value })}
-                          className="w-20 px-2 py-1 rounded-lg bg-[#F5F2EC] border border-[#E2DBD0] text-center font-bold"
+                          className="w-20 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-900 font-bold focus:outline-none focus:border-emerald-500"
                         />
                         <button
                           onClick={() => handleStockUpdate(item.id)}
-                          className="p-1.5 rounded-lg bg-[#24221F] text-white hover:bg-[#A66A4C] transition-colors"
-                          title="Save Stock"
+                          className="p-1.5 rounded-lg bg-slate-900 hover:bg-emerald-600 text-white transition-colors cursor-pointer"
+                          title="Save stock level"
                         >
                           <Save className="w-3.5 h-3.5" />
                         </button>

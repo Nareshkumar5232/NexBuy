@@ -164,7 +164,7 @@ router.post('/', flexibleAdminAuth, (req, res) => {
       slug: uniqueSlug,
       categorySlug,
       categoryName: categoryName || categorySlug,
-      brand: brand || 'Bytecart',
+      brand: brand || 'NEXBUY',
       price: Number(price),
       originalPrice: originalPrice ? Number(originalPrice) : Number(price),
       stock: Number(stock),

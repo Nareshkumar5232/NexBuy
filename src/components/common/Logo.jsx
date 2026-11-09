@@ -1,24 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoImg from '../../logo.png';
+import logoPng from '../../logo.png';
 
-export default function Logo({ light = false, className = '', size = 'default' }) {
-  // Height sizing tailored for the tightly-cropped 773x160 logo
+export default function Logo({ light = true, className = '', size = 'default', showSubtitle = true }) {
   const heightClass =
     size === 'large'
-      ? 'h-11 sm:h-13 md:h-15'
+      ? 'h-11 sm:h-13'
       : size === 'small'
       ? 'h-7 sm:h-8'
-      : 'h-8 sm:h-9 md:h-10';
+      : 'h-9 sm:h-10';
 
   return (
-    <Link to="/" className={`inline-flex items-center group select-none ${className}`}>
+    <Link to="/" className={`inline-flex items-center gap-2 group select-none ${className}`}>
       <img
-        src={logoImg}
-        alt="BYTECART PRIVATE LIMITED"
-        className={`${heightClass} w-auto object-contain transition-transform duration-300 group-hover:scale-105 ${
-          light ? 'brightness-0 invert' : ''
-        }`}
+        src={logoPng}
+        alt="NEXBUY ENTERPRISES PVT LTD"
+        className={`${heightClass} w-auto max-w-[200px] object-contain transition-transform duration-300 group-hover:scale-105`}
       />
     </Link>
   );

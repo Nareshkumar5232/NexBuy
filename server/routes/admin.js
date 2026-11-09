@@ -154,7 +154,7 @@ router.get('/inventory', (req, res) => {
       slug: p.slug,
       sku: p.sku || ('SKU-' + p.id),
       categoryName: p.categoryName,
-      brand: p.brand || 'Bytecart',
+      brand: p.brand || 'NEXBUY',
       price: p.price,
       currentStock: p.stock !== undefined ? p.stock : 0,
       inStock: Boolean(p.inStock),
@@ -380,6 +380,22 @@ router.delete('/feedback/:id', (req, res) => {
   } catch (err) {
     res.status(500).json({ error: 'Failed to delete feedback.' });
   }
+});
+
+// Product aliases for admin operations
+router.post('/products', (req, res, next) => {
+  req.url = '/';
+  require('./products')(req, res, next);
+});
+
+router.put('/products/:id', (req, res, next) => {
+  req.url = `/${req.params.id}`;
+  require('./products')(req, res, next);
+});
+
+router.delete('/products/:id', (req, res, next) => {
+  req.url = `/${req.params.id}`;
+  require('./products')(req, res, next);
 });
 
 module.exports = router;

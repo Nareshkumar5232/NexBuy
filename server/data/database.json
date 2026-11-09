@@ -6,604 +6,928 @@
       "email": "admin@gmail.com",
       "password": "$2a$10$7hYJzh1Xi.8wE.CnhDcnZeIcZX4pYDaY4sRHnd.MtLw93wa8Qebn6",
       "role": "ADMIN",
-      "phone": "+91 98765 43210",
-      "createdAt": "2026-08-28T07:13:21.661Z",
-      "updatedAt": "2026-08-28T07:13:21.661Z"
+      "phone": "+91 74483 76974",
+      "createdAt": "2026-10-01T00:00:00.000Z",
+      "updatedAt": "2026-11-01T00:00:00.000Z"
     },
     {
-      "id": "usr_1787902523191_vva0",
-      "name": "Naresh Test User",
-      "email": "customer_1787902523128@example.com",
+      "id": "usr_test_001",
+      "name": "Karthik Subramanian",
+      "email": "karthik.subramanian@example.com",
       "password": "$2a$10$yQPxUTRnSEfAsLqZJ5pXS.c77Z3louJcK47r2Pw5/fx0xDBage2py",
       "role": "USER",
-      "phone": "+91 99999 88888",
-      "addresses": [],
-      "createdAt": "2026-08-28T07:35:23.191Z",
-      "updatedAt": "2026-08-28T07:35:23.191Z"
+      "phone": "+91 98401 23456",
+      "addresses": [
+        {
+          "id": "addr_1",
+          "name": "Karthik Subramanian",
+          "house": "Flat 3B, Emerald Towers",
+          "street": "18th Main Road, Anna Nagar",
+          "city": "Chennai",
+          "state": "Tamil Nadu",
+          "pincode": "600040",
+          "phone": "+91 98401 23456",
+          "isDefault": true
+        }
+      ],
+      "createdAt": "2026-10-05T07:35:23.191Z",
+      "updatedAt": "2026-10-05T07:35:23.191Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "headphones",
+      "name": "Headphones",
+      "slug": "headphones",
+      "shortName": "Headphones",
+      "tagline": "Immersive sound with industry-leading noise cancellation.",
+      "description": "Over-ear and on-ear wireless headphones engineered for studio audio precision, active noise cancellation, and all-day acoustic comfort.",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-10-01T00:00:00.000Z"
     },
     {
-      "id": "usr_1787902678291_bbwi",
-      "name": "Naresh Test User",
-      "email": "customer_1787902678226@example.com",
-      "password": "$2a$10$dokWgCZtEnCAiaLfsPC40O4UUe.903jR6RJvO.j1iJMn3k9S0c8Mm",
-      "role": "USER",
-      "phone": "+91 99999 88888",
-      "addresses": [],
-      "createdAt": "2026-08-28T07:37:58.291Z",
-      "updatedAt": "2026-08-28T07:37:58.291Z"
+      "id": "earbuds",
+      "name": "Earbuds",
+      "slug": "earbuds",
+      "shortName": "Earbuds",
+      "tagline": "True wireless audio with crystal clear spatial clarity.",
+      "description": "Compact, sweat-resistant true wireless earbuds with active noise cancellation, transparency modes, and long battery life for active lifestyles.",
+      "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-10-01T00:00:00.000Z"
+    },
+    {
+      "id": "smartwatches",
+      "name": "Smartwatches",
+      "slug": "smartwatches",
+      "shortName": "Smartwatches",
+      "tagline": "Fitness tracking, health diagnostics, and smart connectivity.",
+      "description": "Premium titanium and stainless steel smartwatches featuring AMOLED displays, GPS tracking, heart health sensors, and multi-day battery life.",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-10-01T00:00:00.000Z"
+    },
+    {
+      "id": "speakers",
+      "name": "Speakers",
+      "slug": "speakers",
+      "shortName": "Speakers",
+      "tagline": "Room-filling high-fidelity sound for home and on-the-go.",
+      "description": "Portable Bluetooth waterproof speakers, smart home soundbars, and audiophile studio monitors with deep bass and high-resolution spatial sound.",
+      "image": "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-10-01T00:00:00.000Z"
+    },
+    {
+      "id": "computer-accessories",
+      "name": "Computer Accessories",
+      "slug": "computer-accessories",
+      "shortName": "PC Accessories",
+      "tagline": "Elevate your desktop setup and daily productivity.",
+      "description": "Thunderbolt docking stations, ergonomic monitor arms, desk mats, webcams, and workspace lighting designed for peak daily performance.",
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-10-01T00:00:00.000Z"
+    },
+    {
+      "id": "keyboards-mouse",
+      "name": "Keyboards & Mouse",
+      "slug": "keyboards-mouse",
+      "shortName": "Keyboards & Mouse",
+      "tagline": "Tactile mechanical precision and ergonomic optical tracking.",
+      "description": "Custom mechanical keyboards with hot-swappable switches, wireless low-profile boards, and high-DPI ergonomic mice for coding and gaming.",
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-10-01T00:00:00.000Z"
+    },
+    {
+      "id": "chargers-cables",
+      "name": "Chargers & Cables",
+      "slug": "chargers-cables",
+      "shortName": "Chargers & Cables",
+      "tagline": "Ultra-fast GaN power delivery and military-grade braided cables.",
+      "description": "High-wattage multi-port GaN wall chargers, fast-charging power banks, and heavy-duty braided USB-C and Thunderbolt 4 cables.",
+      "image": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-10-01T00:00:00.000Z"
+    },
+    {
+      "id": "storage-devices",
+      "name": "Storage Devices",
+      "slug": "storage-devices",
+      "shortName": "Storage Devices",
+      "tagline": "Blazing-fast PCIe Gen 4 SSDs and rugged portable drives.",
+      "description": "High-speed NVMe internal solid state drives, rugged portable external SSDs, and high-capacity backup drives for high-bandwidth data transfers.",
+      "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-10-01T00:00:00.000Z"
+    },
+    {
+      "id": "networking",
+      "name": "Networking",
+      "slug": "networking",
+      "shortName": "Networking",
+      "tagline": "Next-generation Wi-Fi 6E/7 routers and enterprise mesh systems.",
+      "description": "Ultra-fast tri-band Wi-Fi 6E/7 gaming routers, whole-home mesh network systems, gigabit PoE switches, and high-speed network interfaces.",
+      "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-10-01T00:00:00.000Z"
+    },
+    {
+      "id": "other-gadgets",
+      "name": "Other Gadgets",
+      "slug": "other-gadgets",
+      "shortName": "Other Gadgets",
+      "tagline": "Smart lifestyle tech, streaming gear, and innovative electronics.",
+      "description": "Gimbal cameras, interactive stream controllers, smart lighting strips, wireless presenters, and innovative tech lifestyle essentials.",
+      "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
+      "createdAt": "2026-10-01T00:00:00.000Z"
+    }
+  ],
+  "brands": [
+    {
+      "id": "brd_1",
+      "name": "Apple",
+      "slug": "apple"
+    },
+    {
+      "id": "brd_2",
+      "name": "Sony",
+      "slug": "sony"
+    },
+    {
+      "id": "brd_3",
+      "name": "Bose",
+      "slug": "bose"
+    },
+    {
+      "id": "brd_4",
+      "name": "Samsung",
+      "slug": "samsung"
+    },
+    {
+      "id": "brd_5",
+      "name": "Marshall",
+      "slug": "marshall"
+    },
+    {
+      "id": "brd_6",
+      "name": "JBL",
+      "slug": "jbl"
+    },
+    {
+      "id": "brd_7",
+      "name": "Keychron",
+      "slug": "keychron"
+    },
+    {
+      "id": "brd_8",
+      "name": "Logitech",
+      "slug": "logitech"
+    },
+    {
+      "id": "brd_9",
+      "name": "Anker",
+      "slug": "anker"
+    },
+    {
+      "id": "brd_10",
+      "name": "CalDigit",
+      "slug": "caldigit"
+    },
+    {
+      "id": "brd_11",
+      "name": "BenQ",
+      "slug": "benq"
+    },
+    {
+      "id": "brd_12",
+      "name": "SanDisk",
+      "slug": "sandisk"
+    },
+    {
+      "id": "brd_13",
+      "name": "ASUS ROG",
+      "slug": "asus-rog"
+    },
+    {
+      "id": "brd_14",
+      "name": "Ubiquiti",
+      "slug": "ubiquiti"
+    },
+    {
+      "id": "brd_15",
+      "name": "DJI",
+      "slug": "dji"
+    },
+    {
+      "id": "brd_16",
+      "name": "Elgato",
+      "slug": "elgato"
     }
   ],
   "products": [
     {
-      "id": "prod_demo_001",
-      "name": "MacBook Pro 16 M3 Max Ultra Spec",
-      "slug": "macbook-pro-16-m3-max-ultra-spec",
-      "categorySlug": "laptops",
-      "categoryName": "Laptops",
-      "brand": "Apple",
-      "price": 349900,
-      "originalPrice": 379900,
-      "stock": 14,
+      "id": "prod_1794037022547",
+      "name": "NEXBUY Pro Acoustic T500 (1794037022537)",
+      "slug": "nexbuy-pro-acoustic-t500-1794037022537",
+      "categorySlug": "headphones",
+      "categoryName": "Headphones",
+      "brand": "NEXBUY",
+      "price": 9999,
+      "originalPrice": 14999,
+      "stock": 25,
       "inStock": true,
-      "sku": "SKU-MBP16-M3MAX",
-      "tagline": "Supreme M3 Max silicon with 16.2\" Liquid Retina XDR display",
-      "description": "The most powerful Mac notebook ever designed for extreme workflows. Featuring Apple M3 Max with a 16-core CPU and 40-core GPU, stunning Liquid Retina XDR display with 1600 nits peak brightness, and up to 22 hours of battery life.",
+      "sku": "NB-T500-2537",
+      "tagline": "Precision engineered planar magnetic headphones",
+      "description": "Studio-grade planar magnetic headphones crafted with CNC milled aluminum earcups.",
       "images": [
-        "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
       ],
       "specs": {
-        "processor": "Apple M3 Max (16-Core CPU, 40-Core GPU, 16-Core Neural Engine)",
-        "ram": "64GB Unified Memory",
-        "storage": "1TB Ultra-Fast PCIe NVMe SSD",
-        "display": "16.2-inch Liquid Retina XDR (3456x2234) 120Hz ProMotion",
-        "os": "macOS Sequoia",
-        "battery": "100Wh Lithium-Polymer, 140W USB-C Power Adapter"
+        "Acoustic Driver": "50mm Planar Magnetic",
+        "Impedance": "32 Ohm"
       },
-      "dimensions": "35.57 x 24.81 x 1.68 cm",
-      "weight": "2.16 kg",
+      "dimensions": "",
+      "weight": "",
+      "warranty": "1 Year Official Warranty",
+      "tags": [],
+      "featured": false,
+      "rating": 4.8,
+      "reviewsCount": 0,
+      "createdAt": "2026-11-07T07:37:02.547Z",
+      "updatedAt": "2026-11-07T07:37:02.547Z"
+    },
+    {
+      "id": "prod_nb_001",
+      "name": "Sony WH-1000XM5 Wireless Noise-Canceling Headphones",
+      "slug": "sony-wh-1000xm5-wireless-noise-canceling-headphones",
+      "categorySlug": "headphones",
+      "categoryName": "Headphones",
+      "brand": "Sony",
+      "price": 28990,
+      "originalPrice": 34990,
+      "stock": 22,
+      "inStock": true,
+      "sku": "SKU-NB-SNY-XM5",
+      "tagline": "Industry-leading noise cancellation with 8 microphones & Auto NC Optimizer",
+      "description": "Equipped with two processors and 8 microphones, the Sony WH-1000XM5 delivers unprecedented active noise cancelation. A specially engineered 30mm carbon fiber driver provides ultra-clear high frequencies and punchy, tight bass.",
+      "images": [
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "specs": {
+        "driver": "30mm precision carbon fiber composite dome",
+        "battery": "30 hours with ANC enabled; 3-min quick charge provides 3 hours playback",
+        "connectivity": "Bluetooth 5.2 with Multipoint dual-device pairing, LDAC High-Res audio",
+        "microphones": "4 beamforming mics with AI-based noise reduction for crystal clear calls",
+        "weight": "250g ultra-lightweight comfortable synthetic leather"
+      },
+      "dimensions": "22.5 x 19.8 x 7.3 cm",
+      "weight": "0.25 kg",
+      "warranty": "1 Year Official Sony India Warranty",
+      "tags": [
+        "Sony",
+        "Headphones",
+        "Noise-Canceling",
+        "Wireless",
+        "Featured",
+        "Bestseller"
+      ],
+      "badge": "Bestseller",
+      "featured": true,
+      "rating": 4.9,
+      "reviewsCount": 84,
+      "createdAt": "2026-10-01T10:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
+    },
+    {
+      "id": "prod_nb_002",
+      "name": "Bose QuietComfort Ultra Wireless Headphones",
+      "slug": "bose-quietcomfort-ultra-wireless-headphones",
+      "categorySlug": "headphones",
+      "categoryName": "Headphones",
+      "brand": "Bose",
+      "price": 35900,
+      "originalPrice": 39900,
+      "stock": 14,
+      "inStock": true,
+      "sku": "SKU-NB-BOSE-QCU",
+      "tagline": "World-class spatial audio with Bose Immersive Audio technology",
+      "description": "Experience breakthrough spatialized sound that makes what you're hearing feel more real than ever. CustomTune technology personalizes sound to the shape of your ears, while ultra-soft ear cushions provide luxurious comfort.",
+      "images": [
+        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "specs": {
+        "audio": "Bose Immersive Spatial Audio with CustomTune acoustic tuning",
+        "battery": "Up to 24 hours playback (18 hours with Immersive Audio)",
+        "modes": "Quiet Mode, Aware Mode with ActiveSense, Immersion Mode",
+        "materials": "Cast aluminum yokes, soft protein leather ear cushions",
+        "connectivity": "Bluetooth 5.3, Snapdragon Sound support"
+      },
+      "dimensions": "19.5 x 14.0 x 5.0 cm",
+      "weight": "0.252 kg",
+      "warranty": "1 Year Official Bose India Warranty",
+      "tags": [
+        "Bose",
+        "Headphones",
+        "Spatial Audio",
+        "QuietComfort",
+        "Featured"
+      ],
+      "badge": "Editor's Choice",
+      "featured": true,
+      "rating": 4.8,
+      "reviewsCount": 46,
+      "createdAt": "2026-10-03T11:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
+    },
+    {
+      "id": "prod_nb_003",
+      "name": "Apple AirPods Max — Space Gray",
+      "slug": "apple-airpods-max-space-gray",
+      "categorySlug": "headphones",
+      "categoryName": "Headphones",
+      "brand": "Apple",
+      "price": 54900,
+      "originalPrice": 59900,
+      "stock": 9,
+      "inStock": true,
+      "sku": "SKU-NB-APL-MAX",
+      "tagline": "High-fidelity audio with Apple-designed dynamic driver & computational audio",
+      "description": "The ultimate over-ear listening experience. An Apple-designed 40mm dynamic driver provides high-fidelity audio with ultra-low distortion across the audible range. Computational audio powered by the Apple H1 chip in each ear cup.",
+      "images": [
+        "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "specs": {
+        "driver": "Apple-designed 40mm dynamic driver with dual neodymium ring magnet",
+        "chip": "Apple H1 headphone chip in each ear cup",
+        "anc": "Active Noise Cancellation with Transparency mode and Personalized Spatial Audio",
+        "battery": "Up to 20 hours listening time on a single charge with ANC enabled"
+      },
+      "dimensions": "18.7 x 16.8 x 8.3 cm",
+      "weight": "0.384 kg",
       "warranty": "1 Year Official AppleCare Warranty",
       "tags": [
         "Apple",
-        "M3 Max",
-        "Laptop",
-        "Workstation",
+        "AirPods Max",
+        "Premium",
+        "High-Fidelity"
+      ],
+      "badge": "Flagship",
+      "featured": false,
+      "rating": 4.9,
+      "reviewsCount": 39,
+      "createdAt": "2026-10-05T12:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
+    },
+    {
+      "id": "prod_nb_004",
+      "name": "Apple AirPods Pro (2nd Generation) USB-C",
+      "slug": "apple-airpods-pro-2nd-gen-usb-c",
+      "categorySlug": "earbuds",
+      "categoryName": "Earbuds",
+      "brand": "Apple",
+      "price": 21900,
+      "originalPrice": 24900,
+      "stock": 35,
+      "inStock": true,
+      "sku": "SKU-NB-APL-APP2",
+      "tagline": "Powered by Apple H2 chip with 2x more Active Noise Cancellation",
+      "description": "Next-level active noise cancellation and Adaptive Audio that intelligently tailors noise control to your environment. MagSafe Charging Case (USB-C) with speaker and lanyard loop, plus IP54 dust, sweat, and water resistance.",
+      "images": [
+        "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "specs": {
+        "chip": "Apple H2 headphone chip and Apple U1 in charging case",
+        "anc": "Up to 2x more Active Noise Cancellation + Adaptive Transparency",
+        "battery": "Up to 6 hours listening time (up to 30 hours with case)",
+        "durability": "IP54 dust, sweat, and water resistant (earbuds and case)",
+        "charging": "USB-C, MagSafe, Apple Watch charger, or Qi-certified chargers"
+      },
+      "dimensions": "3.09 x 2.18 x 2.40 cm",
+      "weight": "0.056 kg",
+      "warranty": "1 Year Official AppleCare Warranty",
+      "tags": [
+        "Apple",
+        "AirPods",
+        "Earbuds",
+        "ANC",
+        "Featured",
+        "Bestseller"
+      ],
+      "badge": "Top Seller",
+      "featured": true,
+      "rating": 4.9,
+      "reviewsCount": 112,
+      "createdAt": "2026-10-06T10:30:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
+    },
+    {
+      "id": "prod_nb_005",
+      "name": "Sony WF-1000XM5 True Wireless Noise Canceling Earbuds",
+      "slug": "sony-wf-1000xm5-true-wireless-earbuds",
+      "categorySlug": "earbuds",
+      "categoryName": "Earbuds",
+      "brand": "Sony",
+      "price": 21990,
+      "originalPrice": 24990,
+      "stock": 18,
+      "inStock": true,
+      "sku": "SKU-NB-SNY-WXM5",
+      "tagline": "Dynamic Driver X with Integrated Processor V2 & HD Noise Canceling QN2e",
+      "description": "The best noise cancellation in earbuds with dual feedback microphones and Dynamic Driver X for wide frequency reproduction and deep bass. Bone conduction sensors ensure natural call clarity even in noisy environments.",
+      "images": [
+        "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "specs": {
+        "driver": "8.4mm Dynamic Driver X with carbon-dome diaphragm",
+        "battery": "8 hours in earbuds + 16 hours in case with ANC; Qi wireless charging",
+        "codecs": "LDAC, AAC, SBC, LC3 support",
+        "waterproof": "IPX4 water-resistant rating"
+      },
+      "dimensions": "6.4 x 4.0 x 2.6 cm",
+      "weight": "0.045 kg",
+      "warranty": "1 Year Official Sony India Warranty",
+      "tags": [
+        "Sony",
+        "Earbuds",
+        "Wireless",
+        "Noise Canceling"
+      ],
+      "badge": "Audiophile",
+      "featured": false,
+      "rating": 4.8,
+      "reviewsCount": 52,
+      "createdAt": "2026-10-08T14:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
+    },
+    {
+      "id": "prod_nb_006",
+      "name": "Apple Watch Ultra 2 Titanium GPS + Cellular",
+      "slug": "apple-watch-ultra-2-titanium-gps-cellular",
+      "categorySlug": "smartwatches",
+      "categoryName": "Smartwatches",
+      "brand": "Apple",
+      "price": 84900,
+      "originalPrice": 89900,
+      "stock": 11,
+      "inStock": true,
+      "sku": "SKU-NB-APL-UW2",
+      "tagline": "Rugged aerospace-grade 49mm titanium case with 3000 nits Always-On Retina display",
+      "description": "The most capable and rugged Apple Watch ever. Featuring the S9 SiP for double tap gesture, Siri on device, precision dual-frequency GPS, and up to 36 hours of normal battery life (72 hours in low power mode). Water resistant to 100m.",
+      "images": [
+        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "specs": {
+        "case": "49mm Aerospace-grade Titanium case with sapphire front crystal",
+        "display": "Always-On Retina display with up to 3,000 nits peak brightness",
+        "battery": "Up to 36 hours of normal use, up to 72 hours in Low Power Mode",
+        "features": "Precision Dual-frequency GPS, Depth gauge, Water temperature sensor, 86-decibel Siren",
+        "resistance": "100m water resistance, EN13319 dive computer certification"
+      },
+      "dimensions": "4.9 x 4.4 x 1.44 cm",
+      "weight": "0.061 kg",
+      "warranty": "1 Year Official AppleCare Warranty",
+      "tags": [
+        "Apple",
+        "Smartwatch",
+        "Titanium",
+        "GPS",
         "Featured"
       ],
       "badge": "Flagship",
       "featured": true,
       "rating": 4.9,
-      "reviewsCount": 38,
-      "createdAt": "2026-09-01T10:00:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
+      "reviewsCount": 41,
+      "createdAt": "2026-10-10T09:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
     },
     {
-      "id": "prod_demo_002",
-      "name": "Dell XPS 15 9530 OLED Creator Edition",
-      "slug": "dell-xps-15-oled-creator-edition",
-      "categorySlug": "laptops",
-      "categoryName": "Laptops",
-      "brand": "Dell",
-      "price": 224900,
-      "originalPrice": 249900,
-      "stock": 8,
+      "id": "prod_nb_007",
+      "name": "Samsung Galaxy Watch6 Classic 47mm LTE",
+      "slug": "samsung-galaxy-watch6-classic-47mm-lte",
+      "categorySlug": "smartwatches",
+      "categoryName": "Smartwatches",
+      "brand": "Samsung",
+      "price": 38999,
+      "originalPrice": 43999,
+      "stock": 16,
       "inStock": true,
-      "sku": "SKU-DELL-XPS15",
-      "tagline": "3.5K OLED InfinityEdge touch display with Intel Core i9 & RTX 4070",
-      "description": "Engineered for creators and heavy computational workloads. Built from CNC machined aluminum with a carbon fiber composite palm rest. Gorgeous 3.5K OLED touch panel with 100% DCI-P3 color gamut, NVIDIA GeForce RTX 4070, and studio-grade sound.",
+      "sku": "SKU-NB-SS-GW6C",
+      "tagline": "Iconic rotating physical bezel with advanced sleep coaching & ECG sensor",
+      "description": "Classic watch aesthetics meets modern fitness intelligence. Stainless steel construction with a slender rotating bezel, sapphire crystal glass display, body composition analysis, blood pressure monitoring, and 4G LTE eSIM connectivity.",
       "images": [
-        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
-        "processor": "Intel Core i9-13900H (14 Cores, 20 Threads, up to 5.4 GHz)",
-        "ram": "32GB DDR5 4800MHz Dual-Channel",
-        "storage": "1TB M.2 PCIe NVMe Gen 4 SSD",
-        "gpu": "NVIDIA GeForce RTX 4070 8GB GDDR6",
-        "display": "15.6-inch 3.5K (3456x2160) OLED Touch 400-nit Anti-Reflective",
-        "os": "Windows 11 Pro"
+        "display": "1.5-inch Super AMOLED (480x480) with Sapphire Crystal Glass",
+        "durability": "MIL-STD-810H, 5ATM + IP68 water & dust resistance",
+        "sensors": "BioActive Sensor (Optical Heart Rate + Electrical Heart Signal + BIA)",
+        "battery": "425mAh with fast wireless charging (up to 40 hours runtime)"
       },
-      "dimensions": "34.47 x 23.01 x 1.80 cm",
-      "weight": "1.92 kg",
-      "warranty": "2 Years Dell Premium Support Onsite",
+      "dimensions": "4.65 x 4.65 x 1.09 cm",
+      "weight": "0.059 kg",
+      "warranty": "1 Year Official Samsung India Warranty",
       "tags": [
-        "Dell",
-        "XPS",
-        "OLED",
-        "Creator",
-        "Featured"
+        "Samsung",
+        "Smartwatch",
+        "LTE",
+        "Fitness"
       ],
-      "badge": "Creator Choice",
-      "featured": true,
-      "rating": 4.8,
-      "reviewsCount": 24,
-      "createdAt": "2026-09-02T11:00:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
+      "badge": "Popular",
+      "featured": false,
+      "rating": 4.7,
+      "reviewsCount": 38,
+      "createdAt": "2026-10-12T11:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
     },
     {
-      "id": "prod_demo_003",
-      "name": "Samsung Odyssey Neo G9 49\" Curved Gaming Monitor",
-      "slug": "samsung-odyssey-neo-g9-49-curved",
-      "categorySlug": "monitors",
-      "categoryName": "Monitors",
-      "brand": "Samsung",
-      "price": 169999,
-      "originalPrice": 199999,
-      "stock": 5,
+      "id": "prod_nb_008",
+      "name": "Marshall Stanmore III Bluetooth Home Speaker",
+      "slug": "marshall-stanmore-iii-bluetooth-home-speaker",
+      "categorySlug": "speakers",
+      "categoryName": "Speakers",
+      "brand": "Marshall",
+      "price": 36999,
+      "originalPrice": 41999,
+      "stock": 12,
       "inStock": true,
-      "sku": "SKU-SAM-G9NEO",
-      "tagline": "Dual QHD 1000R curved Quantum Mini-LED display with 240Hz refresh",
-      "description": "Enter an ultra-immersive visual realm. The 49-inch 1000R super ultra-wide screen envelops your field of view. Quantum Mini-LED backlighting achieves 2,048 dimming zones and Quantum HDR 2000, paired with 240Hz refresh rate and 1ms response time.",
+      "sku": "SKU-NB-MSH-ST3",
+      "tagline": "Iconic rock 'n' roll vintage design with wider stereo soundstage & 80W power",
+      "description": "As the middleweight speaker of the home line-up, Stanmore III brings expansive Marshall sound to any room. Outward-angled tweeters and updated waveguides deliver consistently solid sound that chases you around the room.",
+      "images": [
+        "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "specs": {
+        "amplifiers": "One 50 Watt Class D amplifier for woofer, two 15 Watt Class D for tweeters",
+        "maxSound": "97 dB @ 1 m frequency range: 45–20,000 Hz",
+        "connectivity": "Bluetooth 5.2, 3.5 mm AUX input, RCA analog input",
+        "controls": "Analog brass control knobs for Volume, Bass, and Treble"
+      },
+      "dimensions": "35.0 x 20.3 x 18.8 cm",
+      "weight": "4.25 kg",
+      "warranty": "1 Year Official Marshall India Warranty",
+      "tags": [
+        "Marshall",
+        "Speaker",
+        "Bluetooth",
+        "Vintage",
+        "Featured"
+      ],
+      "badge": "Iconic Design",
+      "featured": true,
+      "rating": 4.9,
+      "reviewsCount": 63,
+      "createdAt": "2026-10-14T10:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
+    },
+    {
+      "id": "prod_nb_009",
+      "name": "JBL Charge 5 Portable Waterproof Bluetooth Speaker",
+      "slug": "jbl-charge-5-portable-waterproof-speaker",
+      "categorySlug": "speakers",
+      "categoryName": "Speakers",
+      "brand": "JBL",
+      "price": 13999,
+      "originalPrice": 17999,
+      "stock": 28,
+      "inStock": true,
+      "sku": "SKU-NB-JBL-CHG5",
+      "tagline": "Bold JBL Original Pro Sound with IP67 waterproof & built-in power bank",
+      "description": "Take the party with you no matter the weather. Delivering an optimized long-excursion driver, separate tweeter, and dual pumping JBL bass radiators. Up to 20 hours of playtime and a built-in power bank to keep your phones charged.",
+      "images": [
+        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "specs": {
+        "power": "30W RMS woofer + 10W RMS tweeter (40W total output)",
+        "battery": "7500mAh Li-ion battery (up to 20 hours playtime)",
+        "waterproof": "IP67 dustproof and waterproof design",
+        "partyBoost": "Connect multiple PartyBoost-compatible JBL speakers together"
+      },
+      "dimensions": "22.3 x 9.65 x 9.4 cm",
+      "weight": "0.96 kg",
+      "warranty": "1 Year Official JBL India Warranty",
+      "tags": [
+        "JBL",
+        "Speaker",
+        "Waterproof",
+        "Portable"
+      ],
+      "badge": "Bestseller",
+      "featured": false,
+      "rating": 4.8,
+      "reviewsCount": 95,
+      "createdAt": "2026-10-15T15:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
+    },
+    {
+      "id": "prod_nb_010",
+      "name": "CalDigit TS4 18-Port Thunderbolt 4 Docking Station",
+      "slug": "caldigit-ts4-thunderbolt-4-dock",
+      "categorySlug": "computer-accessories",
+      "categoryName": "Computer Accessories",
+      "brand": "CalDigit",
+      "price": 39999,
+      "originalPrice": 44999,
+      "stock": 15,
+      "inStock": true,
+      "sku": "SKU-NB-CD-TS4",
+      "tagline": "18 ports of extreme connectivity with 98W Power Delivery for Mac & PC",
+      "description": "The undisputed king of Thunderbolt docks. Boasts 18 ports including 3x Thunderbolt 4 ports, 5x USB-A, 3x USB-C (up to 20W power delivery), DisplayPort 1.4, 2.5GbE LAN, SD/microSD 4.0 card readers, and front/rear audio jacks.",
       "images": [
         "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1585792180666-f7347c490ee2?auto=format&fit=crop&w=1200&q=80",
         "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
-        "display": "49-inch Dual QHD (5120 x 1440) 32:9 Aspect Ratio",
-        "panel": "Quantum Mini-LED VA Panel with 1000R Curvature",
-        "refreshRate": "240Hz, 1ms (GtG) Response Time",
-        "hdr": "Quantum HDR 2000, 2048 Local Dimming Zones",
-        "ports": "2x HDMI 2.1, 1x DisplayPort 1.4, 2x USB 3.0 Hub"
+        "ports": "18 Total Ports: 3x TB4 (40Gb/s), 5x USB-A 3.2 Gen2, 3x USB-C (1x 20W), 1x DP 1.4, 1x 2.5GbE",
+        "power": "98W continuous charging power to host laptop",
+        "displays": "Single 8K @ 60Hz or Dual 4K @ 60Hz displays supported",
+        "compatibility": "macOS 11.4+, Windows 10/11 Thunderbolt 4 or USB4 machines"
       },
-      "dimensions": "114.9 x 53.7 x 41.8 cm",
-      "weight": "14.5 kg",
-      "warranty": "3 Years Samsung India On-Site Warranty",
+      "dimensions": "19.8 x 11.3 x 4.2 cm",
+      "weight": "0.64 kg",
+      "warranty": "2 Years Official Global Warranty",
       "tags": [
-        "Samsung",
-        "Monitor",
-        "Curved",
-        "Gaming",
-        "Featured"
-      ],
-      "badge": "Bestseller",
-      "featured": true,
-      "rating": 4.9,
-      "reviewsCount": 31,
-      "createdAt": "2026-09-03T09:30:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
-    },
-    {
-      "id": "prod_demo_004",
-      "name": "ASUS ROG Zephyrus G16 OLED Gaming Beast",
-      "slug": "asus-rog-zephyrus-g16-gaming",
-      "categorySlug": "gaming",
-      "categoryName": "Gaming",
-      "brand": "ASUS ROG",
-      "price": 219990,
-      "originalPrice": 239990,
-      "stock": 7,
-      "inStock": true,
-      "sku": "SKU-ROG-G16-2026",
-      "tagline": "Intel Core Ultra 9 with RTX 4080 and 2.5K 240Hz ROG Nebula OLED",
-      "description": "CNC-machined aluminum body featuring the signature Slash Lighting array. Powered by an Intel Core Ultra 9 processor with dedicated AI NPU, paired with NVIDIA GeForce RTX 4080 GPU in a sub-2cm ultrathin profile for seamless competitive esports and studio workflows.",
-      "images": [
-        "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=1200&q=80"
-      ],
-      "specs": {
-        "processor": "Intel Core Ultra 9 185H (16 Cores, 22 Threads, up to 5.1 GHz)",
-        "ram": "32GB LPDDR5X 7467MHz Dual-Channel",
-        "storage": "2TB M.2 NVMe PCIe 4.0 SSD",
-        "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU 12GB GDDR6",
-        "display": "16-inch 2.5K (2560x1600) ROG Nebula OLED 240Hz 0.2ms",
-        "os": "Windows 11 Home"
-      },
-      "dimensions": "35.4 x 24.6 x 1.49 cm",
-      "weight": "1.85 kg",
-      "warranty": "1 Year ASUS Global Warranty + 1 Year Accidental Damage",
-      "tags": [
-        "ASUS",
-        "ROG",
-        "Gaming",
-        "RTX 4080",
-        "OLED"
-      ],
-      "badge": "High Performance",
-      "featured": false,
-      "rating": 4.8,
-      "reviewsCount": 19,
-      "createdAt": "2026-09-04T14:20:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
-    },
-    {
-      "id": "prod_demo_005",
-      "name": "ThinkPad X1 Carbon Gen 12 Ultralight",
-      "slug": "thinkpad-x1-carbon-gen-12-ultralight",
-      "categorySlug": "laptops",
-      "categoryName": "Laptops",
-      "brand": "Lenovo",
-      "price": 189900,
-      "originalPrice": 215000,
-      "stock": 12,
-      "inStock": true,
-      "sku": "SKU-TP-X1C12",
-      "tagline": "Ultra-featherweight carbon fiber chassis with Intel Core Ultra 7",
-      "description": "The gold standard in executive business laptops. Crafted with aerospace-grade carbon fiber and magnesium alloy. Features 2.8K 120Hz OLED display, MIL-STD 810H durability, and exceptional battery stamina.",
-      "images": [
-        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80"
-      ],
-      "specs": {
-        "processor": "Intel Core Ultra 7 155H (16 Cores, up to 4.8 GHz)",
-        "ram": "32GB LPDDR5X 6400MHz",
-        "storage": "1TB PCIe NVMe Gen 4 SSD",
-        "display": "14-inch 2.8K (2880x1800) OLED 120Hz Display",
-        "os": "Windows 11 Pro",
-        "battery": "57Wh with Rapid Charge 65W"
-      },
-      "dimensions": "31.28 x 21.47 x 1.49 cm",
-      "weight": "1.09 kg",
-      "warranty": "3 Years Premier Support Onsite",
-      "tags": [
-        "Lenovo",
-        "ThinkPad",
-        "Business",
-        "Ultralight"
-      ],
-      "badge": "Executive",
-      "featured": false,
-      "rating": 4.9,
-      "reviewsCount": 15,
-      "createdAt": "2026-09-05T08:00:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
-    },
-    {
-      "id": "prod_demo_006",
-      "name": "Apple Mac Studio M2 Ultra Workstation",
-      "slug": "apple-mac-studio-m2-ultra-workstation",
-      "categorySlug": "desktops",
-      "categoryName": "Desktops",
-      "brand": "Apple",
-      "price": 419900,
-      "originalPrice": 449900,
-      "stock": 6,
-      "inStock": true,
-      "sku": "SKU-MAC-STUDIO-M2U",
-      "tagline": "Outrageous M2 Ultra power with 24-core CPU & 60-core GPU in a 7.7-inch footprint",
-      "description": "Mac Studio is an entirely unprecedented powerhouse. Packed with M2 Ultra, delivering double the performance of M2 Max. Capable of driving up to 8 displays, playback of 22 streams of 8K ProRes video, and whisper-quiet thermal architecture.",
-      "images": [
-        "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=1200&q=80"
-      ],
-      "specs": {
-        "processor": "Apple M2 Ultra (24-Core CPU, 60-Core GPU, 32-Core Neural Engine)",
-        "ram": "128GB Unified Memory with 800GB/s bandwidth",
-        "storage": "2TB Ultra-Fast SSD Storage",
-        "display": "Supports up to 8 external 4K displays or 6 6K displays",
-        "os": "macOS Sequoia",
-        "ports": "6x Thunderbolt 4, 2x USB-A, 10Gb Ethernet, HDMI 2.1, SDXC"
-      },
-      "dimensions": "19.7 x 19.7 x 9.5 cm",
-      "weight": "3.60 kg",
-      "warranty": "1 Year Official AppleCare Warranty",
-      "tags": [
-        "Apple",
-        "Mac Studio",
-        "M2 Ultra",
+        "CalDigit",
+        "Docking Station",
+        "Thunderbolt 4",
         "Workstation",
         "Featured"
       ],
-      "badge": "Studio Pro",
+      "badge": "Pro Setup",
       "featured": true,
-      "rating": 5,
-      "reviewsCount": 18,
-      "createdAt": "2026-09-06T10:00:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
-    },
-    {
-      "id": "prod_demo_007",
-      "name": "Alienware Aurora R16 Liquid Cooled Desktop",
-      "slug": "alienware-aurora-r16-liquid-cooled",
-      "categorySlug": "desktops",
-      "categoryName": "Desktops",
-      "brand": "Dell Alienware",
-      "price": 289900,
-      "originalPrice": 319900,
-      "stock": 9,
-      "inStock": true,
-      "sku": "SKU-AW-R16-4080",
-      "tagline": "Intel Core i9-14900F with RTX 4080 Super and Legend 3 acoustic design",
-      "description": "The redesigned Aurora R16 boasts 40% reduced volume while delivering up to 20% quieter acoustics and 7% lower CPU temperatures. Equipped with Alienware Cryo-tech 240mm liquid cooling and 1000W Platinum power supply.",
-      "images": [
-        "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1200&q=80"
-      ],
-      "specs": {
-        "processor": "Intel Core i9-14900F (24 Cores, 32 Threads, up to 5.8 GHz)",
-        "ram": "64GB Dual-Channel DDR5 5600MHz",
-        "storage": "2TB M.2 PCIe NVMe SSD + 2TB 7200RPM HDD",
-        "gpu": "NVIDIA GeForce RTX 4080 SUPER 16GB GDDR6X",
-        "os": "Windows 11 Home",
-        "power": "1000W 80 PLUS Platinum Rated PSU"
-      },
-      "dimensions": "45.8 x 19.7 x 41.8 cm",
-      "weight": "15.3 kg",
-      "warranty": "2 Years Alienware Onsite Premium Support",
-      "tags": [
-        "Alienware",
-        "Desktop",
-        "Liquid Cooled",
-        "RTX 4080"
-      ],
-      "badge": "Bestseller",
-      "featured": true,
-      "rating": 4.8,
-      "reviewsCount": 27,
-      "createdAt": "2026-09-07T11:30:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
-    },
-    {
-      "id": "prod_demo_008",
-      "name": "Corsair One i500 Compact Studio Workstation",
-      "slug": "corsair-one-i500-compact-workstation",
-      "categorySlug": "desktops",
-      "categoryName": "Desktops",
-      "brand": "Corsair",
-      "price": 359990,
-      "originalPrice": 389990,
-      "stock": 4,
-      "inStock": true,
-      "sku": "SKU-COR-ONE-I500",
-      "tagline": "Natural wood FSC certified aluminum casing with dual-loop liquid cooling",
-      "description": "Breathtaking aesthetics paired with uncompromising compute power. Features real FSC-certified walnut front panel, configurable ambient underglow, liquid-cooled Intel Core i9-14900K, and NVIDIA RTX 4080 Super.",
-      "images": [
-        "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=1200&q=80"
-      ],
-      "specs": {
-        "processor": "Intel Core i9-14900K Liquid Cooled (24 Cores, up to 6.0 GHz)",
-        "ram": "64GB DDR5 6000MHz Corsair Dominator",
-        "storage": "2TB PCIe Gen 4 NVMe M.2 SSD",
-        "gpu": "NVIDIA GeForce RTX 4080 SUPER 16GB Liquid Cooled",
-        "os": "Windows 11 Pro",
-        "chassis": "FSC Certified Natural Walnut with Dark Slate Aluminum"
-      },
-      "dimensions": "39.1 x 17.6 x 30.0 cm",
-      "weight": "7.2 kg",
-      "warranty": "2 Years Corsair Global Warranty",
-      "tags": [
-        "Corsair",
-        "Compact",
-        "Walnut",
-        "Workstation"
-      ],
-      "badge": "Design Award",
-      "featured": false,
       "rating": 4.9,
-      "reviewsCount": 11,
-      "createdAt": "2026-09-08T14:15:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
+      "reviewsCount": 34,
+      "createdAt": "2026-10-18T10:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
     },
     {
-      "id": "prod_demo_009",
-      "name": "Dell UltraSharp 32 6K IPS Black Monitor (U3224KB)",
-      "slug": "dell-ultrasharp-32-6k-ips-black",
-      "categorySlug": "monitors",
-      "categoryName": "Monitors",
-      "brand": "Dell",
-      "price": 245000,
-      "originalPrice": 269000,
-      "stock": 7,
+      "id": "prod_nb_011",
+      "name": "BenQ ScreenBar Halo Wireless Monitor Light Bar",
+      "slug": "benq-screenbar-halo-wireless-monitor-light",
+      "categorySlug": "computer-accessories",
+      "categoryName": "Computer Accessories",
+      "brand": "BenQ",
+      "price": 16990,
+      "originalPrice": 19990,
+      "stock": 20,
       "inStock": true,
-      "sku": "SKU-DELL-U3224KB",
-      "tagline": "First 6K monitor with IPS Black technology & built-in 4K HDR webcam",
-      "description": "Exceptional clarity with 6144 x 3456 resolution (over 21 million pixels). IPS Black panel delivers 2000:1 contrast ratio with 99% DCI-P3 and 100% sRGB coverage. Built-in dual 14W speakers, dual echo cancellation mics, and Thunderbolt 4 hub with 140W PD.",
+      "sku": "SKU-NB-BNQ-SBH",
+      "tagline": "Dual back and front lighting with precision wireless dial controller",
+      "description": "Eliminates screen glare and reduces eye strain. Patented optical design illuminates your desk without reflecting onto curved or flat monitors. Features backlighting for ambient balance and a tactile wireless control puck.",
       "images": [
-        "https://images.unsplash.com/photo-1585792180666-f7347c490ee2?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=1200&q=80",
         "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
-        "display": "31.5-inch 6K UHD (6144 x 3456) at 60Hz",
-        "panel": "IPS Black Technology, 2000:1 Contrast, 450 cd/m2",
-        "camera": "Integrated 4K Sony Starvis HDR Webcam with auto-framing",
-        "ports": "Thunderbolt 4 (up to 140W PD), HDMI 2.1, mini-DP 2.1, 2.5GbE RJ45",
-        "audio": "Integrated Dual 14W High-Fidelity Stereo Speakers"
+        "illumination": "500 Lux centered illumination, 2700K to 6500K color temperatures",
+        "control": "Wireless rotary puck controller with auto-dimming ambient light sensor",
+        "compatibility": "Fits monitors 0.7cm to 6.0cm thick (flat and 1000R–1800R curved screens)",
+        "power": "USB-A powered (5V, 1.3A)"
       },
-      "dimensions": "71.3 x 23.7 x 60.1 cm",
-      "weight": "12.2 kg",
-      "warranty": "3 Years Dell Advanced Exchange Service",
+      "dimensions": "50.0 x 9.5 x 9.7 cm",
+      "weight": "0.80 kg",
+      "warranty": "1 Year Official BenQ India Warranty",
       "tags": [
-        "Dell",
-        "UltraSharp",
-        "6K",
-        "Creator",
-        "Webcam"
+        "BenQ",
+        "ScreenBar",
+        "Accessories",
+        "Ergonomic"
       ],
-      "badge": "Reference Grade",
-      "featured": false,
-      "rating": 4.9,
-      "reviewsCount": 16,
-      "createdAt": "2026-09-09T09:00:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
-    },
-    {
-      "id": "prod_demo_010",
-      "name": "NVIDIA GeForce RTX 4090 24GB Founders Edition",
-      "slug": "nvidia-geforce-rtx-4090-founders-edition",
-      "categorySlug": "pc-components",
-      "categoryName": "PC Components",
-      "brand": "NVIDIA",
-      "price": 189000,
-      "originalPrice": 199990,
-      "stock": 5,
-      "inStock": true,
-      "sku": "SKU-NV-RTX4090-FE",
-      "tagline": "The definitive GPU for AI creators and ultra-enthusiast gamers",
-      "description": "Powered by the ultra-efficient NVIDIA Ada Lovelace architecture. Packed with 24GB of high-speed G6X memory, DLSS 3 frame generation, 16,384 CUDA cores, and 4th Generation Tensor Cores for unimaginable graphics fidelity.",
-      "images": [
-        "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=1200&q=80"
-      ],
-      "specs": {
-        "gpu": "AD102 Ada Lovelace (16384 CUDA Cores, Boost Clock 2.52 GHz)",
-        "vram": "24GB GDDR6X 384-bit memory interface",
-        "rayTracing": "3rd Gen Ray Tracing Cores, 4th Gen Tensor Cores",
-        "powerRequirement": "850W minimum, 450W TGP (16-pin 12VHPWR connector)",
-        "displayOutputs": "3x DisplayPort 1.4a, 1x HDMI 2.1a"
-      },
-      "dimensions": "30.4 x 13.7 x 6.1 cm (3-Slot)",
-      "weight": "2.18 kg",
-      "warranty": "3 Years Official NVIDIA Warranty",
-      "tags": [
-        "NVIDIA",
-        "RTX 4090",
-        "GPU",
-        "Ada Lovelace",
-        "Featured"
-      ],
-      "badge": "Flagship GPU",
-      "featured": true,
-      "rating": 5,
-      "reviewsCount": 42,
-      "createdAt": "2026-09-10T12:00:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
-    },
-    {
-      "id": "prod_demo_011",
-      "name": "Intel Core i9-14900KS 6.2GHz 24-Core Desktop CPU",
-      "slug": "intel-core-i9-14900ks-processor",
-      "categorySlug": "pc-components",
-      "categoryName": "PC Components",
-      "brand": "Intel",
-      "price": 64990,
-      "originalPrice": 69990,
-      "stock": 15,
-      "inStock": true,
-      "sku": "SKU-INT-14900KS",
-      "tagline": "World record 6.2GHz max clock speed with Intel Thermal Velocity Boost",
-      "description": "The fastest desktop processor for world-class gaming and single-threaded dominance. 24 cores (8 Performance + 16 Efficient), 32 threads, 36MB Intel Smart Cache, and unlocked multiplier for extreme overclocking.",
-      "images": [
-        "https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1200&q=80"
-      ],
-      "specs": {
-        "cores": "24 Cores (8 P-Cores + 16 E-Cores), 32 Threads",
-        "clockSpeed": "Base 3.2 GHz, Thermal Velocity Boost up to 6.2 GHz",
-        "cache": "36MB Intel Smart Cache, 32MB L2 Cache",
-        "socket": "LGA1700 (Compatible with Z790/Z690 series motherboards)",
-        "memorySupport": "Up to DDR5 5600 MT/s, Dual-Channel, PCIe 5.0"
-      },
-      "dimensions": "4.5 x 3.75 x 0.5 cm",
-      "weight": "0.08 kg",
-      "warranty": "3 Years Intel Boxed Limited Warranty",
-      "tags": [
-        "Intel",
-        "CPU",
-        "14th Gen",
-        "Overclocking"
-      ],
-      "badge": "High Clock",
+      "badge": "Workspace Essential",
       "featured": false,
       "rating": 4.8,
-      "reviewsCount": 19,
-      "createdAt": "2026-09-10T14:30:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
+      "reviewsCount": 47,
+      "createdAt": "2026-10-20T12:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
     },
     {
-      "id": "prod_demo_012",
-      "name": "Sony PlayStation 5 Pro 2TB Console Edition",
-      "slug": "sony-playstation-5-pro-console",
-      "categorySlug": "gaming",
-      "categoryName": "Gaming",
-      "brand": "Sony",
-      "price": 69990,
-      "originalPrice": 74990,
-      "stock": 18,
+      "id": "prod_nb_012",
+      "name": "Keychron Q1 Pro Wireless Custom Mechanical Keyboard",
+      "slug": "keychron-q1-pro-wireless-custom-keyboard",
+      "categorySlug": "keyboards-mouse",
+      "categoryName": "Keyboards & Mouse",
+      "brand": "Keychron",
+      "price": 19990,
+      "originalPrice": 22990,
+      "stock": 25,
       "inStock": true,
-      "sku": "SKU-PS5-PRO-2TB",
-      "tagline": "PlayStation Spectral Super Resolution with advanced Ray Tracing & 2TB SSD",
-      "description": "Witness gaming revolutionized. PS5 Pro introduces PSSR AI-driven upscaling for unprecedented image clarity, 67% more compute units than standard PS5, up to 120fps at full 4K fidelity, and a massive 2TB ultra-high-speed SSD.",
+      "sku": "SKU-NB-KC-Q1PRO",
+      "tagline": "CNC aluminum body 75% layout with QMK/VIA programmability & Bluetooth 5.1",
+      "description": "A refined piece of mechanical desk art. Double-gasket mount structure delivers flexible, acoustic-tuned typing with deep creamy resonance. Hot-swappable Keychron K Pro Banana tactile switches, South-facing RGB, and precision rotary encoder knob.",
       "images": [
-        "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
-        "gpu": "Upgraded RDNA Architecture with PSSR AI Upscaling (16.7 TFLOPs)",
-        "storage": "2TB Custom PCIe Gen 4 NVMe Ultra-Fast SSD",
-        "displayOutput": "HDMI 2.1 with VRR up to 120Hz at 4K and 8K support",
-        "audio": "Tempest 3D AudioTech Hardware Acceleration",
-        "controller": "DualSense Wireless Controller with Haptic Feedback"
+        "layout": "75% ANSI with programmable rotary aluminum knob",
+        "casing": "6063 CNC Machined Aluminum body with double acoustic damping silicone foam",
+        "connectivity": "Bluetooth 5.1 (3 device pairing) & Type-C wired 1000Hz polling rate",
+        "switches": "Keychron K Pro Pre-Lubed Mechanical Switches (Hot-Swappable 3-pin & 5-pin)",
+        "battery": "4000mAh rechargeable lithium battery (up to 300 hours typing)"
       },
-      "dimensions": "38.8 x 21.6 x 8.9 cm",
-      "weight": "3.10 kg",
-      "warranty": "1 Year Official Sony India Warranty",
+      "dimensions": "32.7 x 14.5 x 4.0 cm",
+      "weight": "1.74 kg",
+      "warranty": "1 Year Official Keychron India Warranty",
       "tags": [
-        "Sony",
-        "PlayStation",
-        "PS5 Pro",
-        "Console",
-        "Gaming"
+        "Keychron",
+        "Mechanical Keyboard",
+        "Custom",
+        "Wireless",
+        "Featured",
+        "Bestseller"
       ],
-      "badge": "Next-Gen",
-      "featured": false,
+      "badge": "Custom Audiophile",
+      "featured": true,
       "rating": 4.9,
-      "reviewsCount": 54,
-      "createdAt": "2026-09-11T16:00:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
+      "reviewsCount": 78,
+      "createdAt": "2026-10-22T09:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
     },
     {
-      "id": "prod_demo_013",
-      "name": "Samsung 990 PRO 4TB PCIe 4.0 NVMe SSD with Heatsink",
-      "slug": "samsung-990-pro-4tb-nvme-ssd",
-      "categorySlug": "storage",
-      "categoryName": "Storage",
+      "id": "prod_nb_013",
+      "name": "Logitech MX Master 3S Performance Wireless Mouse",
+      "slug": "logitech-mx-master-3s-mouse",
+      "categorySlug": "keyboards-mouse",
+      "categoryName": "Keyboards & Mouse",
+      "brand": "Logitech",
+      "price": 9995,
+      "originalPrice": 11495,
+      "stock": 30,
+      "inStock": true,
+      "sku": "SKU-NB-LOGI-MXM3S",
+      "tagline": "8K DPI track-on-glass optical sensor with MagSpeed electromagnetic scrolling",
+      "description": "The quintessential mouse for programmers, designers, and workflow perfectionists. Quiet Click buttons eliminate 90% click noise while preserving tactile feel. Scroll 1,000 lines per second with pixel-accurate MagSpeed wheel.",
+      "images": [
+        "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "specs": {
+        "sensor": "Darkfield High Precision Optical Sensor (200 to 8000 DPI in 50 DPI increments)",
+        "buttons": "7 buttons (Left/Right click, Back/Forward, App-Switch, Wheel mode-shift, Middle click)",
+        "scrollWheel": "Smartshift MagSpeed electromagnetic wheel + thumb horizontal wheel",
+        "connectivity": "Bluetooth Low Energy + Logi Bolt USB Receiver (Easy-Switch up to 3 devices)",
+        "battery": "Rechargeable Li-Po (500 mAh), up to 70 days per charge"
+      },
+      "dimensions": "12.5 x 8.4 x 5.1 cm",
+      "weight": "0.141 kg",
+      "warranty": "2 Years Limited Hardware Warranty",
+      "tags": [
+        "Logitech",
+        "MX Master",
+        "Ergonomic",
+        "Bestseller",
+        "Featured"
+      ],
+      "badge": "Top Seller",
+      "featured": true,
+      "rating": 4.9,
+      "reviewsCount": 120,
+      "createdAt": "2026-10-24T10:30:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
+    },
+    {
+      "id": "prod_nb_014",
+      "name": "Anker Prime 240W 4-Port GaN Desktop Charger",
+      "slug": "anker-prime-240w-4-port-gan-desktop-charger",
+      "categorySlug": "chargers-cables",
+      "categoryName": "Chargers & Cables",
+      "brand": "Anker",
+      "price": 14999,
+      "originalPrice": 17999,
+      "stock": 20,
+      "inStock": true,
+      "sku": "SKU-NB-ANK-240W",
+      "tagline": "Ultra-compact GaNPrime tech with 3x USB-C (140W max single port) & 1x USB-A",
+      "description": "Charge up to two 16-inch laptops simultaneously at peak speeds. Powered by Anker's most advanced GaNPrime technology with ActiveShield 2.0 temperature monitoring that checks temperature over 3 million times per day.",
+      "images": [
+        "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1629429408209-1f912961dbd8?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "specs": {
+        "totalOutput": "240W max combined power",
+        "ports": "3x USB-C (Single port up to 140W PD 3.1) + 1x USB-A (22.5W)",
+        "safety": "ActiveShield 2.0 dynamic temperature sensing",
+        "technology": "GaNPrime semiconductor architecture"
+      },
+      "dimensions": "10.4 x 7.8 x 3.4 cm",
+      "weight": "0.65 kg",
+      "warranty": "24 Months Official Anker Warranty",
+      "tags": [
+        "Anker",
+        "GaN",
+        "Charger",
+        "Fast Charging",
+        "Featured"
+      ],
+      "badge": "240W Max",
+      "featured": true,
+      "rating": 4.8,
+      "reviewsCount": 57,
+      "createdAt": "2026-10-25T11:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
+    },
+    {
+      "id": "prod_nb_015",
+      "name": "Baseus Blade 100W Ultra-Slim Fast Charging Power Bank",
+      "slug": "baseus-blade-100w-slim-power-bank",
+      "categorySlug": "chargers-cables",
+      "categoryName": "Chargers & Cables",
+      "brand": "Baseus",
+      "price": 7999,
+      "originalPrice": 9999,
+      "stock": 24,
+      "inStock": true,
+      "sku": "SKU-NB-BAS-100W",
+      "tagline": "20,000mAh capacity with 18mm ultra-thin laptop-charging profile & digital screen",
+      "description": "Slip high-capacity laptop charging right into your bag alongside your computer. Delivers full 100W PD output through dual USB-C ports and features an informative real-time digital screen showing remaining time and wattage.",
+      "images": [
+        "https://images.unsplash.com/photo-1629429408209-1f912961dbd8?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "specs": {
+        "capacity": "20,000mAh / 74Wh (Airline approved cabin baggage size)",
+        "output": "Dual Type-C 100W PD + Dual USB-A 30W QC",
+        "display": "Digital battery level, charging power wattage, and estimated time remaining",
+        "thickness": "Only 1.8cm ultra-thin form factor"
+      },
+      "dimensions": "16.2 x 14.3 x 1.8 cm",
+      "weight": "0.49 kg",
+      "warranty": "1 Year Official Warranty",
+      "tags": [
+        "Baseus",
+        "Power Bank",
+        "100W",
+        "Portable"
+      ],
+      "badge": "Slim Travel",
+      "featured": false,
+      "rating": 4.7,
+      "reviewsCount": 49,
+      "createdAt": "2026-10-26T14:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
+    },
+    {
+      "id": "prod_nb_016",
+      "name": "Samsung 990 PRO 2TB PCIe 4.0 NVMe M.2 SSD",
+      "slug": "samsung-990-pro-2tb-pcie-nvme-ssd",
+      "categorySlug": "storage-devices",
+      "categoryName": "Storage Devices",
       "brand": "Samsung",
-      "price": 38999,
-      "originalPrice": 44999,
-      "stock": 22,
+      "price": 18499,
+      "originalPrice": 21999,
+      "stock": 19,
       "inStock": true,
-      "sku": "SKU-SAM-990PRO-4TB",
-      "tagline": "Blistering 7,450 MB/s read speed with integrated slim thermal heatsink",
-      "description": "Reach the zenith of PCIe 4.0 throughput. Engineered for hardcore tech enthusiasts, pro 3D animators, and PS5 storage expansion. Integrated heatsink regulates heat to prevent throttling and maintain peak sustained transfers.",
-      "images": [
-        "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1200&q=80"
-      ],
-      "specs": {
-        "capacity": "4TB V-NAND TLC with 4GB LPDDR4 DRAM Cache",
-        "interface": "PCIe Gen 4.0 x4, NVMe 2.0 (M.2 2280 form factor)",
-        "readSpeed": "Up to 7,450 MB/s Sequential Read",
-        "writeSpeed": "Up to 6,900 MB/s Sequential Write",
-        "endurance": "2,400 TBW (Terabytes Written)"
-      },
-      "dimensions": "8.0 x 2.4 x 0.8 cm",
-      "weight": "0.028 kg",
-      "warranty": "5 Years Limited Official Samsung Warranty",
-      "tags": [
-        "Samsung",
-        "Storage",
-        "SSD",
-        "NVMe",
-        "PS5 Ready"
-      ],
-      "badge": "Ultra Fast",
-      "featured": false,
-      "rating": 4.9,
-      "reviewsCount": 36,
-      "createdAt": "2026-09-12T09:00:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
-    },
-    {
-      "id": "prod_demo_014",
-      "name": "SanDisk Extreme PRO 4TB Rugged Portable SSD",
-      "slug": "sandisk-extreme-pro-4tb-portable-ssd",
-      "categorySlug": "storage",
-      "categoryName": "Storage",
-      "brand": "SanDisk",
-      "price": 34499,
-      "originalPrice": 39999,
-      "stock": 14,
-      "inStock": true,
-      "sku": "SKU-SD-EXTPRO-4TB",
-      "tagline": "2000 MB/s NVMe transfer speeds with forged aluminum IP65 chassis",
-      "description": "Built for grueling field cinematography and photography shoots. Features USB 3.2 Gen 2x2 performance, tough silicon shell, up to 3-meter drop protection, and IP65 dust and water ingress resistance.",
+      "sku": "SKU-NB-SAM-990P2T",
+      "tagline": "Blistering 7,450 MB/s sequential read speeds with custom nickel-coated controller",
+      "description": "Reach near-max performance of PCIe 4.0. Up to 40% and 55% faster random read/write speeds than 980 PRO. Engineered for hardcore gamers, 4K/8K video editors, and 3D data analysts seeking extreme thermal control and endurance.",
       "images": [
         "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=1200&q=80",
         "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "specs": {
+        "capacity": "2TB (2,000GB)",
+        "interface": "PCIe Gen 4.0 x4, NVMe 2.0",
+        "speeds": "Up to 7,450 MB/s Read, 6,900 MB/s Write",
+        "endurance": "1200 TBW (Terabytes Written)",
+        "controller": "Samsung in-house Pascal Controller with smart thermal control"
+      },
+      "dimensions": "8.0 x 2.2 x 0.23 cm",
+      "weight": "0.009 kg",
+      "warranty": "5 Years Official Samsung India Warranty",
+      "tags": [
+        "Samsung",
+        "SSD",
+        "NVMe",
+        "PCIe 4.0",
+        "Featured"
+      ],
+      "badge": "Fastest Gen 4",
+      "featured": true,
+      "rating": 5,
+      "reviewsCount": 65,
+      "createdAt": "2026-10-28T09:30:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
+    },
+    {
+      "id": "prod_nb_017",
+      "name": "SanDisk Extreme PRO 4TB Rugged Portable SSD",
+      "slug": "sandisk-extreme-pro-4tb-portable-ssd",
+      "categorySlug": "storage-devices",
+      "categoryName": "Storage Devices",
+      "brand": "SanDisk",
+      "price": 34499,
+      "originalPrice": 39999,
+      "stock": 12,
+      "inStock": true,
+      "sku": "SKU-NB-SD-EXT4TB",
+      "tagline": "2000 MB/s NVMe transfer speeds with forged aluminum IP65 chassis",
+      "description": "Built for grueling field cinematography and photography shoots. Features USB 3.2 Gen 2x2 performance, tough silicone shell, up to 3-meter drop protection, and IP65 dust and water ingress resistance.",
+      "images": [
+        "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "capacity": "4TB High-Speed NVMe Storage",
@@ -624,12 +948,12 @@
       "badge": "IP65 Rugged",
       "featured": false,
       "rating": 4.8,
-      "reviewsCount": 22,
-      "createdAt": "2026-09-12T11:00:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
+      "reviewsCount": 31,
+      "createdAt": "2026-10-29T11:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
     },
     {
-      "id": "prod_demo_015",
+      "id": "prod_nb_018",
       "name": "ASUS ROG Rapture GT-AXE16000 Quad-Band WiFi 6E Router",
       "slug": "asus-rog-rapture-gt-axe16000-router",
       "categorySlug": "networking",
@@ -639,19 +963,18 @@
       "originalPrice": 72999,
       "stock": 8,
       "inStock": true,
-      "sku": "SKU-ROG-AXE16000",
+      "sku": "SKU-NB-ROG-AXE16K",
       "tagline": "World's premier quad-band WiFi 6E gaming router with dual 10Gbps ports",
-      "description": "Ultimate networking performance with quad-band speeds up to 16,000 Mbps. Equipped with the new 6 GHz spectrum, dual 10G Ethernet ports, four 1G ports, and 2.5G WAN port. Driven by a flagship 2.0 GHz quad-core 64-bit Broadcom CPU.",
+      "description": "Ultimate networking performance with quad-band speeds up to 16,000 Mbps. Equipped with the clean 6 GHz spectrum, dual 10G Ethernet ports, four 1G ports, and 2.5G WAN port. Driven by a flagship 2.0 GHz quad-core 64-bit Broadcom CPU.",
       "images": [
         "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "speed": "Quad-Band 16,000 Mbps (6GHz: 4804Mbps, 5GHz-1: 4804Mbps, 5GHz-2: 4804Mbps, 2.4GHz: 1148Mbps)",
         "ports": "2x 10Gbps WAN/LAN, 1x 2.5Gbps WAN, 4x 1Gbps LAN, 1x USB 3.2, 1x USB 2.0",
         "antennas": "8 External Dual-Band Antennas + 4 Internal Antennas",
-        "cpu": "2.0 GHz Quad-Core 64-bit Processor with 2GB DDR4 RAM",
-        "features": "AiMesh, ROG Gaming Port Acceleration, AiProtection Pro Commercial Security"
+        "cpu": "2.0 GHz Quad-Core 64-bit Processor with 2GB DDR4 RAM"
       },
       "dimensions": "35.3 x 35.3 x 20.1 cm",
       "weight": "2.42 kg",
@@ -661,17 +984,18 @@
         "Networking",
         "WiFi 6E",
         "10GbE",
-        "Gaming Router"
+        "Gaming Router",
+        "Featured"
       ],
       "badge": "10G Quad-Band",
-      "featured": false,
+      "featured": true,
       "rating": 4.9,
-      "reviewsCount": 17,
-      "createdAt": "2026-09-12T15:00:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
+      "reviewsCount": 22,
+      "createdAt": "2026-10-30T15:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
     },
     {
-      "id": "prod_demo_016",
+      "id": "prod_nb_019",
       "name": "Ubiquiti UniFi Dream Machine Special Edition (UDM-SE)",
       "slug": "ubiquiti-unifi-dream-machine-se",
       "categorySlug": "networking",
@@ -681,9 +1005,9 @@
       "originalPrice": 62000,
       "stock": 6,
       "inStock": true,
-      "sku": "SKU-UBI-UDM-SE",
+      "sku": "SKU-NB-UBI-UDMSE",
       "tagline": "Enterprise 10G Gateway with PoE switch, NVR storage & 1.3\" LCM touchscreen",
-      "description": "All-in-one 1U rackmount console for enterprise networks. Built-in 8-port Gigabit PoE switch, 2.5G RJ45 WAN, dual 10G SFP+ ports, integrated 128GB SSD for UniFi OS application storage, and 3.5\" HDD bay for UniFi Protect NVR surveillance.",
+      "description": "All-in-one 1U rackmount console for enterprise networks. Built-in 8-port Gigabit PoE switch, 2.5G RJ45 WAN, dual 10G SFP+ ports, integrated 128GB SSD for UniFi OS application storage, and 3.5\" HDD bay for UniFi Protect surveillance.",
       "images": [
         "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
         "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80"
@@ -692,8 +1016,7 @@
         "gateway": "Full 10G Threat Management IDS/IPS throughput at 3.5+ Gbps",
         "ports": "8x GbE RJ45 with PoE (2x PoE+), 1x 2.5GbE WAN, 2x 10G SFP+",
         "storage": "Integrated 128GB SSD + 3.5\" SATA HDD Bay for NVR footage",
-        "display": "1.3-inch LCM Color Touchscreen with AR switch port preview",
-        "management": "Full UniFi Suite (Network, Protect, Access, Talk, Connect)"
+        "display": "1.3-inch LCM Color Touchscreen with AR switch port preview"
       },
       "dimensions": "44.2 x 28.5 x 4.4 cm (1U Rackmount)",
       "weight": "4.95 kg",
@@ -708,355 +1031,154 @@
       "badge": "Enterprise Grade",
       "featured": false,
       "rating": 5,
-      "reviewsCount": 14,
-      "createdAt": "2026-09-12T17:30:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
+      "reviewsCount": 19,
+      "createdAt": "2026-10-31T17:30:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
     },
     {
-      "id": "prod_demo_017",
-      "name": "Keychron Q1 Pro Wireless Custom Mechanical Keyboard",
-      "slug": "keychron-q1-pro-wireless-custom-keyboard",
-      "categorySlug": "accessories",
-      "categoryName": "Accessories",
-      "brand": "Keychron",
-      "price": 19990,
-      "originalPrice": 22990,
-      "stock": 20,
+      "id": "prod_nb_020",
+      "name": "DJI Osmo Pocket 3 Creator Combo 4K Camera",
+      "slug": "dji-osmo-pocket-3-creator-combo",
+      "categorySlug": "other-gadgets",
+      "categoryName": "Other Gadgets",
+      "brand": "DJI",
+      "price": 53990,
+      "originalPrice": 58990,
+      "stock": 14,
       "inStock": true,
-      "sku": "SKU-KC-Q1PRO-RD",
-      "tagline": "Full CNC aluminum body 75% layout with QMK/VIA programmability & Bluetooth 5.1",
-      "description": "A refined piece of mechanical desk art. Double-gasket mount structure delivers flexible, acoustic-tuned typing with deep creamy resonance. Hot-swappable Keychron K Pro Banana tactile switches, South-facing RGB, and precision rotary encoder knob.",
+      "sku": "SKU-NB-DJI-PK3CC",
+      "tagline": "1-inch CMOS sensor with 4K/120fps recording & rotatable 2-inch OLED touchscreen",
+      "description": "Capture steady, cinematic footage in the palm of your hand. Features a 1-inch CMOS sensor for rich low-light detail, 10-bit D-Log M color profile, 3-axis mechanical stabilization, ActiveTrack 6.0, and DJI Mic 2 transmitter included.",
       "images": [
-        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
-        "layout": "75% ANSI / ISO with programmable rotary aluminum knob",
-        "casing": "6063 CNC Machined Aluminum body with double acoustic damping silicone foam",
-        "connectivity": "Bluetooth 5.1 (3 device pairing) & Type-C wired 1000Hz polling rate",
-        "switches": "Keychron K Pro Pre-Lubed Mechanical Switches (Hot-Swappable 3-pin & 5-pin)",
-        "battery": "4000mAh rechargeable lithium battery (up to 300 hours typing)"
+        "sensor": "1-inch CMOS sensor supporting 4K/120fps slow-motion and 10-bit D-Log M",
+        "stabilization": "3-Axis Mechanical Gimbal Stabilization",
+        "screen": "Rotatable 2.0-inch OLED Touchscreen (quick vertical and horizontal shooting)",
+        "audio": "Stereo 3-mic array with omnidirectional audio + DJI Mic 2 wireless transmitter included"
       },
-      "dimensions": "32.7 x 14.5 x 4.0 cm",
-      "weight": "1.74 kg",
-      "warranty": "1 Year Official Keychron India Warranty",
+      "dimensions": "13.9 x 4.2 x 3.3 cm",
+      "weight": "0.179 kg",
+      "warranty": "1 Year Official DJI India Warranty",
       "tags": [
-        "Keychron",
-        "Mechanical Keyboard",
-        "Custom",
-        "Wireless",
+        "DJI",
+        "Camera",
+        "4K",
+        "Creator",
+        "Gimbal",
         "Featured"
       ],
-      "badge": "Custom Audiophile",
+      "badge": "Creator Essential",
       "featured": true,
       "rating": 4.9,
-      "reviewsCount": 39,
-      "createdAt": "2026-09-13T09:00:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
+      "reviewsCount": 71,
+      "createdAt": "2026-11-01T10:00:00.000Z",
+      "updatedAt": "2026-11-01T12:00:00.000Z"
     },
     {
-      "id": "prod_demo_018",
-      "name": "Logitech MX Master 3S Performance Wireless Mouse",
-      "slug": "logitech-mx-master-3s-mouse",
-      "categorySlug": "accessories",
-      "categoryName": "Accessories",
-      "brand": "Logitech",
-      "price": 9995,
-      "originalPrice": 11495,
-      "stock": 25,
+      "id": "prod_nb_021",
+      "name": "Elgato Stream Deck MK.2 — 15 Customizable LCD Keys",
+      "slug": "elgato-stream-deck-mk2-15-keys",
+      "categorySlug": "other-gadgets",
+      "categoryName": "Other Gadgets",
+      "brand": "Elgato",
+      "price": 13999,
+      "originalPrice": 16999,
+      "stock": 26,
       "inStock": true,
-      "sku": "SKU-LOGI-MXM3S",
-      "tagline": "8K DPI track-on-glass optical sensor with MagSpeed electromagnetic scrolling",
-      "description": "The quintessential mouse for programmers, designers, and workflow perfectionists. Quiet Click buttons eliminate 90% click noise while preserving tactile click feel. Scroll 1,000 lines per second with pixel-accurate MagSpeed wheel.",
+      "sku": "SKU-NB-ELG-SDMK2",
+      "tagline": "One-touch tactile control for streaming, coding macros, and creative apps",
+      "description": "Trigger unlimited actions with tactile LCD keys. Switch scenes, mute audio, launch apps, run dev scripts, and tweak smart lighting with instant visual feedback. Detachable faceplate and ergonomic 45-degree magnetic desktop stand.",
       "images": [
-        "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
-        "sensor": "Darkfield High Precision Optical Sensor (200 to 8000 DPI in 50 DPI increments)",
-        "buttons": "7 buttons (Left/Right click, Back/Forward, App-Switch, Wheel mode-shift, Middle click)",
-        "scrollWheel": "Smartshift MagSpeed electromagnetic wheel + thumb horizontal wheel",
-        "connectivity": "Bluetooth Low Energy + Logi Bolt USB Receiver (Easy-Switch up to 3 devices)",
-        "battery": "Rechargeable Li-Po (500 mAh), up to 70 days per charge, 3 hours from 1-min quick charge"
+        "keys": "15 customizable LCD keys with full RGB color animations",
+        "connection": "Detachable USB-C to USB-A cable (1.5m)",
+        "plugins": "Integration with OBS Studio, Twitch, YouTube, Zoom, Philips Hue, VS Code, Spotify",
+        "stand": "Ergonomic 45-degree angle non-slip desktop cradle"
       },
-      "dimensions": "12.5 x 8.4 x 5.1 cm",
-      "weight": "0.141 kg",
-      "warranty": "2 Years Limited Hardware Warranty",
+      "dimensions": "11.8 x 8.4 x 2.5 cm",
+      "weight": "0.145 kg",
+      "warranty": "2 Years Corsair Elgato Warranty",
       "tags": [
-        "Logitech",
-        "MX Master",
-        "Ergonomic",
-        "Accessories"
+        "Elgato",
+        "Stream Deck",
+        "Macros",
+        "Gadgets",
+        "Bestseller"
       ],
-      "badge": "Bestseller",
+      "badge": "Productivity",
       "featured": false,
-      "rating": 4.9,
-      "reviewsCount": 68,
-      "createdAt": "2026-09-13T10:30:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
-    },
-    {
-      "id": "prod_demo_019",
-      "name": "Sony WH-1000XM5 Wireless Noise Canceling Headphones",
-      "slug": "sony-wh-1000xm5-noise-canceling-headphones",
-      "categorySlug": "accessories",
-      "categoryName": "Accessories",
-      "brand": "Sony",
-      "price": 29990,
-      "originalPrice": 34990,
-      "stock": 16,
-      "inStock": true,
-      "sku": "SKU-SONY-1000XM5",
-      "tagline": "Industry-leading noise cancelation with Auto NC Optimizer & 30-hour battery",
-      "description": "Two processors and 8 microphones deliver world-class active noise cancellation. Specially engineered 30mm carbon fiber driver unit delivers airy highs and punchy bass. Crystal clear hands-free calling with 4 beamforming microphones.",
-      "images": [
-        "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1200&q=80"
-      ],
-      "specs": {
-        "audio": "30mm Precision Driver with Carbon Fiber Composite Dome, LDAC High-Res Audio Wireless",
-        "nc": "Integrated Processor V1 + HD Noise Canceling Processor QN1 with 8 microphones",
-        "battery": "Up to 30 hours battery life with NC ON, 3 min charge provides 3 hours playback",
-        "bluetooth": "Bluetooth 5.2 with Multipoint connection to 2 devices simultaneously",
-        "features": "Speak-to-Chat, Quick Attention, Google Fast Pair, Swift Pair"
-      },
-      "dimensions": "22.5 x 19.8 x 7.3 cm",
-      "weight": "0.250 kg",
-      "warranty": "1 Year Official Sony India Warranty",
-      "tags": [
-        "Sony",
-        "Headphones",
-        "Noise Canceling",
-        "Audio",
-        "Accessories"
-      ],
-      "badge": "Audiophile",
-      "featured": false,
-      "rating": 4.9,
-      "reviewsCount": 47,
-      "createdAt": "2026-09-13T11:45:00.000Z",
-      "updatedAt": "2026-09-13T12:00:00.000Z"
-    }
-  ],
-  "categories": [
-    {
-      "id": "laptops",
-      "name": "Laptops",
-      "slug": "laptops",
-      "shortName": "Laptops",
-      "tagline": "High-performance machines for work and play.",
-      "description": "Discover laptops, computers and accessories selected for work, study, gaming, creativity and everyday performance.",
-      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-08-28T07:14:05.559Z"
-    },
-    {
-      "id": "desktops",
-      "name": "Desktops",
-      "slug": "desktops",
-      "shortName": "Desktops",
-      "tagline": "Power, speed, and upgradeability in a classic package.",
-      "description": "High-performance desktop PCs built for heavy tasks, creators, and professionals.",
-      "image": "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-08-28T07:14:05.560Z"
-    },
-    {
-      "id": "monitors",
-      "name": "Monitors",
-      "slug": "monitors",
-      "shortName": "Monitors",
-      "tagline": "Vibrant colors and expansive screen space.",
-      "description": "Widescreen, high-refresh-rate, and color-accurate displays for design, programming, and gaming.",
-      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-08-28T07:14:05.560Z"
-    },
-    {
-      "id": "pc-components",
-      "name": "PC Components",
-      "slug": "pc-components",
-      "shortName": "Components",
-      "tagline": "CPUs, GPUs, motherboards, and power supplies.",
-      "description": "Build, repair, or upgrade your personal computer with industry-leading PC hardware.",
-      "image": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-08-28T07:14:05.560Z"
-    },
-    {
-      "id": "gaming",
-      "name": "Gaming",
-      "slug": "gaming",
-      "shortName": "Gaming",
-      "tagline": "Gear designed for absolute competitive edge.",
-      "description": "Console and PC gaming hardware, controllers, high-fidelity audio, and RGB accessories.",
-      "image": "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-08-28T07:14:05.560Z"
-    },
-    {
-      "id": "storage",
-      "name": "Storage",
-      "slug": "storage",
-      "shortName": "Storage",
-      "tagline": "Reliable speed for your operating system and files.",
-      "description": "High-speed SSDs, external hard drives, and reliable backup solutions for all your files.",
-      "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-08-28T07:14:05.560Z"
-    },
-    {
-      "id": "networking",
-      "name": "Networking",
-      "slug": "networking",
-      "shortName": "Networking",
-      "tagline": "Seamless connectivity throughout your home and office.",
-      "description": "Wireless routers, network cards, switches, and structured cables for reliable connections.",
-      "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-08-28T07:14:05.560Z"
-    },
-    {
-      "id": "accessories",
-      "name": "Accessories",
-      "slug": "accessories",
-      "shortName": "Accessories",
-      "tagline": "Keyboards, mice, webcams, and workspace add-ons.",
-      "description": "High-quality workspace essentials, mechanical keyboards, ergonomic mice, and premium audio equipment.",
-      "image": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-08-28T07:14:05.560Z"
-    },
-    {
-      "id": "keyboards-mouse",
-      "name": "Keyboards & Mouse",
-      "slug": "keyboards-mouse",
-      "shortName": "Peripherals",
-      "tagline": "Tactile typing and precise navigation.",
-      "description": "Premium mechanical keyboards and optical mice for gaming and work.",
-      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-08-28T07:14:05.560Z"
-    },
-    {
-      "id": "audio",
-      "name": "Audio",
-      "slug": "audio",
-      "shortName": "Audio",
-      "tagline": "High-fidelity headphones and studio monitor speakers.",
-      "description": "Immersive sound solutions for streaming, editing, gaming, and pure listening pleasure.",
-      "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-08-28T07:14:05.560Z"
-    },
-    {
-      "id": "webcams",
-      "name": "Webcams",
-      "slug": "webcams",
-      "shortName": "Webcams",
-      "tagline": "Crystal-clear video feeds for remote meetings and streaming.",
-      "description": "High-definition cameras with premium low-light sensors and integrated microphones.",
-      "image": "https://images.unsplash.com/photo-1603184017968-9450a5d0a6cf?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-08-28T07:14:05.560Z"
-    },
-    {
-      "id": "laptop-bags",
-      "name": "Laptop Bags",
-      "slug": "laptop-bags",
-      "shortName": "Bags",
-      "tagline": "Sleek protective sleeves and backpacks.",
-      "description": "Durable, weather-resistant storage options designed to cushion your laptop on the move.",
-      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-08-28T07:14:05.560Z"
-    },
-    {
-      "id": "chargers-adapters",
-      "name": "Chargers & Adapters",
-      "slug": "chargers-adapters",
-      "shortName": "Power",
-      "tagline": "Fast and safe charging for all your devices.",
-      "description": "USB-C GaN wall chargers, multi-port adapters, and reliable power bricks.",
-      "image": "https://images.unsplash.com/photo-1629429408209-1f912961dbd8?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-08-28T07:14:05.560Z"
-    },
-    {
-      "id": "cables",
-      "name": "Cables",
-      "slug": "cables",
-      "shortName": "Cables",
-      "tagline": "High-speed data transfer and power delivery.",
-      "description": "Braided HDMI, Thunderbolt, DisplayPort, and USB cables built for maximum durability.",
-      "image": "https://images.unsplash.com/photo-1555538995-7ecd0b73091b?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-08-28T07:14:05.560Z"
-    }
-  ],
-  "brands": [
-    {
-      "id": "brd_1",
-      "name": "Apple",
-      "slug": "apple",
-      "createdAt": "2026-08-28T07:37:44.894Z"
+      "rating": 4.8,
+      "reviewsCount": 88,
+      "createdAt": "2026-11-02T14:00:00.000Z",
+      "updatedAt": "2026-11-02T14:00:00.000Z"
     }
   ],
   "orders": [
     {
-      "id": "BC85606",
-      "userId": "usr_1787902678291_bbwi",
-      "customerName": "Naresh Kumar",
-      "customerEmail": "customer_1787902678226@example.com",
-      "customerPhone": "+91 98400 12345",
+      "id": "NB92041",
+      "userId": "usr_test_001",
+      "customerName": "Karthik Subramanian",
+      "customerEmail": "karthik.subramanian@example.com",
+      "customerPhone": "+91 98401 23456",
       "items": [
         {
-          "id": "prod_1787902678307",
-          "name": "MacBook Pro 16 M3 Max Ultra Spec",
-          "slug": "macbook-pro-16-m3-max-ultra-spec-1",
-          "categoryName": "Laptops",
-          "price": 349900,
+          "id": "prod_nb_001",
+          "name": "Sony WH-1000XM5 Wireless Noise-Canceling Headphones",
+          "slug": "sony-wh-1000xm5-wireless-noise-canceling-headphones",
+          "categoryName": "Headphones",
+          "price": 28990,
           "quantity": 1,
-          "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80",
-          "material": "",
-          "dimensions": "",
-          "subtotal": 349900
+          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80",
+          "subtotal": 28990
         }
       ],
       "shippingAddress": {
-        "name": "Naresh Kumar",
-        "house": "14A, Grand Tech Avenue",
-        "street": "Anna Nagar West",
-        "area": "",
+        "name": "Karthik Subramanian",
+        "house": "Flat 3B, Emerald Towers",
+        "street": "18th Main Road, Anna Nagar",
         "city": "Chennai",
         "state": "Tamil Nadu",
         "pincode": "600040",
-        "phone": "+91 98400 12345"
+        "phone": "+91 98401 23456"
       },
-      "subtotal": 349900,
+      "subtotal": 28990,
       "deliveryCharge": 0,
       "discount": 0,
       "tax": 0,
-      "total": 349900,
+      "total": 28990,
       "paymentMethod": "ONLINE",
       "paymentProvider": "Razorpay",
       "paymentStatus": "Paid",
-      "transactionId": "TXN_TEST_1787902678322",
+      "transactionId": "TXN_RZP_179201948",
       "orderStatus": "Shipped",
       "timeline": [
         {
           "status": "Order Placed",
-          "date": "2026-08-28T07:37:58.325Z",
+          "date": "2026-11-05T08:15:00.000Z",
           "done": true,
           "current": false
         },
         {
           "status": "Confirmed",
-          "date": "2026-08-28T07:37:58.325Z",
+          "date": "2026-11-05T08:30:00.000Z",
           "done": true,
-          "current": true
-        },
-        {
-          "status": "Processing",
-          "date": null,
-          "done": false,
           "current": false
         },
         {
           "status": "Packed",
-          "date": null,
-          "done": false,
+          "date": "2026-11-05T14:00:00.000Z",
+          "done": true,
           "current": false
         },
         {
           "status": "Shipped",
-          "date": "2026-08-28T07:37:58.334Z",
+          "date": "2026-11-06T09:00:00.000Z",
           "done": true,
           "current": true
         },
@@ -1073,475 +1195,127 @@
           "current": false
         }
       ],
-      "notes": "",
-      "createdAt": "2026-08-28T07:37:58.325Z",
-      "updatedAt": "2026-08-28T07:37:58.334Z"
-    },
-    {
-      "id": "BC65038",
-      "userId": "usr_1787902523191_vva0",
-      "customerName": "Naresh Kumar",
-      "customerEmail": "customer_1787902523128@example.com",
-      "customerPhone": "+91 98400 12345",
-      "items": [
-        {
-          "id": "prod_1787902523207",
-          "name": "MacBook Pro 16 M3 Max Ultra Spec",
-          "slug": "macbook-pro-16-m3-max-ultra-spec",
-          "categoryName": "Laptops",
-          "price": 349900,
-          "quantity": 1,
-          "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80",
-          "material": "",
-          "dimensions": "",
-          "subtotal": 349900
-        }
-      ],
-      "shippingAddress": {
-        "name": "Naresh Kumar",
-        "house": "14A, Grand Tech Avenue",
-        "street": "Anna Nagar West",
-        "area": "",
-        "city": "Chennai",
-        "state": "Tamil Nadu",
-        "pincode": "600040",
-        "phone": "+91 98400 12345"
-      },
-      "subtotal": 349900,
-      "deliveryCharge": 0,
-      "discount": 0,
-      "tax": 0,
-      "total": 349900,
-      "paymentMethod": "ONLINE",
-      "paymentProvider": "Razorpay",
-      "paymentStatus": "Paid",
-      "transactionId": "TXN_TEST_1787902523221",
-      "orderStatus": "Shipped",
-      "timeline": [
-        {
-          "status": "Order Placed",
-          "date": "2026-08-28T07:35:23.223Z",
-          "done": true,
-          "current": false
-        },
-        {
-          "status": "Confirmed",
-          "date": "2026-08-28T07:35:23.223Z",
-          "done": true,
-          "current": true
-        },
-        {
-          "status": "Processing",
-          "date": null,
-          "done": false,
-          "current": false
-        },
-        {
-          "status": "Packed",
-          "date": null,
-          "done": false,
-          "current": false
-        },
-        {
-          "status": "Shipped",
-          "date": "2026-08-28T07:35:23.232Z",
-          "done": true,
-          "current": true
-        },
-        {
-          "status": "Out for Delivery",
-          "date": null,
-          "done": false,
-          "current": false
-        },
-        {
-          "status": "Delivered",
-          "date": null,
-          "done": false,
-          "current": false
-        }
-      ],
-      "notes": "",
-      "createdAt": "2026-08-28T07:35:23.223Z",
-      "updatedAt": "2026-08-28T07:35:23.232Z"
+      "createdAt": "2026-11-05T08:15:00.000Z",
+      "updatedAt": "2026-11-06T09:00:00.000Z"
     }
   ],
   "payments": [
     {
-      "id": "PAY_1787902678325",
-      "orderId": "BC85606",
-      "userId": "usr_1787902678291_bbwi",
-      "customerName": "Naresh Kumar",
-      "customerEmail": "customer_1787902678226@example.com",
-      "amount": 349900,
+      "id": "PAY_179201948",
+      "orderId": "NB92041",
+      "userId": "usr_test_001",
+      "customerName": "Karthik Subramanian",
+      "customerEmail": "karthik.subramanian@example.com",
+      "amount": 28990,
       "paymentMethod": "ONLINE",
       "paymentStatus": "SUCCESS",
       "gateway": "Razorpay",
-      "transactionId": "TXN_TEST_1787902678322",
-      "createdAt": "2026-08-28T07:37:58.325Z",
-      "updatedAt": "2026-08-28T07:37:58.325Z"
-    },
-    {
-      "id": "PAY_1787902523223",
-      "orderId": "BC65038",
-      "userId": "usr_1787902523191_vva0",
-      "customerName": "Naresh Kumar",
-      "customerEmail": "customer_1787902523128@example.com",
-      "amount": 349900,
-      "paymentMethod": "ONLINE",
-      "paymentStatus": "SUCCESS",
-      "gateway": "Razorpay",
-      "transactionId": "TXN_TEST_1787902523221",
-      "createdAt": "2026-08-28T07:35:23.223Z",
-      "updatedAt": "2026-08-28T07:35:23.223Z"
+      "transactionId": "TXN_RZP_179201948",
+      "createdAt": "2026-11-05T08:15:00.000Z",
+      "updatedAt": "2026-11-05T08:15:00.000Z"
     }
   ],
   "feedback": [
     {
-      "id": "fb_1787902678344",
-      "name": "Priya Sharma",
-      "email": "priya@techcorp.in",
-      "phone": "+91 98840 54321",
-      "subject": "Bulk Workstation Procurement",
+      "id": "fb_179201980",
+      "name": "Arun Prakash",
+      "email": "arun.prakash@nextech.io",
+      "phone": "+91 98840 99887",
+      "subject": "Corporate Bulk Procurement Inquiry",
       "category": "Corporate & Bulk Inquiries",
-      "message": "Need quotation for 25 units of MacBook Pro 16 M3 Max for our design department.",
+      "message": "Looking to procure 30 units of Keychron Q1 Pro keyboards and Logitech MX Master 3S mice for our engineering hub in Anna Nagar.",
       "read": false,
       "status": "UNREAD",
-      "createdAt": "2026-08-28T07:37:58.344Z"
-    },
-    {
-      "id": "fb_1787902523242",
-      "name": "Priya Sharma",
-      "email": "priya@techcorp.in",
-      "phone": "+91 98840 54321",
-      "subject": "Bulk Workstation Procurement",
-      "category": "Corporate & Bulk Inquiries",
-      "message": "Need quotation for 25 units of MacBook Pro 16 M3 Max for our design department.",
-      "read": false,
-      "status": "UNREAD",
-      "createdAt": "2026-08-28T07:35:23.242Z"
+      "createdAt": "2026-11-06T10:00:00.000Z"
     }
   ],
   "reviews": [],
+  "subscribers": [
+    {
+      "id": "sub_1794037022454",
+      "email": "subscriber_1794037022453@nexbuy-test.com",
+      "createdAt": "2026-11-07T07:37:02.454Z"
+    },
+    {
+      "id": "sub_1794036784742",
+      "email": "subscriber_1794036784741@nexbuy-test.com",
+      "createdAt": "2026-11-07T07:33:04.742Z"
+    },
+    {
+      "id": "sub_1794036715458",
+      "email": "subscriber_1794036715457@nexbuy-test.com",
+      "createdAt": "2026-11-07T07:31:55.458Z"
+    },
+    {
+      "id": "sub_1",
+      "email": "karthik.subramanian@example.com",
+      "createdAt": "2026-11-05T08:10:00.000Z"
+    }
+  ],
   "settings": {
-    "storeName": "BYTECART Flagship Store",
-    "storeEmail": "contact@bytecart.in",
-    "storePhone": "+91 44 2621 8900",
-    "storeAddress": "14, 2nd Avenue, Anna Nagar, Chennai, Tamil Nadu 600040",
+    "storeName": "NEXBUY Flagship Store",
+    "companyName": "NEXBUY ENTERPRISES PVT LTD",
+    "storeEmail": "reach2nexbuy@gmail.com",
+    "storePhone": "+91 74483 76974",
+    "phones": [
+      "+91 74483 76974",
+      "+91 97890 33393",
+      "+91 44 3154 4371"
+    ],
+    "registeredAddress": "Flat No. 2, Plot No. 1051, 35th Street, 18th Main Road, Anna Nagar, Chennai – 600040",
+    "branchAddress": "1st Floor, Shop No. F49, No. 18/19, UNO Arcade Complex, Meeran Sahib Street, Chennai – 600002",
+    "gstin": "33AMCN1317Q1Z5",
     "taxEnabled": false,
     "taxRate": 0,
     "shippingCharge": 0,
-    "freeShippingThreshold": 0,
+    "freeShippingThreshold": 1999,
     "paymentGateway": "Razorpay",
     "paymentGatewayConnected": true,
-    "allowCOD": true
+    "allowCOD": true,
+    "promotionalBanner": {
+      "heading": "Boost Your Productivity",
+      "subheading": "Premium gear designed for modern workstations and digital creators.",
+      "ctaText": "Browse Now",
+      "ctaLink": "/products",
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1600&q=80"
+    }
   },
   "auditLogs": [
     {
-      "id": "log_1789668699839_bap3v",
-      "adminId": "usr_admin_001",
-      "action": "DELETE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1789668683564",
-      "details": "Deleted product \"Test Admin Unit Demo\"",
-      "createdAt": "2026-09-17T18:11:39.839Z"
-    },
-    {
-      "id": "log_1789668683566_ruu19",
+      "id": "log_1794037022549_w8stk",
       "adminId": "usr_admin_001",
       "action": "CREATE_PRODUCT",
       "entity": "products",
-      "entityId": "prod_1789668683564",
-      "details": "Created product \"Test Admin Unit Demo\"",
-      "createdAt": "2026-09-17T18:11:23.566Z"
+      "entityId": "prod_1794037022547",
+      "details": "Created product \"NEXBUY Pro Acoustic T500 (1794037022537)\"",
+      "createdAt": "2026-11-07T07:37:02.549Z"
     },
     {
-      "id": "log_1789322236719_rjcq2",
+      "id": "log_1794037022534_7jowc",
       "adminId": "usr_admin_001",
       "action": "ADMIN_LOGIN",
       "entity": "users",
       "entityId": "usr_admin_001",
       "details": "Administrator logged in successfully.",
-      "createdAt": "2026-09-13T17:57:16.719Z"
+      "createdAt": "2026-11-07T07:37:02.534Z"
     },
     {
-      "id": "log_1789321993477_wbzb7",
+      "id": "log_1794036784822_565op",
       "adminId": "usr_admin_001",
       "action": "ADMIN_LOGIN",
       "entity": "users",
       "entityId": "usr_admin_001",
       "details": "Administrator logged in successfully.",
-      "createdAt": "2026-09-13T17:53:13.477Z"
+      "createdAt": "2026-11-07T07:33:04.822Z"
     },
     {
-      "id": "log_1788767455859_rxlio",
-      "adminId": "usr_admin_001",
-      "action": "DELETE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1788767455835",
-      "details": "Deleted product \"Dell Inspiron 15\"",
-      "createdAt": "2026-09-07T07:50:55.859Z"
-    },
-    {
-      "id": "log_1788767455849_iy89a",
-      "adminId": "usr_admin_001",
-      "action": "UPDATE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1788767455835",
-      "details": "Updated product \"Dell Inspiron 15\"",
-      "createdAt": "2026-09-07T07:50:55.849Z"
-    },
-    {
-      "id": "log_1788767455837_kduxa",
-      "adminId": "usr_admin_001",
-      "action": "CREATE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1788767455835",
-      "details": "Created product \"Dell Inspiron 15\"",
-      "createdAt": "2026-09-07T07:50:55.837Z"
-    },
-    {
-      "id": "log_1788767455819_8uj7e",
-      "adminId": "usr_admin_001",
-      "action": "ADMIN_LOGIN",
-      "entity": "users",
-      "entityId": "usr_admin_001",
-      "details": "Administrator logged in successfully.",
-      "createdAt": "2026-09-07T07:50:55.819Z"
-    },
-    {
-      "id": "log_1788767401845_ey0cp",
-      "adminId": "usr_admin_001",
-      "action": "DELETE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1788767401820",
-      "details": "Deleted product \"Dell Inspiron 15\"",
-      "createdAt": "2026-09-07T07:50:01.845Z"
-    },
-    {
-      "id": "log_1788767401832_nnefi",
-      "adminId": "usr_admin_001",
-      "action": "UPDATE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1788767401820",
-      "details": "Updated product \"Dell Inspiron 15\"",
-      "createdAt": "2026-09-07T07:50:01.832Z"
-    },
-    {
-      "id": "log_1788767401822_pe91g",
-      "adminId": "usr_admin_001",
-      "action": "CREATE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1788767401820",
-      "details": "Created product \"Dell Inspiron 15\"",
-      "createdAt": "2026-09-07T07:50:01.822Z"
-    },
-    {
-      "id": "log_1788767401811_x3fv7",
-      "adminId": "usr_admin_001",
-      "action": "DELETE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1787904785775",
-      "details": "Deleted product \"test\"",
-      "createdAt": "2026-09-07T07:50:01.811Z"
-    },
-    {
-      "id": "log_1788767401794_j3oys",
-      "adminId": "usr_admin_001",
-      "action": "ADMIN_LOGIN",
-      "entity": "users",
-      "entityId": "usr_admin_001",
-      "details": "Administrator logged in successfully.",
-      "createdAt": "2026-09-07T07:50:01.794Z"
-    },
-    {
-      "id": "log_1788767372658_bc21x",
-      "adminId": "usr_admin_001",
-      "action": "DELETE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1788767372632",
-      "details": "Deleted product \"Dell Inspiron 15\"",
-      "createdAt": "2026-09-07T07:49:32.658Z"
-    },
-    {
-      "id": "log_1788767372645_7tbg5",
-      "adminId": "usr_admin_001",
-      "action": "UPDATE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1788767372632",
-      "details": "Updated product \"Dell Inspiron 15\"",
-      "createdAt": "2026-09-07T07:49:32.645Z"
-    },
-    {
-      "id": "log_1788767372634_7ta8y",
-      "adminId": "usr_admin_001",
-      "action": "CREATE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1788767372632",
-      "details": "Created product \"Dell Inspiron 15\"",
-      "createdAt": "2026-09-07T07:49:32.634Z"
-    },
-    {
-      "id": "log_1788767372615_e9gqt",
-      "adminId": "usr_admin_001",
-      "action": "ADMIN_LOGIN",
-      "entity": "users",
-      "entityId": "usr_admin_001",
-      "details": "Administrator logged in successfully.",
-      "createdAt": "2026-09-07T07:49:32.615Z"
-    },
-    {
-      "id": "log_1788764643351_thl5n",
-      "adminId": "usr_admin_001",
-      "action": "ADMIN_LOGIN",
-      "entity": "users",
-      "entityId": "usr_admin_001",
-      "details": "Administrator logged in successfully.",
-      "createdAt": "2026-09-07T07:04:03.351Z"
-    },
-    {
-      "id": "log_1787904785778_c2ahr",
-      "adminId": "usr_admin_001",
-      "action": "CREATE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1787904785775",
-      "details": "Created product \"test\"",
-      "createdAt": "2026-08-28T08:13:05.778Z"
-    },
-    {
-      "id": "log_1787904737707_kkxjg",
-      "adminId": "usr_admin_001",
-      "action": "DELETE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1787902523207",
-      "details": "Deleted product \"MacBook Pro 16 M3 Max Ultra Spec\"",
-      "createdAt": "2026-08-28T08:12:17.707Z"
-    },
-    {
-      "id": "log_1787904730692_ts2bf",
-      "adminId": "usr_admin_001",
-      "action": "DELETE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1787902678307",
-      "details": "Deleted product \"MacBook Pro 16 M3 Max Ultra Spec\"",
-      "createdAt": "2026-08-28T08:12:10.692Z"
-    },
-    {
-      "id": "log_1787904727078_d97fw",
-      "adminId": "usr_admin_001",
-      "action": "DELETE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1787904529636",
-      "details": "Deleted product \"Test Laptop\"",
-      "createdAt": "2026-08-28T08:12:07.078Z"
-    },
-    {
-      "id": "log_1787904529681_bnz4b",
-      "adminId": "usr_admin_001",
-      "action": "UPDATE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1787904529636",
-      "details": "Updated product \"Test Laptop\"",
-      "createdAt": "2026-08-28T08:08:49.681Z"
-    },
-    {
-      "id": "log_1787904529668_smljz",
-      "adminId": "usr_admin_001",
-      "action": "UPDATE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1787904529636",
-      "details": "Updated product \"Test Laptop\"",
-      "createdAt": "2026-08-28T08:08:49.669Z"
-    },
-    {
-      "id": "log_1787904529638_npea2",
-      "adminId": "usr_admin_001",
-      "action": "CREATE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1787904529636",
-      "details": "Created product \"Test Laptop\"",
-      "createdAt": "2026-08-28T08:08:49.638Z"
-    },
-    {
-      "id": "log_1787904529615_yd9iz",
-      "adminId": "usr_admin_001",
-      "action": "ADMIN_LOGIN",
-      "entity": "users",
-      "entityId": "usr_admin_001",
-      "details": "Administrator logged in successfully.",
-      "createdAt": "2026-08-28T08:08:49.615Z"
-    },
-    {
-      "id": "log_1787902870766_99tsr",
-      "adminId": "usr_admin_001",
-      "action": "ADMIN_LOGIN",
-      "entity": "users",
-      "entityId": "usr_admin_001",
-      "details": "Administrator logged in successfully.",
-      "createdAt": "2026-08-28T07:41:10.766Z"
-    },
-    {
-      "id": "log_1787902678336_kfpju",
-      "adminId": "usr_admin_001",
-      "action": "UPDATE_ORDER_STATUS",
-      "entity": "orders",
-      "entityId": "BC85606",
-      "details": "Updated status to Shipped Paid",
-      "createdAt": "2026-08-28T07:37:58.336Z"
-    },
-    {
-      "id": "log_1787902678309_excre",
-      "adminId": "usr_admin_001",
-      "action": "CREATE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1787902678307",
-      "details": "Created product \"MacBook Pro 16 M3 Max Ultra Spec\"",
-      "createdAt": "2026-08-28T07:37:58.309Z"
-    },
-    {
-      "id": "log_1787902678223_i1nwr",
-      "adminId": "usr_admin_001",
-      "action": "ADMIN_LOGIN",
-      "entity": "users",
-      "entityId": "usr_admin_001",
-      "details": "Administrator logged in successfully.",
-      "createdAt": "2026-08-28T07:37:58.223Z"
-    },
-    {
-      "id": "log_1787902523234_t89gf",
-      "adminId": "usr_admin_001",
-      "action": "UPDATE_ORDER_STATUS",
-      "entity": "orders",
-      "entityId": "BC65038",
-      "details": "Updated status to Shipped Paid",
-      "createdAt": "2026-08-28T07:35:23.234Z"
-    },
-    {
-      "id": "log_1787902523208_6do75",
-      "adminId": "usr_admin_001",
-      "action": "CREATE_PRODUCT",
-      "entity": "products",
-      "entityId": "prod_1787902523207",
-      "details": "Created product \"MacBook Pro 16 M3 Max Ultra Spec\"",
-      "createdAt": "2026-08-28T07:35:23.208Z"
-    },
-    {
-      "id": "log_1787902523124_za99i",
-      "adminId": "usr_admin_001",
-      "action": "ADMIN_LOGIN",
-      "entity": "users",
-      "entityId": "usr_admin_001",
-      "details": "Administrator logged in successfully.",
-      "createdAt": "2026-08-28T07:35:23.124Z"
-    },
-    {
-      "id": "log_1787901340168_4fkur",
-      "adminId": "usr_admin_001",
-      "action": "ADMIN_LOGIN",
-      "entity": "users",
-      "entityId": "usr_admin_001",
-      "details": "Administrator logged in successfully.",
-      "createdAt": "2026-08-28T07:15:40.168Z"
+      "id": "log_init_001",
+      "adminId": "system",
+      "action": "SYSTEM_INIT",
+      "entity": "database",
+      "entityId": "global",
+      "details": "Initialized NEXBUY ENTERPRISES PVT LTD database pipeline.",
+      "createdAt": "2026-11-01T00:00:00.000Z"
     }
   ]
 }

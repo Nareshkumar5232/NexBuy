@@ -5,7 +5,7 @@ import { categoriesData as defaultCategories } from '../data/categoriesData';
 function getAdminFallbackProducts(params = {}) {
   let list = [...productsData];
   try {
-    const custom = JSON.parse(localStorage.getItem('bytecart_custom_products') || '[]');
+    const custom = JSON.parse(localStorage.getItem('nexbuy_custom_products') || '[]');
     if (Array.isArray(custom) && custom.length > 0) {
       const customIds = new Set(custom.map(p => p.id));
       list = [...custom, ...list.filter(p => !customIds.has(p.id))];
@@ -31,30 +31,30 @@ function getAdminFallbackProducts(params = {}) {
 function notifyProductsUpdated() {
   try {
     if (typeof window !== 'undefined') {
-      window.dispatchEvent(new CustomEvent('bytecart_products_updated'));
+      window.dispatchEvent(new CustomEvent('nexbuy_products_updated'));
     }
   } catch {}
 }
 
 function saveCustomProductFallback(product) {
   try {
-    const custom = JSON.parse(localStorage.getItem('bytecart_custom_products') || '[]');
+    const custom = JSON.parse(localStorage.getItem('nexbuy_custom_products') || '[]');
     const index = custom.findIndex(p => p.id === product.id || p.slug === product.slug);
     if (index >= 0) {
       custom[index] = { ...custom[index], ...product };
     } else {
       custom.unshift(product);
     }
-    localStorage.setItem('bytecart_custom_products', JSON.stringify(custom));
+    localStorage.setItem('nexbuy_custom_products', JSON.stringify(custom));
     notifyProductsUpdated();
   } catch {}
 }
 
 function deleteCustomProductFallback(id) {
   try {
-    const custom = JSON.parse(localStorage.getItem('bytecart_custom_products') || '[]');
+    const custom = JSON.parse(localStorage.getItem('nexbuy_custom_products') || '[]');
     const filtered = custom.filter(p => p.id !== id && p.slug !== id);
-    localStorage.setItem('bytecart_custom_products', JSON.stringify(filtered));
+    localStorage.setItem('nexbuy_custom_products', JSON.stringify(filtered));
     notifyProductsUpdated();
   } catch {}
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { ArrowRight, Eye, EyeOff, Lock, Mail, User, Phone, ChevronLeft } from 'lucide-react';
+import { ArrowRight, Eye, EyeOff, Lock, Mail, User, Phone, ChevronLeft, ShieldCheck } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import Logo from '../../components/common/Logo';
 
@@ -71,153 +71,164 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-[1600px] mx-auto flex items-center justify-center">
-      <div className="w-full grid grid-cols-1 lg:grid-cols-12 rounded-[2.5rem] overflow-hidden border border-[#E2DBD0] bg-[#E8E0D5]/30 shadow-xl">
-        {/* Left Column: Architectural Imagery & Brand Ethos (Span 6) */}
-        <div className="hidden lg:flex lg:col-span-6 relative bg-[#24221F] text-[#F4F0E8] p-12 flex-col justify-between overflow-hidden">
+    <div className="min-h-[85vh] py-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto flex items-center justify-center">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-xl">
+        {/* Left Column: Tech Visuals & Brand Details */}
+        <div className="hidden lg:flex lg:col-span-6 relative bg-[#0B0F17] text-white p-12 flex-col justify-between overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=1200&q=80"
-            alt="Modern laptop setup workspace"
-            className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity"
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80"
+            alt="NEXBUY Technology"
+            className="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-luminosity"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#24221F] via-[#24221F]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F17] via-[#0B0F17]/70 to-transparent" />
 
           <div className="relative z-10">
-            <Link to="/" className="inline-flex items-center gap-1 text-xs uppercase tracking-widest text-[#C08A6A] hover:text-white transition-colors mb-6">
+            <Link to="/" className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-emerald-400 hover:text-white transition-colors mb-6 font-bold">
               <ChevronLeft className="w-4 h-4" />
               <span>Back to Store</span>
             </Link>
-            <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#C08A6A] block">
-              Access Premium Tech
+            <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-emerald-400 block">
+              Join NEXBUY
             </span>
-            <h2 className="text-3xl xl:text-4xl font-serif text-[#F4F0E8] mt-2 leading-tight">
-              Create an account with Bytecart.
+            <h2 className="text-3xl font-black text-white mt-2 leading-tight">
+              Create an account with NEXBUY.
             </h2>
+            <p className="text-xs text-slate-400 mt-2 leading-relaxed">
+              Unlock fast checkout, order tracking, exclusive discounts on audio, smart devices, and computer peripherals.
+            </p>
           </div>
 
-          <div className="relative z-10 space-y-3 border-t border-[#4A4642] pt-6">
-            <p className="text-xs text-[#BDB6AF] font-light leading-relaxed">
-              “Join our community of technology enthusiasts, developers, and creators scaling their computing power.”
-            </p>
-            <span className="text-[10px] uppercase font-bold tracking-widest text-[#C08A6A] block">
-              Official Manufacturer Warranty • Secured Insured Shipping
+          <div className="relative z-10 space-y-3 border-t border-slate-800 pt-6">
+            <div className="flex items-center gap-2 text-xs text-slate-300">
+              <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span>GST Verified Invoices & Pan-India Dispatch</span>
+            </div>
+            <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400 block">
+              NEXBUY ENTERPRISES PVT LTD • GSTIN: 33AMCN1317Q1Z5
             </span>
           </div>
         </div>
 
-        {/* Right Column: Clean Registration Form (Span 6) */}
-        <div className="lg:col-span-6 p-8 sm:p-14 lg:p-16 flex flex-col justify-center space-y-6 bg-[#F4F0E8]">
-          <div className="space-y-2">
+        {/* Right Column: Clean Registration Form */}
+        <div className="lg:col-span-6 p-8 sm:p-12 flex flex-col justify-center space-y-5 bg-white">
+          <div className="space-y-1.5">
             <div className="flex justify-between items-center">
               <Logo />
-              <Link to="/login" state={{ from: location.state?.from || location.state?.redirect }} className="text-xs text-[#A66A4C] hover:text-[#24221F] uppercase font-semibold tracking-wider">
+              <Link to="/login" state={{ from: location.state?.from || location.state?.redirect }} className="text-xs text-emerald-600 hover:text-emerald-700 font-bold uppercase tracking-wider">
                 Sign In →
               </Link>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-serif text-[#24221F] pt-2">
-              Create Your Client Account
+            <h1 className="text-2xl font-black text-slate-900 pt-1">
+              Create Your Account
             </h1>
-            <p className="text-xs text-[#77716A] leading-relaxed">
-              Enjoy seamless multi-step checkout, real-time dispatch tracking, and saved address books.
+            <p className="text-xs text-slate-500">
+              Fill in your details to create your customer account.
             </p>
           </div>
 
           {error && (
-            <div className="p-3.5 rounded-2xl bg-red-50 border border-red-200 text-xs text-red-700">
+            <div className="p-3 rounded-xl bg-rose-50 border border-rose-200 text-xs text-rose-700">
               {error}
             </div>
           )}
 
           <form onSubmit={handleSubmit} className="space-y-3.5">
             <div className="space-y-1">
-              <label className="text-[10px] font-semibold uppercase tracking-wider text-[#77716A] block">
-                Full Name *
+              <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block">
+                Full Name
               </label>
               <div className="relative">
-                <User className="w-4 h-4 text-[#9E9890] absolute left-4 top-1/2 -translate-y-1/2" />
+                <User className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                 <input
                   type="text"
                   name="name"
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="e.g. Maya Ramesh"
-                  className="w-full pl-11 pr-4 py-3 rounded-2xl bg-[#E8E0D5]/40 border border-[#E2DBD0] text-xs text-[#24221F] focus:bg-white focus:outline-none focus:border-[#A66A4C] transition-all"
+                  placeholder="John Doe"
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-emerald-500"
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="space-y-1">
-                <label className="text-[10px] font-semibold uppercase tracking-wider text-[#77716A] block">
-                  Email Address *
+                <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block">
+                  Email
                 </label>
                 <div className="relative">
-                  <Mail className="w-4 h-4 text-[#9E9890] absolute left-4 top-1/2 -translate-y-1/2" />
+                  <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                   <input
                     type="email"
                     name="email"
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="name@domain.com"
-                    className="w-full pl-11 pr-4 py-3 rounded-2xl bg-[#E8E0D5]/40 border border-[#E2DBD0] text-xs text-[#24221F] focus:bg-white focus:outline-none focus:border-[#A66A4C] transition-all"
+                    placeholder="name@example.com"
+                    className="w-full pl-10 pr-3 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-emerald-500"
                   />
                 </div>
               </div>
 
               <div className="space-y-1">
-                <label className="text-[10px] font-semibold uppercase tracking-wider text-[#77716A] block">
-                  Phone Number *
+                <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block">
+                  Phone
                 </label>
                 <div className="relative">
-                  <Phone className="w-4 h-4 text-[#9E9890] absolute left-4 top-1/2 -translate-y-1/2" />
+                  <Phone className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                   <input
                     type="tel"
                     name="phone"
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="+91 98400 12345"
-                    className="w-full pl-11 pr-4 py-3 rounded-2xl bg-[#E8E0D5]/40 border border-[#E2DBD0] text-xs text-[#24221F] focus:bg-white focus:outline-none focus:border-[#A66A4C] transition-all"
+                    placeholder="+91 98765 43210"
+                    className="w-full pl-10 pr-3 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-emerald-500"
                   />
                 </div>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="space-y-1">
-                <label className="text-[10px] font-semibold uppercase tracking-wider text-[#77716A] block">
-                  Password *
+                <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block">
+                  Password
                 </label>
                 <div className="relative">
-                  <Lock className="w-4 h-4 text-[#9E9890] absolute left-4 top-1/2 -translate-y-1/2" />
+                  <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                   <input
                     type={showPassword ? 'text' : 'password'}
                     name="password"
                     required
                     value={formData.password}
                     onChange={handleChange}
-                    placeholder="Min 6 chars"
-                    className="w-full pl-11 pr-11 py-3 rounded-2xl bg-[#E8E0D5]/40 border border-[#E2DBD0] text-xs text-[#24221F] focus:bg-white focus:outline-none focus:border-[#A66A4C] transition-all"
+                    placeholder="••••••••"
+                    className="w-full pl-10 pr-9 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-emerald-500"
                   />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700"
+                  >
+                    {showPassword ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+                  </button>
                 </div>
               </div>
 
               <div className="space-y-1">
-                <label className="text-[10px] font-semibold uppercase tracking-wider text-[#77716A] block">
-                  Confirm Password *
+                <label className="text-[11px] font-bold uppercase tracking-wider text-slate-700 block">
+                  Confirm Password
                 </label>
                 <div className="relative">
-                  <Lock className="w-4 h-4 text-[#9E9890] absolute left-4 top-1/2 -translate-y-1/2" />
+                  <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                   <input
                     type={showPassword ? 'text' : 'password'}
                     name="confirmPassword"
                     required
                     value={formData.confirmPassword}
                     onChange={handleChange}
-                    placeholder="Repeat password"
-                    className="w-full pl-11 pr-4 py-3 rounded-2xl bg-[#E8E0D5]/40 border border-[#E2DBD0] text-xs text-[#24221F] focus:bg-white focus:outline-none focus:border-[#A66A4C] transition-all"
+                    placeholder="••••••••"
+                    className="w-full pl-10 pr-3 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-emerald-500"
                   />
                 </div>
               </div>
@@ -226,18 +237,16 @@ export default function Register() {
             <button
               type="submit"
               disabled={submitting}
-              className="w-full py-4 px-6 rounded-full bg-[#24221F] hover:bg-[#A66A4C] active:scale-[0.99] disabled:opacity-50 text-[#F4F0E8] text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer shadow-sm mt-3"
+              className="w-full py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 active:scale-[0.99] text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md shadow-emerald-500/20 disabled:opacity-50 mt-2"
             >
-              {submitting ? (
-                <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-              ) : (
-                <>
-                  <span>Create Account & Proceed</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </>
-              )}
+              <span>{submitting ? 'Creating Account...' : 'Register Account'}</span>
+              <ArrowRight className="w-4 h-4" />
             </button>
           </form>
+
+          <p className="text-[11px] text-center text-slate-400">
+            By registering, you agree to NEXBUY's Terms of Service and Privacy Policy.
+          </p>
         </div>
       </div>
     </div>

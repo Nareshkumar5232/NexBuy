@@ -20,11 +20,19 @@ app.use('/api/payments', require('./routes/payments'));
 app.use('/api/feedback', require('./routes/feedback'));
 app.use('/api/admin', require('./routes/admin'));
 
+// Public Store Settings
+app.get('/api/settings', (req, res) => {
+  const db = require('./db');
+  const data = db.get();
+  res.json(data.settings || {});
+});
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'healthy',
-    service: 'BYTECART Unified Backend',
+    service: 'NEXBUY Unified Backend',
+    brand: 'NEXBUY ENTERPRISES PVT LTD',
     timestamp: new Date().toISOString()
   });
 });
@@ -33,8 +41,8 @@ app.get('/api/health', (req, res) => {
 seed().then(() => {
   app.listen(PORT, () => {
     console.log(`===============================================`);
-    console.log(`✓ BYTECART Backend Server running on port ${PORT}`);
-    console.log(`✓ Unified Single Source of Truth initialized`);
+    console.log(`✓ NEXBUY Backend Server running on port ${PORT}`);
+    console.log(`✓ NEXBUY Unified Source of Truth initialized`);
     console.log(`===============================================`);
   });
 });

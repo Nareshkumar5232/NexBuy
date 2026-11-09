@@ -16,7 +16,7 @@ router.post('/create-order', (req, res) => {
       gatewayOrderId,
       amount,
       currency,
-      keyId: process.env.RAZORPAY_KEY_ID || 'rzp_test_bytecart_key',
+      keyId: process.env.RAZORPAY_KEY_ID || 'rzp_test_nexbuy_key',
       customer: {
         name: customerName,
         email: customerEmail,

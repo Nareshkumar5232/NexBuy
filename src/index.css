@@ -2,110 +2,103 @@
 
 @layer base {
   :root {
-    --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     
-    --bg-ivory: #F4F0E8;
-    --bg-beige: #E8E0D5;
-    --bg-cream: #FAF8F5;
-    --text-charcoal: #24221F;
-    --text-warm-gray: #77716A;
-    --text-light-gray: #9E9890;
-    --accent-terracotta: #A66A4C;
-    --accent-sandstone: #C08A6A;
-    --accent-terracotta-hover: #8C5539;
-    --accent-olive: #4A493D;
-    --border-warm: #E2DBD0;
+    --bg-dark: #0B0F17;
+    --bg-darker: #06090E;
+    --bg-surface-dark: #121824;
+    --bg-light: #F8FAFC;
+    --bg-white: #FFFFFF;
+    
+    --text-primary: #0F172A;
+    --text-muted: #64748B;
+    --text-light: #F8FAFC;
+    --text-light-muted: #94A3B8;
+    
+    --accent-green: #10B981;
+    --accent-green-hover: #059669;
+    --accent-green-light: #D1FAE5;
+    --accent-green-glow: rgba(16, 185, 129, 0.25);
+    
+    --border-light: #E2E8F0;
+    --border-dark: #1E293B;
   }
 
   body {
     font-family: var(--font-sans);
-    background-color: #F4F0E8;
-    color: #24221F;
+    background-color: #FFFFFF;
+    color: #0F172A;
     overflow-x: hidden;
     letter-spacing: -0.01em;
   }
 
-  h1, h2, h3, .font-serif, .serif-heading {
-    font-family: var(--font-serif);
-    letter-spacing: -0.02em;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    letter-spacing: -0.025em;
   }
 }
 
-/* Custom Editorial Utilities */
-.font-serif {
-  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-}
-
+/* Custom Technology Theme Utilities */
 .font-sans {
-  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-.bg-warm-ivory {
-  background-color: #F4F0E8;
+.bg-tech-dark {
+  background-color: #0B0F17;
 }
 
-.bg-soft-beige {
-  background-color: #E8E0D5;
+.bg-tech-darker {
+  background-color: #06090E;
 }
 
-.bg-deep-charcoal {
-  background-color: #24221F;
+.bg-tech-card {
+  background-color: #121824;
 }
 
-.text-deep-charcoal {
-  color: #24221F;
+.text-tech-green {
+  color: #10B981;
 }
 
-.text-warm-gray {
-  color: #77716A;
+.bg-tech-green {
+  background-color: #10B981;
 }
 
-.text-terracotta {
-  color: #A66A4C;
+.bg-tech-green:hover {
+  background-color: #059669;
 }
 
-.text-sandstone {
-  color: #C08A6A;
+.border-tech-dark {
+  border-color: #1E293B;
 }
 
-.border-warm {
-  border-color: #E2DBD0;
+.green-glow {
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.35);
 }
 
-/* Glass & Blur in warm neutral */
-.glass-warm {
-  background: rgba(244, 240, 232, 0.90);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+.green-glow-sm {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
 }
 
-.glass-dark-warm {
-  background: rgba(36, 34, 31, 0.94);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-/* Custom Scrollbar in warm stone */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F4F0E8;
+  background: #0B0F17;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D4CCC1;
+  background: #1E293B;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B8ADA0;
+  background: #10B981;
 }
 
-/* Smooth Image Scale Transitions */
-.editorial-img-hover {
-  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+/* Smooth Product Zoom Transitions */
+.tech-img-hover {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
 }
-.editorial-img-hover:hover {
-  transform: scale(1.035);
+.tech-img-hover:hover {
+  transform: scale(1.04);
 }

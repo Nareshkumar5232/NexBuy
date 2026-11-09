@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const db = require('../db');
 const { authenticate } = require('../middleware/auth');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'bytecart_secure_jwt_secret_production_2026';
+const JWT_SECRET = process.env.JWT_SECRET || 'nexbuy_secure_jwt_secret_production_2026';
 
 // Register User
 router.post('/register', async (req, res) => {

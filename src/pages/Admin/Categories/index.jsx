@@ -36,7 +36,7 @@ export default function AdminCategories() {
         name: newName.trim(),
         description: newDesc.trim(),
       });
-      addToast(`Category "${newName}" created.`, 'success');
+      addToast(`Category "${newName}" created successfully.`, 'success');
       setNewName('');
       setNewDesc('');
       fetchCategories();
@@ -48,7 +48,7 @@ export default function AdminCategories() {
   };
 
   const handleDelete = async (id, name) => {
-    if (!window.confirm(`Delete category "${name}"?`)) return;
+    if (!window.confirm(`Delete category "${name}"? Products in this category will remain.`)) return;
     try {
       await adminService.deleteCategory(id);
       addToast(`Category "${name}" deleted.`, 'info');
@@ -62,48 +62,48 @@ export default function AdminCategories() {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A66A4C]">
-            Taxonomy Structure
+          <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600">
+            Catalog Taxonomy
           </span>
-          <h1 className="text-2xl sm:text-3xl font-serif text-[#24221F] font-bold">
-            Hardware Categories
+          <h1 className="text-2xl sm:text-3xl font-black text-slate-900">
+            Technology Categories ({categories.length})
           </h1>
         </div>
 
         <button
           onClick={fetchCategories}
-          className="self-start sm:self-auto px-4 py-2 rounded-full border border-[#E2DBD0] bg-white hover:bg-[#EAE4DA] text-xs font-semibold text-[#24221F] flex items-center gap-2 transition-colors cursor-pointer"
+          className="self-start sm:self-auto px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-xs font-bold text-slate-700 flex items-center gap-2 transition-colors cursor-pointer shadow-xs"
         >
-          <RefreshCw className="w-3.5 h-3.5 text-[#77716A]" />
+          <RefreshCw className="w-3.5 h-3.5 text-slate-500" />
           <span>Refresh</span>
         </button>
       </div>
 
       {/* Add Category Form */}
-      <form onSubmit={handleCreate} className="p-6 rounded-3xl bg-white border border-[#E2DBD0] space-y-4 shadow-xs">
-        <h2 className="text-sm font-serif font-bold text-[#24221F]">Create New Category</h2>
+      <form onSubmit={handleCreate} className="p-6 rounded-2xl bg-white border border-slate-200 space-y-4 shadow-xs">
+        <h2 className="text-sm font-bold text-slate-900">Create New Technology Category</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
           <input
             type="text"
             required
             value={newName}
             onChange={(e) => setNewName(e.target.value)}
-            placeholder="Category Name (e.g. Graphics Cards, Processors)"
-            className="px-4 py-2.5 rounded-xl bg-[#F5F2EC] border border-[#E2DBD0] text-[#24221F]"
+            placeholder="Category Name (e.g. Virtual Reality, Drones)"
+            className="px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-emerald-500"
           />
           <input
             type="text"
             value={newDesc}
             onChange={(e) => setNewDesc(e.target.value)}
             placeholder="Description summary..."
-            className="px-4 py-2.5 rounded-xl bg-[#F5F2EC] border border-[#E2DBD0] text-[#24221F]"
+            className="px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-emerald-500"
           />
         </div>
         <div className="flex justify-end">
           <button
             type="submit"
             disabled={saving}
-            className="px-5 py-2.5 rounded-full bg-[#24221F] hover:bg-[#A66A4C] text-white text-xs font-semibold uppercase tracking-wider flex items-center gap-2 disabled:opacity-50 cursor-pointer"
+            className="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2 disabled:opacity-50 cursor-pointer shadow-sm shadow-emerald-500/20 transition-colors"
           >
             <Plus className="w-3.5 h-3.5" />
             <span>{saving ? 'Creating...' : 'Add Category'}</span>
@@ -114,15 +114,15 @@ export default function AdminCategories() {
       {/* Categories Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {categories.map((c) => (
-          <div key={c.id || c.slug} className="p-5 rounded-2xl bg-white border border-[#E2DBD0] flex items-start justify-between gap-3 shadow-xs">
+          <div key={c.id || c.slug} className="p-5 rounded-2xl bg-white border border-slate-200 flex items-start justify-between gap-3 shadow-xs hover:border-slate-300 transition-all">
             <div className="space-y-1">
-              <h3 className="font-serif font-bold text-sm text-[#24221F]">{c.name}</h3>
-              <p className="text-[11px] text-[#77716A] line-clamp-2">{c.description || 'Hardware category'}</p>
-              <code className="text-[10px] text-[#A66A4C] font-mono">/{c.slug}</code>
+              <h3 className="font-bold text-sm text-slate-900">{c.name}</h3>
+              <p className="text-[11px] text-slate-500 line-clamp-2">{c.description || 'Consumer technology'}</p>
+              <code className="text-[10px] text-emerald-600 font-mono font-bold block pt-1">/{c.slug}</code>
             </div>
             <button
               onClick={() => handleDelete(c.id || c.slug, c.name)}
-              className="p-1.5 text-[#9E9890] hover:text-red-700 transition-colors"
+              className="p-1.5 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-colors cursor-pointer"
               title="Delete Category"
             >
               <Trash2 className="w-4 h-4" />

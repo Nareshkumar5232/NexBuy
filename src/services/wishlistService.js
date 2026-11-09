@@ -1,4 +1,4 @@
-const WISHLIST_STORAGE_KEY = 'bytecart_customer_wishlist_v1';
+const WISHLIST_STORAGE_KEY = 'nexbuy_customer_wishlist_v1';
 
 export const wishlistService = {
   async getWishlist(userId) {

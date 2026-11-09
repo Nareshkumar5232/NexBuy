@@ -56,11 +56,11 @@ export default function Account() {
 
   if (authLoading || (loading && isAuthenticated)) {
     return (
-      <div className="pt-36 pb-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 animate-pulse">
-        <div className="h-20 bg-[#E8E0D5] rounded-3xl" />
+      <div className="pt-8 pb-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 animate-pulse">
+        <div className="h-20 bg-slate-100 rounded-2xl" />
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {[1, 2, 3].map((i) => (
-            <div key={i} className="h-36 bg-[#E8E0D5] rounded-3xl" />
+            <div key={i} className="h-36 bg-slate-100 rounded-2xl" />
           ))}
         </div>
       </div>
@@ -68,109 +68,109 @@ export default function Account() {
   }
 
   return (
-    <div className="pt-28 md:pt-36 pb-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <div className="pt-6 pb-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       {/* Account Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#E2DBD0] pb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-5">
         <div className="space-y-1">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A66A4C]">
-            Client Sanctuary
+          <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600">
+            Customer Dashboard
           </span>
-          <h1 className="text-3xl sm:text-4xl font-serif text-[#24221F] tracking-tight">
-            Hello, {user?.name || 'Client'}
+          <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+            Hello, {user?.name || 'Customer'}
           </h1>
-          <p className="text-xs text-[#77716A]">{user?.email}</p>
+          <p className="text-xs text-slate-500">{user?.email}</p>
         </div>
 
         <button
           onClick={handleLogout}
-          className="px-5 py-2 rounded-full border border-[#E2DBD0] text-[#77716A] hover:text-[#24221F] hover:border-[#24221F] text-xs font-semibold uppercase tracking-wider transition-colors self-start sm:self-auto cursor-pointer"
+          className="px-4 py-2 rounded-xl border border-slate-300 text-slate-600 hover:text-slate-900 hover:bg-slate-100 text-xs font-bold uppercase tracking-wider transition-colors self-start sm:self-auto cursor-pointer"
         >
           Sign Out
         </button>
       </div>
 
       {/* Account Navigation Grid Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
         <Link
           to="/my-orders"
-          className="p-6 rounded-3xl bg-[#E8E0D5]/40 hover:bg-[#E8E0D5]/80 border border-[#E2DBD0] transition-all space-y-3 block group"
+          className="p-5 rounded-2xl bg-white hover:border-emerald-500 border border-slate-200 transition-all space-y-3 block group shadow-xs"
         >
-          <div className="w-10 h-10 rounded-2xl bg-[#F4F0E8] text-[#24221F] flex items-center justify-center">
+          <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
             <Package className="w-5 h-5" />
           </div>
-          <h3 className="text-lg font-serif text-[#24221F] group-hover:text-[#A66A4C] transition-colors">
+          <h3 className="text-base font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
             My Orders
           </h3>
-          <p className="text-xs text-[#77716A]">Track current dispatches and previous product orders.</p>
+          <p className="text-xs text-slate-500">Track shipments, live delivery progress, and previous purchases.</p>
         </Link>
 
         <Link
           to="/account/addresses"
-          className="p-6 rounded-3xl bg-[#E8E0D5]/40 hover:bg-[#E8E0D5]/80 border border-[#E2DBD0] transition-all space-y-3 block group"
+          className="p-5 rounded-2xl bg-white hover:border-emerald-500 border border-slate-200 transition-all space-y-3 block group shadow-xs"
         >
-          <div className="w-10 h-10 rounded-2xl bg-[#F4F0E8] text-[#24221F] flex items-center justify-center">
+          <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
             <MapPin className="w-5 h-5" />
           </div>
-          <h3 className="text-lg font-serif text-[#24221F] group-hover:text-[#A66A4C] transition-colors">
-            Delivery Addresses
+          <h3 className="text-base font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+            Saved Addresses
           </h3>
-          <p className="text-xs text-[#77716A]">Manage saved residential and workplace destinations.</p>
+          <p className="text-xs text-slate-500">Manage shipping addresses for fast and seamless checkout.</p>
         </Link>
 
         <Link
           to="/account/profile"
-          className="p-6 rounded-3xl bg-[#E8E0D5]/40 hover:bg-[#E8E0D5]/80 border border-[#E2DBD0] transition-all space-y-3 block group"
+          className="p-5 rounded-2xl bg-white hover:border-emerald-500 border border-slate-200 transition-all space-y-3 block group shadow-xs"
         >
-          <div className="w-10 h-10 rounded-2xl bg-[#F4F0E8] text-[#24221F] flex items-center justify-center">
+          <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
             <User className="w-5 h-5" />
           </div>
-          <h3 className="text-lg font-serif text-[#24221F] group-hover:text-[#A66A4C] transition-colors">
+          <h3 className="text-base font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
             Profile & Security
           </h3>
-          <p className="text-xs text-[#77716A]">Update personal details, contact number, and password.</p>
+          <p className="text-xs text-slate-500">Update your name, contact phone, and account password.</p>
         </Link>
       </div>
 
       {/* Recent Orders Overview */}
-      <div className="space-y-6">
+      <div className="space-y-4">
         <div className="flex justify-between items-center">
-          <h2 className="text-xl font-serif text-[#24221F]">Recent Orders</h2>
+          <h2 className="text-lg font-bold text-slate-900">Recent Orders</h2>
           {recentOrders.length > 0 && (
             <Link
               to="/my-orders"
-              className="text-xs font-semibold uppercase tracking-wider text-[#A66A4C] hover:text-[#24221F]"
+              className="text-xs font-bold uppercase tracking-wider text-emerald-600 hover:text-emerald-700"
             >
-              View All ({recentOrders.length}) →
+              View All Orders →
             </Link>
           )}
         </div>
 
         {recentOrders.length === 0 ? (
-          <div className="p-8 rounded-3xl bg-[#E8E0D5]/20 border border-[#E2DBD0] text-center text-xs text-[#77716A]">
-            You haven't placed any orders yet.
+          <div className="p-8 rounded-2xl bg-white border border-slate-200 text-center text-xs text-slate-500 shadow-xs">
+            You haven't placed any orders yet. Discover our latest tech collection!
           </div>
         ) : (
-          <div className="space-y-4">
+          <div className="space-y-3">
             {recentOrders.map((order) => (
               <div
                 key={order.id}
-                className="p-6 rounded-3xl bg-[#E8E0D5]/30 border border-[#E2DBD0] flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+                className="p-5 rounded-2xl bg-white border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xs"
               >
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <span className="font-serif font-bold text-sm text-[#24221F]">#{order.id}</span>
-                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#24221F] text-[#F4F0E8]">
+                    <span className="font-black text-sm text-slate-900">#{order.id}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-900 text-white">
                       {order.orderStatus}
                     </span>
                   </div>
-                  <p className="text-xs text-[#77716A]">
+                  <p className="text-xs text-slate-500">
                     {order.items?.length} {order.items?.length === 1 ? 'Item' : 'Items'} • {formatCurrency(order.total)}
                   </p>
                 </div>
 
                 <Link
                   to={`/my-orders/${order.id}`}
-                  className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-[#A66A4C] hover:text-[#24221F]"
+                  className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-emerald-600 hover:text-emerald-700"
                 >
                   <span>Order Details</span>
                   <ChevronRight className="w-3.5 h-3.5" />
@@ -183,33 +183,33 @@ export default function Account() {
 
       {/* Default Address Snapshot */}
       <div className="space-y-3">
-        <h2 className="text-xl font-serif text-[#24221F]">Delivery Address</h2>
+        <h2 className="text-lg font-bold text-slate-900">Default Shipping Address</h2>
         {defaultAddress ? (
-          <div className="p-6 rounded-3xl bg-[#E8E0D5]/30 border border-[#E2DBD0] space-y-3">
+          <div className="p-5 rounded-2xl bg-white border border-slate-200 space-y-2 shadow-xs">
             <div className="flex justify-between items-center">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-[#A66A4C]">
-                Default Delivery Destination
+              <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600">
+                Primary Destination
               </span>
               <Link
                 to="/account/addresses"
-                className="text-xs text-[#77716A] hover:text-[#24221F] underline"
+                className="text-xs text-slate-500 hover:text-slate-900 underline font-medium"
               >
                 Manage
               </Link>
             </div>
-            <p className="font-serif font-bold text-sm text-[#24221F]">{defaultAddress.name} ({defaultAddress.tag})</p>
-            <p className="text-xs text-[#77716A]">
+            <p className="font-bold text-sm text-slate-900">{defaultAddress.name} ({defaultAddress.tag})</p>
+            <p className="text-xs text-slate-500">
               {defaultAddress.house}, {defaultAddress.street}, {defaultAddress.area}, {defaultAddress.city} – {defaultAddress.pincode}
             </p>
           </div>
         ) : (
-          <div className="p-8 rounded-3xl bg-[#E8E0D5]/20 border border-[#E2DBD0] text-center space-y-3">
-            <p className="text-xs text-[#77716A]">No saved addresses.</p>
+          <div className="p-6 rounded-2xl bg-white border border-slate-200 text-center space-y-3 shadow-xs">
+            <p className="text-xs text-slate-500">No saved address yet.</p>
             <Link
               to="/account/addresses"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#24221F] text-white text-[11px] font-semibold uppercase tracking-wider hover:bg-[#A66A4C] transition-colors"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-900 text-white text-[11px] font-bold uppercase tracking-wider hover:bg-emerald-600 transition-colors"
             >
-              <Plus className="w-3 h-3" />
+              <Plus className="w-3.5 h-3.5" />
               <span>Add Address</span>
             </Link>
           </div>

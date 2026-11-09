@@ -15,17 +15,28 @@ function initDb() {
       feedback: [],
       reviews: [],
       settings: {
-        storeName: 'BYTECART Flagship Store',
-        storeEmail: 'contact@bytecart.in',
-        storePhone: '+91 44 2621 8900',
-        storeAddress: '14, 2nd Avenue, Anna Nagar, Chennai, Tamil Nadu 600040',
+        storeName: 'NEXBUY Flagship Store',
+        companyName: 'NEXBUY ENTERPRISES PVT LTD',
+        storeEmail: 'reach2nexbuy@gmail.com',
+        storePhone: '+91 74483 76974',
+        phones: ['+91 74483 76974', '+91 97890 33393', '+91 44 3154 4371'],
+        registeredAddress: 'Flat No. 2, Plot No. 1051, 35th Street, 18th Main Road, Anna Nagar, Chennai – 600040',
+        branchAddress: '1st Floor, Shop No. F49, No. 18/19, UNO Arcade Complex, Meeran Sahib Street, Chennai – 600002',
+        gstin: '33AMCN1317Q1Z5',
         taxEnabled: false,
         taxRate: 0,
         shippingCharge: 0,
-        freeShippingThreshold: 0,
+        freeShippingThreshold: 1999,
         paymentGateway: 'Razorpay',
         paymentGatewayConnected: true,
         allowCOD: true,
+        promotionalBanner: {
+          heading: 'Boost Your Productivity',
+          subheading: 'Premium gear designed for modern workstations and digital creators.',
+          ctaText: 'Browse Now',
+          ctaLink: '/products',
+          image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1600&q=80'
+        }
       },
       auditLogs: []
     };

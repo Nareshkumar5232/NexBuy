@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Plus, ArrowRight, Heart } from 'lucide-react';
+import { ShoppingBag, Heart, Star, Check } from 'lucide-react';
 import { formatCurrency } from '../../utils/formatters';
 import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
@@ -14,169 +14,122 @@ export default function ProductCard({ product, layout = 'grid' }) {
 
   const imageUrl =
     product.images?.[0] ||
-    'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80';
+    'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80';
 
-  const subtitle = product.material
-    ? product.material.split('&')[0]
-    : product.tagline || product.brand || '';
+  const discountPercent =
+    product.originalPrice && product.originalPrice > product.price
+      ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
+      : null;
 
-  if (layout === 'editorial-large') {
-    return (
-      <div className="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#EAE4DA]/30 rounded-3xl p-6 sm:p-10 border border-[#E2DBD0]/60 relative">
-        {/* Large Dominant Image */}
-        <Link
-          to={`/products/${product.slug}`}
-          className="lg:col-span-7 aspect-4/3 sm:aspect-16/10 rounded-2xl overflow-hidden bg-[#EAE4DA] relative block"
-        >
-          <img
-            src={imageUrl}
-            alt={product.name}
-            className="w-full h-full object-cover group-hover:scale-104 transition-transform duration-1000 ease-out"
-            loading="lazy"
-            onError={(e) => {
-              e.target.src = 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80';
-            }}
-          />
+  return (
+    <div className="group relative bg-white rounded-2xl border border-slate-200/80 hover:border-emerald-500/50 p-4 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)] flex flex-col justify-between h-full">
+      {/* Top Badges & Wishlist */}
+      <div className="flex items-center justify-between gap-2 mb-3">
+        <div className="flex items-center gap-1.5 flex-wrap">
+          {discountPercent && (
+            <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-emerald-500 text-white tracking-wide shadow-xs">
+              {discountPercent}% OFF
+            </span>
+          )}
           {product.badge && (
-            <span className="absolute top-4 left-4 text-[10px] uppercase font-bold tracking-[0.16em] px-3 py-1 bg-[#24221F] text-[#F5F2EC] rounded-full">
+            <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-zinc-900 text-zinc-100 tracking-wide">
               {product.badge}
             </span>
           )}
-
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              toggleWishlist(product);
-            }}
-            className={`absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center transition-all cursor-pointer ${
-              isWished
-                ? 'bg-[#A66A4C] text-white'
-                : 'bg-[#F5F2EC]/80 backdrop-blur-xs text-[#24221F] hover:bg-white'
-            }`}
-            title="Save to wishlist"
-          >
-            <Heart className={`w-4 h-4 ${isWished ? 'fill-current' : ''}`} />
-          </button>
-        </Link>
-
-        {/* Editorial Text */}
-        <div className="lg:col-span-5 space-y-4 lg:pl-4">
-          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#A66A4C]">
-            {product.categoryName}
-          </span>
-          <h3 className="text-2xl sm:text-4xl font-serif text-[#24221F] tracking-tight leading-tight group-hover:text-[#A66A4C] transition-colors">
-            <Link to={`/products/${product.slug}`}>{product.name}</Link>
-          </h3>
-          <p className="text-xs sm:text-sm text-[#77716A] leading-relaxed font-light line-clamp-3">
-            {product.description}
-          </p>
-          {subtitle && (
-            <div className="pt-2 text-sm text-[#77716A]">
-              <span className="font-medium text-[#24221F]">{subtitle}</span>
-            </div>
-          )}
-
-          <div className="pt-4 flex items-center justify-between border-t border-[#E2DBD0]/80">
-            <span className="text-xl font-bold font-serif text-[#24221F]">
-              {formatCurrency(product.price)}
-            </span>
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => addToCart(product)}
-                className="px-4 py-2 rounded-full border border-[#24221F] text-[#24221F] hover:bg-[#24221F] hover:text-[#F5F2EC] text-xs font-medium tracking-wider uppercase transition-colors cursor-pointer"
-              >
-                Add to Cart
-              </button>
-              <Link
-                to={`/products/${product.slug}`}
-                className="p-2 rounded-full bg-[#24221F] text-white hover:bg-[#A66A4C] transition-colors"
-                title="View product"
-              >
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-          </div>
         </div>
-      </div>
-    );
-  }
 
-  // Standard Minimal Editorial Card
-  return (
-    <div className="group flex flex-col space-y-3.5">
-      {/* Product Image Dominance */}
-      <Link
-        to={`/products/${product.slug}`}
-        className="relative aspect-4/3 sm:aspect-5/4 rounded-2xl overflow-hidden bg-[#EAE4DA]/50 block"
-      >
-        <img
-          src={imageUrl}
-          alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-104 transition-transform duration-700 ease-out"
-          loading="lazy"
-          onError={(e) => {
-            e.target.src = 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80';
-          }}
-        />
-        {product.badge && (
-          <span className="absolute top-3 left-3 text-[9px] uppercase font-semibold tracking-[0.14em] px-2.5 py-0.5 bg-[#24221F]/90 backdrop-blur-xs text-[#F5F2EC] rounded-full">
-            {product.badge}
-          </span>
-        )}
-
-        {/* Wishlist Button */}
         <button
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
             toggleWishlist(product);
           }}
-          className={`absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center transition-all cursor-pointer shadow-xs ${
+          className={`w-8 h-8 rounded-full flex items-center justify-center transition-all cursor-pointer ${
             isWished
-              ? 'bg-[#A66A4C] text-white opacity-100'
-              : 'bg-[#F5F2EC]/80 backdrop-blur-xs text-[#24221F] hover:bg-white opacity-0 group-hover:opacity-100'
+              ? 'bg-rose-50 text-rose-500 shadow-xs'
+              : 'text-slate-400 hover:text-slate-700 hover:bg-slate-100'
           }`}
           title="Save to wishlist"
           aria-label="Wishlist"
         >
-          <Heart className={`w-3.5 h-3.5 ${isWished ? 'fill-current' : ''}`} />
+          <Heart className={`w-4 h-4 ${isWished ? 'fill-current' : ''}`} />
         </button>
+      </div>
 
-        {/* Quick Add Button */}
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            addToCart(product);
+      {/* Product Image */}
+      <Link
+        to={`/products/${product.slug}`}
+        className="relative aspect-square w-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center mb-4 block"
+      >
+        <img
+          src={imageUrl}
+          alt={product.name}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+          loading="lazy"
+          onError={(e) => {
+            e.target.src =
+              'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80';
           }}
-          className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-[#F5F2EC]/90 text-[#24221F] hover:bg-[#24221F] hover:text-white flex items-center justify-center shadow-xs opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer"
-          title="Quick add to cart"
-          aria-label="Add to cart"
-        >
-          <Plus className="w-4 h-4" />
-        </button>
+        />
+        {/* Subtle hover gradient */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
       </Link>
 
-      {/* Catalogue Details */}
-      <div className="flex justify-between items-start pt-1">
-        <div className="space-y-0.5">
-          <span className="text-[10px] uppercase tracking-[0.16em] text-[#77716A] font-medium block">
-            {product.categoryName}
-          </span>
-          <h3 className="text-base sm:text-lg font-serif text-[#24221F] group-hover:text-[#A66A4C] transition-colors leading-snug">
+      {/* Information Section */}
+      <div className="flex-1 flex flex-col justify-between space-y-3">
+        <div>
+          {/* Category & Rating */}
+          <div className="flex items-center justify-between text-[11px] text-slate-500 mb-1">
+            <span className="font-semibold uppercase tracking-wider text-emerald-600">
+              {product.categoryName || product.categorySlug}
+            </span>
+            <div className="flex items-center gap-1 font-semibold text-slate-700">
+              <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+              <span>{product.rating || '4.9'}</span>
+              <span className="text-slate-400">({product.reviewsCount || 18})</span>
+            </div>
+          </div>
+
+          {/* Product Name */}
+          <h3 className="font-bold text-sm sm:text-base text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug">
             <Link to={`/products/${product.slug}`}>{product.name}</Link>
           </h3>
-          {subtitle && (
-            <p className="text-[11px] text-[#77716A] line-clamp-1">
-              {subtitle}
+
+          {/* Tagline / Subtitle */}
+          {product.tagline && (
+            <p className="text-[11px] text-slate-500 line-clamp-1 mt-1 font-normal">
+              {product.tagline}
             </p>
           )}
         </div>
 
-        <span className="text-sm font-semibold text-[#24221F] font-serif shrink-0 ml-2">
-          {formatCurrency(product.price)}
-        </span>
+        {/* Price & Shopping Button */}
+        <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-3">
+          <div className="flex flex-col">
+            <span className="text-base sm:text-lg font-black text-slate-900">
+              {formatCurrency(product.price)}
+            </span>
+            {product.originalPrice && product.originalPrice > product.price && (
+              <span className="text-[11px] text-slate-400 line-through">
+                {formatCurrency(product.originalPrice)}
+              </span>
+            )}
+          </div>
+
+          {/* Green Accent Shopping Button — matching TechNest */}
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              addToCart(product);
+            }}
+            className="flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white font-bold text-xs uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm hover:shadow-[0_4px_12px_rgba(16,185,129,0.35)] shrink-0"
+            title="Add to shopping cart"
+          >
+            <ShoppingBag className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Add</span>
+          </button>
+        </div>
       </div>
     </div>
   );

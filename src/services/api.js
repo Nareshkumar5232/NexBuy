@@ -9,7 +9,10 @@ const RAW_API_URL =
 const API_BASE = RAW_API_URL.endsWith('/api') ? RAW_API_URL : `${RAW_API_URL.replace(/\/+$/, '')}/api`;
 
 export async function apiRequest(endpoint, { method = 'GET', body, headers = {}, token, silent = false } = {}) {
-  const finalToken = token || localStorage.getItem('bytecart_auth_token_v1') || localStorage.getItem('bytecart_admin_token_v1');
+  const finalToken =
+    token ||
+    localStorage.getItem('nexbuy_auth_token_v1') ||
+    localStorage.getItem('nexbuy_admin_token_v1');
   const finalHeaders = {
     'Content-Type': 'application/json',
     ...headers,

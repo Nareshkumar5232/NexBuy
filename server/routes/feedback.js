@@ -3,6 +3,41 @@ const router = express.Router();
 const db = require('../db');
 const { authenticate, requireAdmin } = require('../middleware/auth');
 
+// Customer: Subscribe to Newsletter
+router.post('/newsletter', (req, res) => {
+  try {
+    const { email } = req.body;
+    if (!email || !email.includes('@')) {
+      return res.status(400).json({ error: 'Please provide a valid email address.' });
+    }
+
+    const data = db.get();
+    if (!data.subscribers) data.subscribers = [];
+
+    const normalized = email.trim().toLowerCase();
+    const existing = data.subscribers.find(s => s.email.toLowerCase() === normalized);
+    if (existing) {
+      return res.json({ message: 'You are already subscribed to NEXBUY product drops & tech updates.' });
+    }
+
+    const newSub = {
+      id: 'sub_' + Date.now(),
+      email: normalized,
+      createdAt: new Date().toISOString()
+    };
+
+    data.subscribers.unshift(newSub);
+    db.save();
+
+    res.status(201).json({
+      message: 'Thank you for subscribing to NEXBUY tech updates!',
+      subscriber: newSub
+    });
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to process newsletter subscription.' });
+  }
+});
+
 // Customer: Submit Feedback / Contact Form
 router.post('/', (req, res) => {
   try {

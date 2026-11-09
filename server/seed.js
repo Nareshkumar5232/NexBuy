@@ -33,7 +33,7 @@ async function seed() {
       const categoriesDataPath = path.join(__dirname, '..', 'src', 'data', 'categoriesData.js');
       if (fs.existsSync(categoriesDataPath)) {
         let content = fs.readFileSync(categoriesDataPath, 'utf8');
-        const match = content.match(/export const categories = ([\s\S]*?);\s*$/);
+        const match = content.match(/export const categoriesData = (\[[\s\S]*?\]);\s*/) || content.match(/export const categories = (\[[\s\S]*?\]);\s*/);
         if (match) {
           const cats = eval(match[1]);
           if (Array.isArray(cats)) {

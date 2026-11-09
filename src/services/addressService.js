@@ -1,4 +1,4 @@
-const ADDRESSES_STORAGE_KEY = 'bytecart_customer_addresses_v1';
+const ADDRESSES_STORAGE_KEY = 'nexbuy_customer_addresses_v1';
 
 export const addressService = {
   async getAddresses(userId) {

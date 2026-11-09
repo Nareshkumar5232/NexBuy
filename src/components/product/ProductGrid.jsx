@@ -1,15 +1,19 @@
 import React from 'react';
 import ProductCard from './ProductCard';
-import { RotateCcw } from 'lucide-react';
+import { RotateCcw, PackageSearch } from 'lucide-react';
 
 export function ProductSkeleton() {
   return (
-    <div className="space-y-3 animate-pulse">
-      <div className="aspect-4/3 sm:aspect-5/4 bg-[#E8E0D5] rounded-2xl" />
-      <div className="space-y-1.5 pt-1">
-        <div className="h-3 w-16 bg-[#E2DBD0] rounded" />
-        <div className="h-4 w-3/4 bg-[#E2DBD0] rounded" />
-        <div className="h-3 w-20 bg-[#E2DBD0] rounded" />
+    <div className="bg-white p-4 rounded-2xl border border-slate-200/80 animate-pulse space-y-4">
+      <div className="aspect-square bg-slate-100 rounded-xl" />
+      <div className="space-y-2 pt-1">
+        <div className="h-3 w-20 bg-slate-100 rounded" />
+        <div className="h-4 w-5/6 bg-slate-100 rounded" />
+        <div className="h-3 w-3/4 bg-slate-100 rounded" />
+      </div>
+      <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
+        <div className="h-5 w-24 bg-slate-100 rounded" />
+        <div className="h-8 w-16 bg-slate-100 rounded-xl" />
       </div>
     </div>
   );
@@ -20,19 +24,19 @@ export default function ProductGrid({
   loading = false,
   onResetFilters,
   onReset,
-  columns = 3,
-  emptyMessage = 'No products available yet.',
+  columns = 4,
+  emptyMessage = 'No technology gear found in this section.',
 }) {
   const handleResetAction = onResetFilters || onReset;
 
   if (loading) {
     return (
       <div
-        className={`grid grid-cols-1 sm:grid-cols-2 ${
+        className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ${
           columns === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'
-        } gap-x-8 gap-y-12`}
+        } gap-6`}
       >
-        {Array.from({ length: 6 }).map((_, i) => (
+        {Array.from({ length: 8 }).map((_, i) => (
           <ProductSkeleton key={i} />
         ))}
       </div>
@@ -41,15 +45,21 @@ export default function ProductGrid({
 
   if (products.length === 0) {
     return (
-      <div className="py-24 text-center max-w-md mx-auto space-y-4">
-        <h3 className="text-2xl font-serif text-[#24221F]">{emptyMessage}</h3>
+      <div className="py-20 text-center max-w-md mx-auto space-y-4 p-8 bg-slate-50 rounded-3xl border border-slate-200/80">
+        <div className="w-14 h-14 rounded-2xl bg-slate-200/70 text-slate-500 mx-auto flex items-center justify-center">
+          <PackageSearch className="w-7 h-7" />
+        </div>
+        <h3 className="text-xl font-bold text-slate-800">{emptyMessage}</h3>
+        <p className="text-xs text-slate-500 leading-relaxed">
+          Try adjusting your search criteria or explore our featured technology collections.
+        </p>
         {handleResetAction && (
           <button
             onClick={handleResetAction}
-            className="mt-4 inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#24221F] text-xs font-semibold uppercase tracking-wider text-[#24221F] hover:bg-[#24221F] hover:text-white transition-colors cursor-pointer"
+            className="mt-3 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-zinc-900 text-xs font-bold uppercase tracking-wider text-white hover:bg-emerald-600 transition-colors cursor-pointer"
           >
             <RotateCcw className="w-3.5 h-3.5" />
-            <span>Reset Filters</span>
+            <span>Clear Filters</span>
           </button>
         )}
       </div>
@@ -58,9 +68,9 @@ export default function ProductGrid({
 
   return (
     <div
-      className={`grid grid-cols-1 sm:grid-cols-2 ${
+      className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ${
         columns === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'
-      } gap-x-8 gap-y-12`}
+      } gap-6`}
     >
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
