@@ -36,7 +36,7 @@ export default function Login() {
         {/* Left Column: Tech Visuals & Brand Details */}
         <div className="hidden lg:flex lg:col-span-6 relative bg-[#0B0F17] text-white p-12 flex-col justify-between overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80"
+            src="https://images.unsplash.com/photo-1751200065687-a126e7c304da?auto=format&fit=crop&w=1200&q=80"
             alt="NEXBUY Tech Workspace"
             className="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-luminosity"
           />

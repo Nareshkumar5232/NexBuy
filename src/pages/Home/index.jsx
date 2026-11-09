@@ -99,7 +99,7 @@ export default function Home() {
     subheading: 'High-performance computing accessories, mechanical peripherals, and ergonomic tech setups.',
     ctaText: 'Browse Now',
     ctaLink: '/products',
-    image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1600&q=80'
+    image: 'https://images.unsplash.com/photo-1751200065687-a126e7c304da?auto=format&fit=crop&w=1600&q=80'
   };
 
   return (
@@ -182,7 +182,7 @@ export default function Home() {
             >
               <div className="relative aspect-4/3 sm:aspect-16/11 rounded-3xl overflow-hidden bg-gradient-to-tr from-zinc-900 to-zinc-950 border border-zinc-800 shadow-2xl p-2 sm:p-3">
                 <img
-                  src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80"
+                  src="https://images.unsplash.com/photo-1547932087-59a8f2be576e?auto=format&fit=crop&w=1200&q=80"
                   alt="Sony WH-1000XM5 Premium Headphones & Tech Gear"
                   className="w-full h-full object-cover rounded-2xl tech-img-hover"
                 />
@@ -408,7 +408,7 @@ export default function Home() {
             {/* Decorative background image */}
             <div className="absolute right-0 bottom-0 w-1/2 h-full opacity-20 group-hover:opacity-30 transition-opacity pointer-events-none">
               <img
-                src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1679436204470-87dc7da1e8be?auto=format&fit=crop&w=800&q=80"
                 alt="New Arrivals"
                 className="w-full h-full object-cover object-right"
               />
@@ -443,7 +443,7 @@ export default function Home() {
             {/* Decorative background image */}
             <div className="absolute right-0 bottom-0 w-1/2 h-full opacity-20 group-hover:opacity-30 transition-opacity pointer-events-none">
               <img
-                src="https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1768032986608-f00b2c79bcd5?auto=format&fit=crop&w=800&q=80"
                 alt="Best Sellers"
                 className="w-full h-full object-cover object-right"
               />
@@ -487,7 +487,7 @@ export default function Home() {
                   alt={cat.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80';
+                    e.target.src = 'https://images.unsplash.com/photo-1547932087-59a8f2be576e?auto=format&fit=crop&w=800&q=80';
                   }}
                 />
               </div>

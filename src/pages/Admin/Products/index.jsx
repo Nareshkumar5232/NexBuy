@@ -232,7 +232,7 @@ export default function AdminProducts() {
                           alt={p.name}
                           className="w-10 h-10 rounded-lg object-cover bg-slate-100 border border-slate-200/80 shrink-0"
                           onError={(e) => {
-                            e.target.src = 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=400&q=80';
+                            e.target.src = 'https://images.unsplash.com/photo-1547932087-59a8f2be576e?auto=format&fit=crop&w=400&q=80';
                           }}
                         />
                         <div className="min-w-0">

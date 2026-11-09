@@ -14,7 +14,7 @@ export default function ProductCard({ product, layout = 'grid' }) {
 
   const imageUrl =
     product.images?.[0] ||
-    'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80';
+    'https://images.unsplash.com/photo-1547932087-59a8f2be576e?auto=format&fit=crop&w=800&q=80';
 
   const discountPercent =
     product.originalPrice && product.originalPrice > product.price
@@ -68,7 +68,7 @@ export default function ProductCard({ product, layout = 'grid' }) {
           loading="lazy"
           onError={(e) => {
             e.target.src =
-              'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80';
+              'https://images.unsplash.com/photo-1547932087-59a8f2be576e?auto=format&fit=crop&w=800&q=80';
           }}
         />
         {/* Subtle hover gradient */}

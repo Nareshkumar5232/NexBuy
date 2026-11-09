@@ -160,7 +160,7 @@ export default function AdminOrderDetails() {
                 <div key={idx} className="py-3.5 flex items-center justify-between gap-4">
                   <div className="flex items-center gap-3.5 min-w-0">
                     <img
-                      src={item.image || 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=300&q=80'}
+                      src={item.image || 'https://images.unsplash.com/photo-1547932087-59a8f2be576e?auto=format&fit=crop&w=300&q=80'}
                       alt={item.name}
                       className="w-14 h-14 rounded-xl object-cover bg-slate-100 border border-slate-200/80 shrink-0"
                     />

@@ -42,7 +42,7 @@
       "shortName": "Headphones",
       "tagline": "Immersive sound with industry-leading noise cancellation.",
       "description": "Over-ear and on-ear wireless headphones engineered for studio audio precision, active noise cancellation, and all-day acoustic comfort.",
-      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+      "image": "https://images.unsplash.com/photo-1547932087-59a8f2be576e?auto=format&fit=crop&w=800&q=80",
       "createdAt": "2026-10-01T00:00:00.000Z"
     },
     {
@@ -52,7 +52,7 @@
       "shortName": "Earbuds",
       "tagline": "True wireless audio with crystal clear spatial clarity.",
       "description": "Compact, sweat-resistant true wireless earbuds with active noise cancellation, transparency modes, and long battery life for active lifestyles.",
-      "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80",
+      "image": "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&w=800&q=80",
       "createdAt": "2026-10-01T00:00:00.000Z"
     },
     {
@@ -62,7 +62,7 @@
       "shortName": "Smartwatches",
       "tagline": "Fitness tracking, health diagnostics, and smart connectivity.",
       "description": "Premium titanium and stainless steel smartwatches featuring AMOLED displays, GPS tracking, heart health sensors, and multi-day battery life.",
-      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
+      "image": "https://images.unsplash.com/photo-1679436204470-87dc7da1e8be?auto=format&fit=crop&w=800&q=80",
       "createdAt": "2026-10-01T00:00:00.000Z"
     },
     {
@@ -72,7 +72,7 @@
       "shortName": "Speakers",
       "tagline": "Room-filling high-fidelity sound for home and on-the-go.",
       "description": "Portable Bluetooth waterproof speakers, smart home soundbars, and audiophile studio monitors with deep bass and high-resolution spatial sound.",
-      "image": "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80",
+      "image": "https://images.unsplash.com/photo-1768032986608-f00b2c79bcd5?auto=format&fit=crop&w=800&q=80",
       "createdAt": "2026-10-01T00:00:00.000Z"
     },
     {
@@ -82,7 +82,7 @@
       "shortName": "PC Accessories",
       "tagline": "Elevate your desktop setup and daily productivity.",
       "description": "Thunderbolt docking stations, ergonomic monitor arms, desk mats, webcams, and workspace lighting designed for peak daily performance.",
-      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+      "image": "https://images.unsplash.com/photo-1616578273461-3a99ce422de6?auto=format&fit=crop&w=800&q=80",
       "createdAt": "2026-10-01T00:00:00.000Z"
     },
     {
@@ -92,7 +92,7 @@
       "shortName": "Keyboards & Mouse",
       "tagline": "Tactile mechanical precision and ergonomic optical tracking.",
       "description": "Custom mechanical keyboards with hot-swappable switches, wireless low-profile boards, and high-DPI ergonomic mice for coding and gaming.",
-      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
+      "image": "https://images.unsplash.com/photo-1781455092634-ee2f02eeba09?auto=format&fit=crop&w=800&q=80",
       "createdAt": "2026-10-01T00:00:00.000Z"
     },
     {
@@ -102,7 +102,7 @@
       "shortName": "Chargers & Cables",
       "tagline": "Ultra-fast GaN power delivery and military-grade braided cables.",
       "description": "High-wattage multi-port GaN wall chargers, fast-charging power banks, and heavy-duty braided USB-C and Thunderbolt 4 cables.",
-      "image": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80",
+      "image": "https://images.unsplash.com/photo-1632156752206-f6dac15dd37d?auto=format&fit=crop&w=800&q=80",
       "createdAt": "2026-10-01T00:00:00.000Z"
     },
     {
@@ -112,7 +112,7 @@
       "shortName": "Storage Devices",
       "tagline": "Blazing-fast PCIe Gen 4 SSDs and rugged portable drives.",
       "description": "High-speed NVMe internal solid state drives, rugged portable external SSDs, and high-capacity backup drives for high-bandwidth data transfers.",
-      "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=800&q=80",
+      "image": "https://images.unsplash.com/photo-1779896412225-e2f374234cd1?auto=format&fit=crop&w=800&q=80",
       "createdAt": "2026-10-01T00:00:00.000Z"
     },
     {
@@ -122,7 +122,7 @@
       "shortName": "Networking",
       "tagline": "Next-generation Wi-Fi 6E/7 routers and enterprise mesh systems.",
       "description": "Ultra-fast tri-band Wi-Fi 6E/7 gaming routers, whole-home mesh network systems, gigabit PoE switches, and high-speed network interfaces.",
-      "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
+      "image": "https://images.unsplash.com/photo-1745847768408-b7b83796cae6?auto=format&fit=crop&w=800&q=80",
       "createdAt": "2026-10-01T00:00:00.000Z"
     },
     {
@@ -132,7 +132,7 @@
       "shortName": "Other Gadgets",
       "tagline": "Smart lifestyle tech, streaming gear, and innovative electronics.",
       "description": "Gimbal cameras, interactive stream controllers, smart lighting strips, wireless presenters, and innovative tech lifestyle essentials.",
-      "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
+      "image": "https://images.unsplash.com/photo-1791356431341-3ad6c1cac065?auto=format&fit=crop&w=800&q=80",
       "createdAt": "2026-10-01T00:00:00.000Z"
     }
   ],
@@ -234,7 +234,7 @@
       "tagline": "Precision engineered planar magnetic headphones",
       "description": "Studio-grade planar magnetic headphones crafted with CNC milled aluminum earcups.",
       "images": [
-        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1547932087-59a8f2be576e?auto=format&fit=crop&w=800&q=80"
       ],
       "specs": {
         "Acoustic Driver": "50mm Planar Magnetic",
@@ -265,9 +265,9 @@
       "tagline": "Industry-leading noise cancellation with 8 microphones & Auto NC Optimizer",
       "description": "Equipped with two processors and 8 microphones, the Sony WH-1000XM5 delivers unprecedented active noise cancelation. A specially engineered 30mm carbon fiber driver provides ultra-clear high frequencies and punchy, tight bass.",
       "images": [
-        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1547932087-59a8f2be576e?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1547932045-4ffd9b8ae8a9?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1505739718967-6df30ff369c7?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "driver": "30mm precision carbon fiber composite dome",
@@ -309,8 +309,9 @@
       "tagline": "World-class spatial audio with Bose Immersive Audio technology",
       "description": "Experience breakthrough spatialized sound that makes what you're hearing feel more real than ever. CustomTune technology personalizes sound to the shape of your ears, while ultra-soft ear cushions provide luxurious comfort.",
       "images": [
-        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1583373351761-fa9e3a19c99d?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1600681341802-14a7cb4dc357?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1565935192924-21a9ddca26eb?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "audio": "Bose Immersive Spatial Audio with CustomTune acoustic tuning",
@@ -351,8 +352,9 @@
       "tagline": "High-fidelity audio with Apple-designed dynamic driver & computational audio",
       "description": "The ultimate over-ear listening experience. An Apple-designed 40mm dynamic driver provides high-fidelity audio with ultra-low distortion across the audible range. Computational audio powered by the Apple H1 chip in each ear cup.",
       "images": [
-        "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1579038932368-c8da2ebcbd79?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1566533926025-96bc9fefdd10?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1547932087-59a8f2be576e?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "driver": "Apple-designed 40mm dynamic driver with dual neodymium ring magnet",
@@ -391,8 +393,9 @@
       "tagline": "Powered by Apple H2 chip with 2x more Active Noise Cancellation",
       "description": "Next-level active noise cancellation and Adaptive Audio that intelligently tailors noise control to your environment. MagSafe Charging Case (USB-C) with speaker and lanyard loop, plus IP54 dust, sweat, and water resistance.",
       "images": [
-        "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1574920162043-b872873f19c8?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1621570555334-66a1f48e48eb?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1756902368926-eb9e5e9d2a69?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "chip": "Apple H2 headphone chip and Apple U1 in charging case",
@@ -434,8 +437,9 @@
       "tagline": "Dynamic Driver X with Integrated Processor V2 & HD Noise Canceling QN2e",
       "description": "The best noise cancellation in earbuds with dual feedback microphones and Dynamic Driver X for wide frequency reproduction and deep bass. Bone conduction sensors ensure natural call clarity even in noisy environments.",
       "images": [
-        "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1583343894790-5cff219de28a?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1756902368926-eb9e5e9d2a69?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "driver": "8.4mm Dynamic Driver X with carbon-dome diaphragm",
@@ -474,8 +478,9 @@
       "tagline": "Rugged aerospace-grade 49mm titanium case with 3000 nits Always-On Retina display",
       "description": "The most capable and rugged Apple Watch ever. Featuring the S9 SiP for double tap gesture, Siri on device, precision dual-frequency GPS, and up to 36 hours of normal battery life (72 hours in low power mode). Water resistant to 100m.",
       "images": [
-        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1679436204470-87dc7da1e8be?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1540206395-68808572332f?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1787834964374-e69cbec38c44?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "case": "49mm Aerospace-grade Titanium case with sapphire front crystal",
@@ -516,8 +521,9 @@
       "tagline": "Iconic rotating physical bezel with advanced sleep coaching & ECG sensor",
       "description": "Classic watch aesthetics meets modern fitness intelligence. Stainless steel construction with a slender rotating bezel, sapphire crystal glass display, body composition analysis, blood pressure monitoring, and 4G LTE eSIM connectivity.",
       "images": [
-        "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1722153105551-cfea928e80de?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1722156465633-0be603df7f8c?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1787834964374-e69cbec38c44?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "display": "1.5-inch Super AMOLED (480x480) with Sapphire Crystal Glass",
@@ -556,8 +562,9 @@
       "tagline": "Iconic rock 'n' roll vintage design with wider stereo soundstage & 80W power",
       "description": "As the middleweight speaker of the home line-up, Stanmore III brings expansive Marshall sound to any room. Outward-angled tweeters and updated waveguides deliver consistently solid sound that chases you around the room.",
       "images": [
-        "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1768032986608-f00b2c79bcd5?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1772442363740-5e746c05b43d?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1761384409454-736d69295db0?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "amplifiers": "One 50 Watt Class D amplifier for woofer, two 15 Watt Class D for tweeters",
@@ -597,8 +604,9 @@
       "tagline": "Bold JBL Original Pro Sound with IP67 waterproof & built-in power bank",
       "description": "Take the party with you no matter the weather. Delivering an optimized long-excursion driver, separate tweeter, and dual pumping JBL bass radiators. Up to 20 hours of playtime and a built-in power bank to keep your phones charged.",
       "images": [
-        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1693446967879-0dbea1ddde72?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1572764699799-a7ac5e3f8c46?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1761384409454-736d69295db0?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "power": "30W RMS woofer + 10W RMS tweeter (40W total output)",
@@ -637,8 +645,8 @@
       "tagline": "18 ports of extreme connectivity with 98W Power Delivery for Mac & PC",
       "description": "The undisputed king of Thunderbolt docks. Boasts 18 ports including 3x Thunderbolt 4 ports, 5x USB-A, 3x USB-C (up to 20W power delivery), DisplayPort 1.4, 2.5GbE LAN, SD/microSD 4.0 card readers, and front/rear audio jacks.",
       "images": [
-        "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1616578273461-3a99ce422de6?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1751200065687-a126e7c304da?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "ports": "18 Total Ports: 3x TB4 (40Gb/s), 5x USB-A 3.2 Gen2, 3x USB-C (1x 20W), 1x DP 1.4, 1x 2.5GbE",
@@ -678,8 +686,8 @@
       "tagline": "Dual back and front lighting with precision wireless dial controller",
       "description": "Eliminates screen glare and reduces eye strain. Patented optical design illuminates your desk without reflecting onto curved or flat monitors. Features backlighting for ambient balance and a tactile wireless control puck.",
       "images": [
-        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1662018109594-2b34b609fb57?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1751200065687-a126e7c304da?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "illumination": "500 Lux centered illumination, 2700K to 6500K color temperatures",
@@ -718,8 +726,9 @@
       "tagline": "CNC aluminum body 75% layout with QMK/VIA programmability & Bluetooth 5.1",
       "description": "A refined piece of mechanical desk art. Double-gasket mount structure delivers flexible, acoustic-tuned typing with deep creamy resonance. Hot-swappable Keychron K Pro Banana tactile switches, South-facing RGB, and precision rotary encoder knob.",
       "images": [
-        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1781455092634-ee2f02eeba09?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1547394765-185e1e68f34e?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1760654550361-5437f6176370?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "layout": "75% ANSI with programmable rotary aluminum knob",
@@ -761,8 +770,8 @@
       "tagline": "8K DPI track-on-glass optical sensor with MagSpeed electromagnetic scrolling",
       "description": "The quintessential mouse for programmers, designers, and workflow perfectionists. Quiet Click buttons eliminate 90% click noise while preserving tactile feel. Scroll 1,000 lines per second with pixel-accurate MagSpeed wheel.",
       "images": [
-        "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1619334084350-b093f0a9b40e?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "sensor": "Darkfield High Precision Optical Sensor (200 to 8000 DPI in 50 DPI increments)",
@@ -803,8 +812,8 @@
       "tagline": "Ultra-compact GaNPrime tech with 3x USB-C (140W max single port) & 1x USB-A",
       "description": "Charge up to two 16-inch laptops simultaneously at peak speeds. Powered by Anker's most advanced GaNPrime technology with ActiveShield 2.0 temperature monitoring that checks temperature over 3 million times per day.",
       "images": [
-        "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1629429408209-1f912961dbd8?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1632156752206-f6dac15dd37d?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1595756630452-736bc8ef3693?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "totalOutput": "240W max combined power",
@@ -844,8 +853,8 @@
       "tagline": "20,000mAh capacity with 18mm ultra-thin laptop-charging profile & digital screen",
       "description": "Slip high-capacity laptop charging right into your bag alongside your computer. Delivers full 100W PD output through dual USB-C ports and features an informative real-time digital screen showing remaining time and wattage.",
       "images": [
-        "https://images.unsplash.com/photo-1629429408209-1f912961dbd8?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1525858907241-d230b66fb9fa?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1632156752206-f6dac15dd37d?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "capacity": "20,000mAh / 74Wh (Airline approved cabin baggage size)",
@@ -884,8 +893,8 @@
       "tagline": "Blistering 7,450 MB/s sequential read speeds with custom nickel-coated controller",
       "description": "Reach near-max performance of PCIe 4.0. Up to 40% and 55% faster random read/write speeds than 980 PRO. Engineered for hardcore gamers, 4K/8K video editors, and 3D data analysts seeking extreme thermal control and endurance.",
       "images": [
-        "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1672165407867-fa0ec7afa896?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1580090928201-88ab9b4a4d2e?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "capacity": "2TB (2,000GB)",
@@ -926,8 +935,8 @@
       "tagline": "2000 MB/s NVMe transfer speeds with forged aluminum IP65 chassis",
       "description": "Built for grueling field cinematography and photography shoots. Features USB 3.2 Gen 2x2 performance, tough silicone shell, up to 3-meter drop protection, and IP65 dust and water ingress resistance.",
       "images": [
-        "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1779896412225-e2f374234cd1?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1616578273461-3a99ce422de6?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "capacity": "4TB High-Speed NVMe Storage",
@@ -967,8 +976,8 @@
       "tagline": "World's premier quad-band WiFi 6E gaming router with dual 10Gbps ports",
       "description": "Ultimate networking performance with quad-band speeds up to 16,000 Mbps. Equipped with the clean 6 GHz spectrum, dual 10G Ethernet ports, four 1G ports, and 2.5G WAN port. Driven by a flagship 2.0 GHz quad-core 64-bit Broadcom CPU.",
       "images": [
-        "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1745847768408-b7b83796cae6?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1682559736721-c2e77ff4c650?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "speed": "Quad-Band 16,000 Mbps (6GHz: 4804Mbps, 5GHz-1: 4804Mbps, 5GHz-2: 4804Mbps, 2.4GHz: 1148Mbps)",
@@ -1009,8 +1018,8 @@
       "tagline": "Enterprise 10G Gateway with PoE switch, NVR storage & 1.3\" LCM touchscreen",
       "description": "All-in-one 1U rackmount console for enterprise networks. Built-in 8-port Gigabit PoE switch, 2.5G RJ45 WAN, dual 10G SFP+ ports, integrated 128GB SSD for UniFi OS application storage, and 3.5\" HDD bay for UniFi Protect surveillance.",
       "images": [
-        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1682559736721-c2e77ff4c650?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1691435828932-911a7801adfb?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "gateway": "Full 10G Threat Management IDS/IPS throughput at 3.5+ Gbps",
@@ -1050,8 +1059,8 @@
       "tagline": "1-inch CMOS sensor with 4K/120fps recording & rotatable 2-inch OLED touchscreen",
       "description": "Capture steady, cinematic footage in the palm of your hand. Features a 1-inch CMOS sensor for rich low-light detail, 10-bit D-Log M color profile, 3-axis mechanical stabilization, ActiveTrack 6.0, and DJI Mic 2 transmitter included.",
       "images": [
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1791356431341-3ad6c1cac065?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1777573284902-519a8bf0c8b0?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "sensor": "1-inch CMOS sensor supporting 4K/120fps slow-motion and 10-bit D-Log M",
@@ -1092,8 +1101,8 @@
       "tagline": "One-touch tactile control for streaming, coding macros, and creative apps",
       "description": "Trigger unlimited actions with tactile LCD keys. Switch scenes, mute audio, launch apps, run dev scripts, and tweak smart lighting with instant visual feedback. Detachable faceplate and ergonomic 45-degree magnetic desktop stand.",
       "images": [
-        "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1547394765-185e1e68f34e?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1781455092634-ee2f02eeba09?auto=format&fit=crop&w=1200&q=80"
       ],
       "specs": {
         "keys": "15 customizable LCD keys with full RGB color animations",
@@ -1134,7 +1143,7 @@
           "categoryName": "Headphones",
           "price": 28990,
           "quantity": 1,
-          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80",
+          "image": "https://images.unsplash.com/photo-1547932087-59a8f2be576e?auto=format&fit=crop&w=1200&q=80",
           "subtotal": 28990
         }
       ],
@@ -1277,7 +1286,7 @@
       "subheading": "Premium gear designed for modern workstations and digital creators.",
       "ctaText": "Browse Now",
       "ctaLink": "/products",
-      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1600&q=80"
+      "image": "https://images.unsplash.com/photo-1751200065687-a126e7c304da?auto=format&fit=crop&w=1600&q=80"
     }
   },
   "auditLogs": [

@@ -176,7 +176,7 @@ export default function SearchModal() {
                   >
                     <div className="w-14 h-14 rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-200/80">
                       <img
-                        src={product.images?.[0] || 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=300&q=80'}
+                        src={product.images?.[0] || 'https://images.unsplash.com/photo-1547932087-59a8f2be576e?auto=format&fit=crop&w=300&q=80'}
                         alt={product.name}
                         className="w-full h-full object-cover"
                       />

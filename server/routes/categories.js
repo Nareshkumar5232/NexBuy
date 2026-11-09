@@ -32,7 +32,7 @@ router.post('/', authenticate, requireAdmin, (req, res) => {
       name,
       slug: finalSlug,
       description: description || '',
-      image: image || 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80',
+      image: image || 'https://images.unsplash.com/photo-1547932087-59a8f2be576e?auto=format&fit=crop&w=800&q=80',
       heroTagline: heroTagline || name,
       createdAt: new Date().toISOString()
     };

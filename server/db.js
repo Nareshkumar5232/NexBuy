@@ -35,7 +35,7 @@ function initDb() {
           subheading: 'Premium gear designed for modern workstations and digital creators.',
           ctaText: 'Browse Now',
           ctaLink: '/products',
-          image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1600&q=80'
+          image: 'https://images.unsplash.com/photo-1751200065687-a126e7c304da?auto=format&fit=crop&w=1600&q=80'
         }
       },
       auditLogs: []

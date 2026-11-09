@@ -33,7 +33,7 @@ export default function About() {
       {/* 2. Full-Width Tech Imagery */}
       <div className="relative aspect-16/9 sm:aspect-21/9 rounded-3xl overflow-hidden bg-slate-900 shadow-xl border border-slate-200/80">
         <img
-          src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1600&q=80"
+          src="https://images.unsplash.com/photo-1751200065687-a126e7c304da?auto=format&fit=crop&w=1600&q=80"
           alt="NEXBUY Technology Engineering"
           className="w-full h-full object-cover"
         />

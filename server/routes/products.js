@@ -172,7 +172,7 @@ router.post('/', flexibleAdminAuth, (req, res) => {
       sku: sku || ('SKU-' + Math.floor(100000 + Math.random() * 900000)),
       tagline: tagline || '',
       description: description || '',
-      images: images.length > 0 ? images : ['https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80'],
+      images: images.length > 0 ? images : ['https://images.unsplash.com/photo-1547932087-59a8f2be576e?auto=format&fit=crop&w=800&q=80'],
       specs: specs || {},
       dimensions: dimensions || '',
       weight: weight || '',

@@ -74,7 +74,7 @@ export default function Wishlist() {
               <div className="relative aspect-square rounded-xl overflow-hidden bg-slate-50 border border-slate-100">
                 <Link to={`/products/${product.slug}`} className="block w-full h-full">
                   <img
-                    src={product.images?.[0] || 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=400&q=80'}
+                    src={product.images?.[0] || 'https://images.unsplash.com/photo-1547932087-59a8f2be576e?auto=format&fit=crop&w=400&q=80'}
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
