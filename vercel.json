@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://byte-backend-mhke.onrender.com/api/$1"
+      "destination": "https://nex-backend-l03q.onrender.com/api/$1"
     },
     {
       "source": "/(.*)",

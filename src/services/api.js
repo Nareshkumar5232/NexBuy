@@ -1,5 +1,5 @@
 const envApiUrl = import.meta.env.VITE_API_URL;
-const REMOTE_API_URL = 'https://byte-backend-mhke.onrender.com/api';
+const REMOTE_API_URL = 'https://nex-backend-l03q.onrender.com/api';
 
 const RAW_API_URL =
   envApiUrl && envApiUrl.startsWith('http')

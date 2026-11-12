@@ -11,7 +11,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: process.env.VITE_BACKEND_URL || 'https://nex-backend-l03q.onrender.com',
         changeOrigin: true,
         secure: false,
       }
